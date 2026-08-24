@@ -73,9 +73,9 @@ matter:
         factual sentence bound to an exact quotation inside one of those files,
         and a verification gate that refused to let the text ship until each
         binding checked out. Thirty-one claims went into the ledger; one failed
-        and is cited nowhere in these pages. Two more were withdrawn mid-draft
-        when I found the primary sources and discovered the secondhand versions
-        had improved on them. Section 6 names one of those out loud, because a
+        and is cited nowhere in these pages. Two more were withdrawn mid-draft,
+        once the publications they rested on turned out to say something other
+        than what they had been reported as saying. Section 6 names one of those out loud, because a
         paper making this argument does not get to correct itself quietly.</p>
 
       <p>The superscripts are not decoration &mdash; they are the audit trail, and
@@ -84,8 +84,8 @@ matter:
         answer for itself. If you compose every sentence by hand, full respect
         &mdash; the craft shows. And if you notice the em-dashes, they are mine. I
         have always written this way. Make your peace with them.</p>
-
-      <p class="signoff">&mdash; A.S.</p>
+      <!-- No sign-off here: front-matter.html.j2 emits <p class="signoff">
+           from author.initials immediately after this block. -->
     sources_html: |
       <p>The sources are a separate matter. This paper is published alongside a
         free companion archive &mdash; <span class="mono">tech.anujsadani.in/monolith-wearing-a-transformer</span>
@@ -110,9 +110,12 @@ matter:
         label: "This paper, and the evidence"
         blurb: "Read this online, walk the claim ledger, open every source."
         code: "tech.anujsadani.in"
+  # A colophon says how the thing was made. Restating the title and the URL here
+  # only repeated the work line on page 3 and the QR card directly above it.
   colophon_html: |
-    <b>A Monolith Wearing a Transformer</b> &mdash; a verified inquiry by Anuj Sadani, 2026.<br>
-      Read online: <b>tech.anujsadani.in/monolith-wearing-a-transformer</b>
+    Set in Source Serif 4, Archivo and IBM Plex Mono.<br>
+      Nineteen sources captured and hashed, thirty-one claims bound to quotation,
+      one of them failed. First edition, 2026.
 
 license:
   id: all-rights-reserved

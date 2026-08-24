@@ -835,7 +835,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   </p>
 </section>
 
-<!-- BOOK-FORGE:FRONT-MATTER v1 sha=879870ba4f7c -->
+<!-- BOOK-FORGE:FRONT-MATTER v1 sha=1aad94455abc -->
 <section class="bf-matter bf-front bf-flow">
   <h2>Copyright, permissions, and how this was made</h2>
 
@@ -884,9 +884,9 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
       factual sentence bound to an exact quotation inside one of those files,
       and a verification gate that refused to let the text ship until each
       binding checked out. Thirty-one claims went into the ledger; one failed
-      and is cited nowhere in these pages. Two more were withdrawn mid-draft
-      when I found the primary sources and discovered the secondhand versions
-      had improved on them. Section 6 names one of those out loud, because a
+      and is cited nowhere in these pages. Two more were withdrawn mid-draft,
+      once the publications they rested on turned out to say something other
+      than what they had been reported as saying. Section 6 names one of those out loud, because a
       paper making this argument does not get to correct itself quietly.</p>
 
     <p>The superscripts are not decoration &mdash; they are the audit trail, and
@@ -895,8 +895,8 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
       answer for itself. If you compose every sentence by hand, full respect
       &mdash; the craft shows. And if you notice the em-dashes, they are mine. I
       have always written this way. Make your peace with them.</p>
-
-    <p class="signoff">&mdash; A.S.</p>
+    <!-- No sign-off here: front-matter.html.j2 emits <p class="signoff">
+         from author.initials immediately after this block. -->
 
     <p class="signoff">&mdash; A.S.</p>
 
@@ -1584,11 +1584,9 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   rate. Five times more disputes identified, on what merchant segment. Each of those
   is one subordinate clause away from being a number a reader can use, and the company
   has the data, because you cannot claim the multiplier without it.</p>
-  <p>And there is a recency defense that should be granted plainly: the model was
-  announced days before this research began. Nothing has had time to be independently
-  verified. That is an absence of scrutiny rather than evidence of failure, and if a
-  named merchant publishes its own before-and-after next quarter, this paper’s second
-  section becomes obsolete in the best possible way.</p>
+  <p>And the recency defense granted in Section 2 still stands: none of this has had
+  time to be checked by anyone, and one merchant publishing its own before-and-after
+  would retire most of that section.</p>
   <p class="beat">Back to the number</p>
   <p>Which returns us to the 29 milliseconds.</p>
   <p>It was never the important thing. It was a symptom, and the disease is that the
@@ -1597,8 +1595,8 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   generated that is fluent, technical, cited in appearance, internally consistent, and
   load-bearing on a quantity that came from nowhere — and the parts of it that
   are true make the invented part harder to see, not easier.</p>
-  <p>The defense is not skepticism, which does not scale and which I did not have. I liked
-  the figure. It was the most concrete thing in the document. The defense is
+  <p>The defense is not skepticism, which does not scale and which I did not have –
+  Section 1 is the record of me admiring that number, not doubting it. The defense is
   mechanical: a rule that a claim without a locator in a captured source does not get
   made, applied by something that does not care how good the sentence sounds.</p>
   <p>This paper was written under that rule. It has thirty-one claims in its ledger; one
@@ -1616,7 +1614,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   <p>But it will have been checkable, and the thing it argued against was not.</p>
 </section>
 
-<!-- BOOK-FORGE:ABOUT v1 sha=cdab7bb8f6c0 -->
+<!-- BOOK-FORGE:ABOUT v1 sha=2b464443ec08 -->
 <section class="bf-matter bf-about bf-flow">
   <h2>About the author</h2>
 
@@ -1656,8 +1654,9 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   </div>
 
   <div class="colophon">
-    <b>A Monolith Wearing a Transformer</b> &mdash; a verified inquiry by Anuj Sadani, 2026.<br>
-      Read online: <b>tech.anujsadani.in/monolith-wearing-a-transformer</b>
+    Set in Source Serif 4, Archivo and IBM Plex Mono.<br>
+      Nineteen sources captured and hashed, thirty-one claims bound to quotation,
+      one of them failed. First edition, 2026.
   </div>
 
 </section>
