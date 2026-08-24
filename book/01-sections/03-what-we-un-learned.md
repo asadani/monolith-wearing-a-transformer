@@ -1,7 +1,7 @@
 # Section 3. What we un-learned about decoupling
 
-Fifteen years of payment engineering can be summarized as one long argument about
-boundaries. Where to put them, what to pay for them, and what breaks when they are
+On my reading, the last fifteen years of payment engineering come down to one
+long argument about boundaries. Where to put them, what to pay for them, and what breaks when they are
 removed. The argument was not about elegance and it was not about fashion, though
 both were used as ammunition at various points. It was about a single question that
 every senior engineer eventually learns to ask before any other:

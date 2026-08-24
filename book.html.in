@@ -957,8 +957,8 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   routing, fraud, risk, and checkout personalization, learning jointly, serving
   every decision in the path.</p>
   <p>That is not a small suggestion. It is a proposal to re-couple a system that an
-  industry spent fifteen years learning to decouple, in the one place where failure
-  is most expensive, on the authority of a document containing an invented
+  industry spent the better part of two decades learning to decouple, in the one
+  place where failure is most expensive, on the authority of a document containing an invented
   specification.</p>
   <p>The recommendation might still be right. Architecture is not decided by the
   provenance of the arguments made for it, and I will spend most of this paper
@@ -1061,8 +1061,8 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   <p class="chapter-num">03</p>
     <h2>What we un-learned about decoupling</h2>
     <p class="standfirst">Service boundaries were not fashion. They were an answer to a question about what happens when one part of a system is wrong.</p>
-  <p class="dropcap">Fifteen years of payment engineering can be summarized as one long argument about
-  boundaries. Where to put them, what to pay for them, and what breaks when they are
+  <p class="dropcap">On my reading, the last fifteen years of payment engineering come down to one
+  long argument about boundaries. Where to put them, what to pay for them, and what breaks when they are
   removed. The argument was not about elegance and it was not about fashion, though
   both were used as ammunition at various points. It was about a single question that
   every senior engineer eventually learns to ask before any other:</p>

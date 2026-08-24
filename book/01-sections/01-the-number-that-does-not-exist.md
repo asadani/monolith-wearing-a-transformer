@@ -53,8 +53,8 @@ routing, fraud, risk, and checkout personalization, learning jointly, serving
 every decision in the path.
 
 That is not a small suggestion. It is a proposal to re-couple a system that an
-industry spent fifteen years learning to decouple, in the one place where failure
-is most expensive, on the authority of a document containing an invented
+industry spent the better part of two decades learning to decouple, in the one
+place where failure is most expensive, on the authority of a document containing an invented
 specification.
 
 The recommendation might still be right. Architecture is not decided by the
