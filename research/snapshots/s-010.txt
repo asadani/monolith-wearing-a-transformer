@@ -1,0 +1,337 @@
+We Value your Privacy
+
+We use cookies in the delivery of our services. To learn about the cookies we use and information about your preferences and opt-out choices, please click here.
+
+CustomizeReject AllAccept All
+
+Customize Consent Preferences
+
+We use cookies in the delivery of our services. To learn about the cookies we use and information about your preferences and opt-out choices, please click here. By using our platform you agree to our use of cookies.
+
+Essential
+
+Always Active
+
+These items are required to enable basic website functionality.
+
+Marketing
+Essential
+
+These items are used to deliver advertising that is more relevant to you and your interests. They may also be used to limit the number of times you see an advertisement and measure the effectiveness of advertising campaigns. Advertising networks usually place them with the website operator’s permission.
+
+Analytics
+Essential
+
+These items help the website operator understand how its website performs, how visitors interact with the site, and whether there may be technical issues. This storage type usually doesn’t collect information that identifies a visitor.
+
+Reject all cookiesAllow all cookiesConfirm and close
+
+Platform
+
+OVERVIEW
+
+Platform Overview
+
+Learn how teams connect data, apply policies, and run confidential AI workloads, all while protecting sensitive data.
+
+OVERVIEW VIDEO
+
+Watch
+
+FEATURED CONTENT
+
+Ready to get started with OPAQUE
+
+Request Demo
+
+Case Studies
+
+FROM THIS CASE STUDY
+
+Case Study Name
+
+FROM THIS CASE STUDY
+
+Watch
+
+“Our technical stakeholders kept telling us, ‘We’re finally able to use confidential AI without compromising our environment or losing control of our data.’ Once those hurdles dropped, adoption soared."
+
+FROM THIS CASE STUDY
+
+Watch
+
+Learn how ServiceNow partnered with OPAQUE Systems to enhance AI solutions, ensuring data privacy and compliance while streamlining operations. Discover the impact of confidential computing on enterprise AI scalability.
+
+Read More
+
+ServiceNow
+
+ServiceNow
+
+FROM THIS CASE STUDY
+
+Watch
+
+Discover how Accenture partners with OPAQUE to transform AI implementation through confidential computing technologies. Learn how this collaboration enables secure data sharing and analysis across industries while maintaining privacy, regulatory compliance, and unlocking AI's full potential for telecommunications and retail sectors.
+
+Read More
+
+Accenture
+
+Accenture
+
+FROM THIS CASE STUDY
+
+Watch
+
+Discover how RiskStream Collaborative uses OPAQUE Systems' Confidential AI to enable secure data sharing for insurers, enhancing fraud detection while maintaining compliance and data privacy. Learn more in our detailed case study.
+
+Read More
+
+RiskStream
+
+RiskStream
+
+FROM THIS CASE STUDY
+
+Watch
+
+Unlocking AI-Powered Software Development with Confidential Data: Bloomfilter x OPAQUE
+
+Read More
+
+Bloomfilter
+
+Bloomfilter
+
+Ready to get started with OPAQUE
+
+Request Demo
+
+Resources
+
+FEATURED CONTENT
+
+WATCH & LISTEN
+
+OPAQUE YouTube
+
+Webinars
+
+Confidential Computing Summit
+
+AI Confidential Podcast
+
+READ
+
+Blog
+
+White Papers
+
+Reports
+
+Product
+
+News
+
+Research
+
+Press Releases
+
+Newsletter
+
+Media
+
+MORE
+
+Content Hub
+
+Events
+
+FAQs
+
+Documentation
+
+Support
+
+Open Source Notices
+
+Ready to get started with OPAQUE
+
+Request Demo
+
+Podcast
+
+FEATURED
+
+RECENT EPISODES
+
+Agents are the New API Client
+
+Marco Palladino, Co-Founder & CTO, Kong
+
+Understanding the Internet of Agents with Vijoy Pandey
+
+Vijoy Pandey, Senior Vice President / GM, Head of Outshift by Cisco
+
+Unleashing the Power of Agents with the "Forrest Gump of Tech"
+
+Reuven Cohen, Founder, Agentics Foundation
+
+Days to Seconds: ServiceNow Harnessing Confidential AI Agents Across Its Business
+
+Kellie Romack, Chief Digital Information Officer, ServiceNow
+
+MORE EPSIODES
+
+Season One
+
+Season Two
+
+Like the OPAQUE Podcast?
+
+Subscribe on Youtube
+
+About
+
+OPAQUE is building the trust layer for enterprise AI, so every organization can innovate fearlessly with their most sensitive data.
+
+COMPANY
+
+About OPAQUE
+
+Careers at OPAQUE
+
+Contact Us
+
+Press Releases
+
+Looking to talk to someone from OPAQUE?
+
+Start a conversation
+
+Request Demo
+
+Qualify for a Trial
+
+Resources
+
+Blog
+
+Beyond Microservices: How AI Agents Are Transforming Enterprise Architecture
+
+By
+
+Aaron Fulkerson | CEO
+
+2025-01-06
+
+•
+
+5 min read
+
+In a recently published whitepaper on AI agents, Google offers a compelling vision of the future of enterprise architecture. As the CEO of Opaque Systems, I find this particularly relevant to our mission of enabling secure and private AI computing. Let me explain why this represents such a fundamental shift in how we build enterprise systems.
+
+The Evolution from Microservices to AI Agents
+
+Today’s enterprise applications largely follow microservices architecture principles – small, independently deployable services that communicate via well-defined APIs. This approach has served us well, offering benefits like scalability, technological flexibility, and team autonomy. However, AI agents represent a profound evolution of these concepts.
+
+Consider how a typical microservice operates: it receives a request, processes it according to predetermined business logic, and returns a response. Now, imagine replacing that rigid service with an intelligent agent that can perceive its environment, make autonomous decisions, and take actions to achieve specific goals. This is the transformation we’re witnessing.
+
+The Agent Architecture Landscape
+
+Google’s whitepaper outlines several types of agents, each building upon microservices principles while adding layers of intelligence:
+
+Simple Reflex Agents
+
+These parallel basic microservices but add conditional intelligence. Instead of just processing requests, they actively observe and respond to their environment. Think of an intelligent routing service that doesn’t just follow rules but adapts to system conditions in real-time.
+
+Model-Based Reflex Agents
+
+These extend further by maintaining internal state – similar to stateful microservices but with sophisticated environmental modeling capabilities. These agents can make predictions and decisions even with incomplete information, far surpassing traditional caching or state management approaches.
+
+Goal-Based Agents
+
+These represent a significant leap beyond traditional microservices. While microservices execute predefined processes, goal-based agents actively plan and adjust their actions to achieve specific objectives. This transforms static service orchestration into dynamic, purpose-driven behavior.
+
+Utility-Based Agents
+
+These add another dimension by incorporating sophisticated decision-making capabilities. Unlike microservices that follow fixed business rules, these agents can evaluate trade-offs and optimize for multiple competing objectives.
+
+Learning Agents
+
+These perhaps best exemplify the departure from traditional microservices. They continuously improve through experience, fundamentally changing how enterprise systems evolve. Instead of requiring explicit updates, these systems autonomously enhance their capabilities.
+
+Multi-Agent Systems
+
+These represent the most sophisticated evolution, where multiple agents – potentially of different types – work together collaboratively or competitively to achieve complex goals. Unlike traditional microservice orchestration, these agents can dynamically form alliances, negotiate resources, and adapt their interactions based on changing conditions. Think of it as moving from a traditional hierarchical corporate structure to an agile workforce where independent teams dynamically collaborate, compete, and self-organize to achieve objectives. I discussed these multi-agent systems in the context of Agentic Workflows with Jason from Anthropic on a recent podcast episode, and we’re seeing customers of Opaque adopt these for some pretty basic workflows like RAG pipelines, but these compositions will undoubtedly replace entire enterprise software systems.
+
+The Critical Role of Security and Privacy
+
+This architectural evolution introduces new challenges that make confidential computing more crucial than ever:
+
+Agent Authentication and Attestation: Unlike traditional microservices where authentication primarily involves API keys or certificates, AI agents require sophisticated attestation mechanisms to prove their authenticity and behavioral integrity. These agents are unlike microservices today because the logic is non-deterministic, and the model will become increasingly intelligent and capable of executing autonomously to call and process resources. This is where Opaque’s attestation capabilities become essential.
+
+Model Protection: Organizations investing in specialized AI agents need assurance that their intellectual property remains protected. Confidential computing provides the foundation for deploying agents without exposing their valuable internal models.
+
+Data Sovereignty: As agents access and process sensitive data across organizational boundaries, we need cryptographically enforced data governance. This goes beyond traditional microservice security patterns, requiring sophisticated privacy-preserving computation capabilities.
+
+Looking Forward: The Intelligent Enterprise
+
+The shift from microservices to agent-based architectures represents more than incremental improvement – it’s a fundamental reimagining of enterprise systems. While microservices gave us modularity and scalability, AI agents add autonomous intelligence and learning capabilities.
+
+This transformation will demand new approaches to security, privacy, and governance. Confidential computing will play a crucial role in enabling organizations to:
+
+Deploy intelligent agents while protecting their IP
+
+Enable secure cross-organizational agent collaboration
+
+Maintain data privacy and sovereignty in agent-based systems
+
+Provide cryptographic guarantees for agent behavior
+
+As we witness this architectural evolution, I’m excited about Opaque’s role in enabling the secure and private deployment of AI agents. The future of enterprise software will be built on intelligent, autonomous agents operating within a framework that ensures security, privacy, and sovereignty.
+
+What are your thoughts on this architectural transformation? How do you see AI agents changing the way we build and deploy enterprise systems? I’d love to hear your perspectives on the intersection of AI agents, microservices, and data privacy.
+
+Related Content
+
+Showing 28
+
+GuardRail OSS, open source project, provides guardrails for responsible AI development
+
+This is some text inside of a div block.
+
+GENERAL
+
+Read More
+
+No items found.
+
+Have a question about OPAQUE’s Confidential AI Platform or want to see a live demo?
+
+Reach out here
+
+COMPANY
+
+HomeAboutResourcesCareersContact
+
+SOLUTIONS
+
+Insurance
+
+Finance
+
+High-Tech
+
+Contact
+
+hello@opaque.coLinkedInX (Formerly Twitter)
+
+© 2026 OPAQUE Systems, Inc. All rights reserved.
+
+OPAQUE, The Confidential AI CompanyTM
+
+Cookie Settings
+
+Privacy PolicyTerms of Service

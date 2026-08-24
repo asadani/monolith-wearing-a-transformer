@@ -1,0 +1,175 @@
+Subscribe
+
+0
+
+Login
+
+Join DQ.
+
+Sign In with Google
+
+Sign In with Facebook
+
+Sign in with Email
+
+By clicking the button, I accept the Terms of Use of the service and its Privacy Policy, as well as consent to the processing of personal data.
+
+Don’t have an account? Signup
+
+Bookmarks
+
+My Profile
+
+Log Out
+
+NEWS
+
+DATA & AI
+
+BUSINESS TECHNOLOGIES
+
+Semiconductors
+
+Government & Policy
+
+LEADERSHIP INSIGHTS
+
+Interview
+
+Opinion
+
+Editors Blog
+
+Features
+
+DQ Explainers
+
+UPSKILLING
+
+Dataquest Digital
+
+News
+
+DATA & AI
+
+Business Technologies
+
+ESDM
+
+Government & Policy
+
+UPSKILLING
+
+DQ Connect
+
+Powered by :
+
+You have successfully subscribed the newsletter.
+
+News
+
+Razorpay built one AI for payments, fraud and checkout
+
+Razorpay says Vulcan detects eight times more international card fraud, but enterprises still lack baselines, testing methodology, confidence intervals and independent validation needed for assessment.
+
+Preeti Anand
+
+20 Aug 2026
+
+12:52
+IST
+
+Follow Us
+
+New Update
+
+Razorpay built one AI for payments, fraud and checkout
+
+Listen to this article
+
+0.75x1x1.5x
+
+00:00/ 00:00
+
+Razorpay has announced its collaboration with NVIDIA and AWS to create Vulcan, a transformer-based AI foundation model, and unsurprisingly, it has attracted the attention of the Indian fintech industry. Vulcan has been trained on almost three trillion data points across four billion payments and is intended to work as a single intelligence layer, not a collection of different machine-learning models with different jobs.
+
+Advertisment
+
+However, one key technical metric is not included with the headline figures of “8–10% higher payment success rates” and “8x more international card fraud detected and stopped”: the baseline used to measure them.
+
+Razorpay Vulcan is not a chatbot
+
+To start, it’s important to understand what Vulcan is. This is not a chatbot. Vulcan is a non-LLM, domain-specific transformer that processes payment data differently from a generative AI chatbot or general-purpose Large Language Model (LLM).
+
+It doesn’t analyse text. Rather, it learns patterns in transaction flows and processes about 3,000 behavioural signals per transaction in real time, says Razorpay. It provides a shared intelligence layer for payment routing, fraud detection, cash-on-delivery risk and checkout personalisation.
+
+Advertisment
+
+What was the control group?
+
+Early deployments involving merchants such as Blinkit and redBus have shown an 8–10% increase in payment success rates, according to Razorpay, but the baseline has not been released. What was this 8–10% improvement measured against? Was it based on a basic routing system or Razorpay’s own highly optimised legacy ML models?
+
+What was the baseline rate of international card fraud, and was there any effect on false-positive rates with the “5x increase in identified fraudulent or disputed transactions”? Razorpay claims that this rise came without an increase in the number of alerts but hasn’t disclosed the underlying detection rates.
+
+Enterprise engineers have no way to independently measure the reported lift without detailed latency percentiles, testing methodology and confidence intervals.
+
+Advertisment
+
+Data privacy and merchant isolation remain unanswered questions
+
+There are some difficult questions to consider regarding data privacy and merchant isolation, with approximately 3,000 signals per transaction and data across thousands of merchants. What is being done to ensure sensitive transaction data is handled securely when adopting a model backbone across this network?
+
+Razorpay has yet to provide details publicly on how merchants can audit the model, whether the architecture is completely closed, or how cross-merchant intelligence will be maintained in compliance with India’s evolving data-protection requirements.
+
+While Vulcan’s metrics are impressive, they are company-reported claims without third-party audits or a detailed technical whitepaper in the public domain. Razorpay’s official announcement states that its architecture and training data are proprietary. The performance claims, therefore, should be considered early deployment results and not independent test results.
+
+Advertisment
+
+razorpay
+
+Subscribe to our Newsletter!
+Be the first to get exclusive offers and the latest news
+
+Subscribe Now
+
+Related Articles
+
+Read the Next Article
+
+Latest Stories
+
+Subscribe to our Newsletter!
+Be the first to get exclusive offers and the latest news
+
+Subscribe Now
+
+Latest Stories
+
+Latest Stories
+
+Powered by
+
+Subscribe to our Newsletter!
+
+Subscribe Now
+
+Powered by
+
+Select Language
+
+English
+
+Cancel
+
+Share this article
+
+If you liked this article share it with your friends.
+they will thank you later
+
+Facebook
+
+Twitter
+
+Whatsapp
+
+Copied!

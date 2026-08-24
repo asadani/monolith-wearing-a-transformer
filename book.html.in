@@ -1,0 +1,1649 @@
+<meta charset="utf-8">
+<title>A Monolith Wearing a Transformer</title>
+<meta name="author" content="Anuj Sadani">
+<meta name="description" content="Whether domain foundation models belong in the critical path of payment infrastructure. 19 captured sources, 31 claims bound to exact quotations.">
+
+<style>
+<style>
+{{FONT_FACES}}
+/* ============================================================
+   Speed Is the Moat — designed edition
+   Print-first: A4, chapter recto starts, running feet stamped
+   post-hoc. Screen presentation wraps each section as a card.
+   ============================================================ */
+
+:root{
+  --ink:#161A21;
+  --ink-soft:#4E5665;
+  --ink-faint:#7C8593;
+  --rule:#D8DCE3;
+  --rule-strong:#B9C1CC;
+  --paper:#FFFFFF;
+  --wash:#F2F4F7;
+  --accent:#9E2B3A;          /* oxblood — the single loud color */
+  --accent-wash:#F6E9EB;
+  --fast:#1F4E79;            /* data: the quick end of the curve */
+  --slow:#9BA5B2;            /* data: the slow end */
+  --gold:#8A6212;
+
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Iowan Old Style,"Palatino Linotype",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+
+*{box-sizing:border-box}
+
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:11.2pt;
+  line-height:1.62;
+  text-rendering:optimizeLegibility;
+  font-kerning:normal;
+}
+
+/* ---------- page geometry ---------- */
+
+@page{ size:A4; margin:24mm 21mm 22mm 21mm; }
+@page :first{ margin:0; }
+
+section.sheet{ page-break-after:always; break-after:page; }
+section.sheet:last-of-type{ page-break-after:auto; break-after:auto; }
+
+/* ---------- cover: full-bleed artwork, page 1 ---------- */
+
+section.cover{
+  width:210mm;
+  height:297mm;
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+  background:#0E1116;
+}
+section.cover img{
+  display:block;
+  width:210mm;
+  height:297mm;
+  object-fit:cover;
+  object-position:center center;
+}
+
+/* ---------- title page ---------- */
+
+.titlepage{ padding-top:6mm }
+.titlepage .kicker{
+  font-family:var(--mono);
+  font-size:8pt;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 16mm;
+}
+.titlepage h1{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:40pt;
+  line-height:.96;
+  letter-spacing:-.028em;
+  margin:0 0 6mm;
+}
+.titlepage .rule{ width:34mm;height:2px;background:var(--accent);margin:0 0 8mm }
+.titlepage .sub{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:13.5pt;
+  line-height:1.34;
+  color:var(--ink-soft);
+  margin:0 0 10mm;
+  max-width:120mm;
+}
+.titlepage .verdict{
+  font-size:12pt;
+  line-height:1.52;
+  max-width:122mm;
+  margin:0 0 16mm;
+}
+.titlepage .verdict b{ color:var(--accent) }
+.titlepage .byline{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:13pt;
+  letter-spacing:.02em;
+  margin:0;
+  padding-top:6mm;
+  border-top:1.5px solid var(--ink);
+}
+.titlepage .byline small{
+  display:block;
+  font-family:var(--mono);
+  font-weight:400;
+  font-size:7.6pt;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-top:2.5mm;
+}
+
+/* ---------- title page description ---------- */
+
+.titlepage .desc{
+  font-size:11.4pt;
+  line-height:1.6;
+  margin:0 0 5mm;
+  max-width:124mm;
+}
+.titlepage .desc:last-of-type{ margin-bottom:14mm }
+
+/* ---------- copyright plate ---------- */
+
+.plate h3{ margin-top:6mm }
+.legal{
+  font-size:10.2pt;
+  line-height:1.58;
+}
+.legal p{ margin:0 0 3.4mm }
+.legal .work{
+  font-style:italic;
+  color:var(--ink-soft);
+}
+.legal .grant{
+  border-left:3px solid var(--accent);
+  padding:0 0 0 5mm;
+  margin:5mm 0;
+}
+.legal .imprint{
+  font-family:var(--mono);
+  font-size:7.6pt;
+  letter-spacing:.05em;
+  color:var(--ink-faint);
+  margin-top:4mm;
+  padding-top:2.5mm;
+  border-top:1px solid var(--rule);
+}
+.signoff{
+  font-family:var(--mono);
+  font-size:8.4pt;
+  letter-spacing:.1em;
+  color:var(--ink-faint);
+  margin-top:3mm;
+}
+
+/* ---------- tier legend ---------- */
+
+.tierkey{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3mm 7mm;
+  margin:5mm 0 6mm;
+  padding:4.5mm 5mm;
+  background:var(--wash);
+  border:1px solid var(--rule);
+  break-inside:avoid;
+}
+.tierkey .row{ display:grid;grid-template-columns:9mm 1fr;gap:3mm;align-items:start }
+.tierkey .row > span:last-child{
+  font-size:9.2pt;
+  line-height:1.42;
+  color:var(--ink-soft);
+}
+.tierkey b{
+  font-family:var(--display);
+  font-weight:600;
+  color:var(--ink);
+}
+.tierkey .lead{
+  grid-column:1 / -1;
+  font-size:9.4pt;
+  line-height:1.45;
+  color:var(--ink-soft);
+  margin:0 0 1mm;
+}
+
+/* ---------- about the author ---------- */
+
+.about .bio{ font-size:11pt;line-height:1.62;max-width:128mm }
+.qrpanel{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8mm;
+  margin:9mm 0 0;
+  padding-top:6mm;
+  border-top:1.5px solid var(--ink);
+}
+.qrcard{ display:flex;gap:5mm;align-items:flex-start }
+.qrcard .code{
+  width:26mm;
+  flex:0 0 auto;
+  padding:2mm;
+  border:1px solid var(--rule-strong);
+  background:#fff;
+}
+.qrcard .code svg{ display:block;width:100%;height:auto }
+.qrcard .what{ padding-top:1mm }
+.qrcard .what b{
+  display:block;
+  font-family:var(--display);
+  font-weight:600;
+  font-size:10pt;
+  margin-bottom:1.5mm;
+}
+.qrcard .what span{
+  display:block;
+  font-size:9.4pt;
+  line-height:1.45;
+  color:var(--ink-soft);
+  margin-bottom:2mm;
+}
+.qrcard .what code{
+  font-family:var(--mono);
+  font-size:8pt;
+  color:var(--accent);
+}
+
+/* ---------- front matter ---------- */
+
+.plate{ padding-top:4mm }
+.plate h2, .backmatter h2{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:15pt;
+  letter-spacing:-.01em;
+  margin:0 0 5mm;
+}
+.abstract{
+  font-size:11.6pt;
+  line-height:1.66;
+}
+.abstract .lead{
+  font-size:13pt;
+  line-height:1.5;
+  color:var(--ink);
+  font-weight:600;
+  margin:0 0 6mm;
+}
+
+ol.contents{
+  margin:8mm 0 0;padding:0;list-style:none;
+  counter-reset:toc;
+}
+ol.contents li{
+  counter-increment:toc;
+  display:grid;grid-template-columns:8mm 1fr;
+  gap:4mm;padding:2.6mm 0;
+  border-bottom:1px solid var(--rule);
+  font-size:10.6pt;
+}
+ol.contents li::before{
+  content:counter(toc,decimal-leading-zero);
+  font-family:var(--mono);font-size:8.4pt;color:var(--accent);
+  padding-top:.8mm;
+}
+ol.contents li.app::before{ content:"—";color:var(--ink-faint) }
+ol.contents b{ grid-column:2;font-family:var(--display);font-weight:600 }
+ol.contents span{ grid-column:2;display:block;color:var(--ink-soft);font-size:9.8pt;line-height:1.45 }
+ol.contents li{ break-inside:avoid }
+
+/* ---------- chapters ---------- */
+
+.chapter{ padding-top:2mm }
+.chapter-num{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:58pt;
+  line-height:.8;
+  color:var(--wash);
+  letter-spacing:-.04em;
+  margin:0 0 -6mm;
+  user-select:none;
+}
+.chapter h2{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:22pt;
+  line-height:1.08;
+  letter-spacing:-.022em;
+  margin:0 0 3mm;
+  max-width:132mm;
+}
+.chapter .standfirst{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:11.4pt;
+  line-height:1.45;
+  color:var(--ink-soft);
+  margin:0 0 7mm;
+  padding-bottom:5mm;
+  border-bottom:1px solid var(--rule);
+  max-width:126mm;
+}
+
+p{ margin:0 0 3.6mm;orphans:2;widows:2 }
+p.dropcap::first-letter{
+  float:left;
+  font-family:var(--display);
+  font-weight:700;
+  font-size:34pt;
+  line-height:.82;
+  padding:1mm 2mm 0 0;
+  color:var(--accent);
+}
+
+h3{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:11.6pt;
+  letter-spacing:.005em;
+  margin:7mm 0 2.5mm;
+  break-after:avoid;
+}
+
+.beat{
+  font-family:var(--mono);
+  font-size:7.6pt;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:8mm 0 3mm;
+  break-after:avoid;
+}
+
+blockquote.pull{
+  margin:6mm 0;
+  padding:0 0 0 5mm;
+  border-left:3px solid var(--accent);
+  font-family:var(--display);
+  font-weight:500;
+  font-size:13pt;
+  line-height:1.36;
+  letter-spacing:-.008em;
+  color:var(--ink);
+  break-inside:avoid;
+}
+blockquote.pull .who{
+  display:block;
+  font-family:var(--mono);
+  font-weight:400;
+  font-size:8pt;
+  letter-spacing:.06em;
+  color:var(--ink-faint);
+  margin-top:3mm;
+  text-transform:none;
+}
+
+blockquote.quote{
+  margin:5mm 0;padding:0 0 0 5mm;
+  border-left:1px solid var(--rule-strong);
+  font-size:10.4pt;color:var(--ink-soft);
+  break-inside:avoid;
+}
+
+sup.cite{
+  font-family:var(--mono);
+  font-size:6.6pt;
+  color:var(--accent);
+  letter-spacing:.02em;
+  vertical-align:.42em;
+  line-height:0;
+  white-space:nowrap;
+  padding-left:.5px;
+}
+
+.num{ font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums }
+
+/* data callout */
+.data{
+  background:var(--wash);
+  border:1px solid var(--rule);
+  padding:5mm 5.5mm;
+  margin:6mm 0;
+  break-inside:avoid;
+}
+.data .label{
+  font-family:var(--mono);font-size:7.2pt;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-faint);
+  margin:0 0 3.5mm;display:block;
+}
+.data table{ width:100%;border-collapse:collapse;font-size:9.6pt }
+.data th{
+  text-align:left;font-family:var(--mono);font-weight:500;
+  font-size:7.4pt;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-faint);padding:0 3mm 2mm 0;
+  border-bottom:1px solid var(--rule-strong);
+}
+.data td{
+  padding:2mm 3mm 2mm 0;border-bottom:1px solid var(--rule);
+  vertical-align:top;
+}
+.data td.n{ font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap }
+.data tr:last-child td{ border-bottom:0 }
+
+/* bar figure */
+.bars{ margin:5mm 0 0 }
+.bargroup{ margin-bottom:4.5mm }
+.bargroup:last-child{ margin-bottom:0 }
+.bargroup .cap{
+  display:flex;justify-content:space-between;gap:4mm;
+  font-family:var(--mono);font-size:8pt;color:var(--ink-soft);
+  border-bottom:1px solid var(--rule);padding-bottom:1.6mm;margin-bottom:2.4mm;
+}
+.bargroup .cap b{ color:var(--accent);font-weight:600 }
+.bar{
+  display:grid;grid-template-columns:24mm 1fr 16mm;
+  align-items:center;gap:3mm;margin-bottom:1.6mm;
+  font-family:var(--mono);font-size:8pt;
+}
+.bar .track{ display:block;background:#E3E7ED;height:4.4mm;position:relative;overflow:hidden }
+.bar .fill{ display:block;height:100%;background:var(--slow) }
+.bar .fill.fast{ background:var(--fast) }
+.bar .v{ text-align:right;color:var(--ink-soft);font-variant-numeric:tabular-nums }
+
+/* epistemic note — where the evidence is thin */
+.ledger{
+  border:1px solid var(--accent);
+  background:var(--accent-wash);
+  padding:4.5mm 5mm;
+  margin:6mm 0;
+  font-size:10pt;
+  line-height:1.55;
+  break-inside:avoid;
+}
+.ledger .label{
+  font-family:var(--mono);font-size:7.2pt;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);
+  display:block;margin:0 0 2.5mm;
+}
+.ledger p{ margin:0 0 2.5mm }
+.ledger p:last-child{ margin:0 }
+
+/* in-practice list */
+ol.practice{ counter-reset:pr;list-style:none;padding:0;margin:5mm 0 0 }
+ol.practice li{
+  counter-increment:pr;
+  display:grid;grid-template-columns:7mm 1fr;gap:3.5mm;
+  padding:3mm 0;border-top:1px solid var(--rule);
+  break-inside:avoid;
+}
+ol.practice li:last-child{ border-bottom:1px solid var(--rule) }
+ol.practice li::before{
+  content:counter(pr);
+  font-family:var(--mono);font-weight:600;font-size:9pt;
+  color:var(--accent);padding-top:.6mm;
+}
+ol.practice p{ margin:0 }
+ol.practice b{ font-family:var(--display);font-weight:600 }
+
+ul.plain{ list-style:none;padding:0;margin:4mm 0 }
+ul.plain li{
+  padding:2.6mm 0 2.6mm 5mm;position:relative;
+  border-top:1px solid var(--rule);font-size:10.4pt;line-height:1.55;
+}
+ul.plain li:last-child{ border-bottom:1px solid var(--rule) }
+ul.plain li::before{
+  content:"";position:absolute;left:0;top:5.6mm;
+  width:2.6mm;height:1px;background:var(--rule-strong);
+}
+
+/* ---------- back matter ---------- */
+
+.backmatter{ padding-top:2mm }
+.backmatter .beat:first-child{ margin-top:0 }
+
+table.refs{ width:100%;border-collapse:collapse;font-size:8.6pt;margin-top:4mm }
+table.refs th{
+  text-align:left;font-family:var(--mono);font-weight:500;font-size:7pt;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);
+  border-bottom:1.5px solid var(--ink);padding:0 2.5mm 2mm 0;
+}
+table.refs td{
+  padding:1.8mm 2.5mm 1.8mm 0;border-bottom:1px solid var(--rule);
+  vertical-align:top;line-height:1.42;
+}
+table.refs td.sid{ font-family:var(--mono);color:var(--ink-faint);white-space:nowrap }
+table.refs td.t{ white-space:nowrap }
+table.refs td.pub{ color:var(--ink-soft);white-space:nowrap }
+table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var(--rule-strong) }
+.tier{
+  font-family:var(--mono);font-size:6.8pt;font-weight:600;letter-spacing:.05em;
+  border:1px solid var(--rule-strong);padding:.3mm 1.2mm;color:var(--ink-soft);
+}
+.tier.t1{ border-color:#1F6B4A;color:#1F6B4A }
+.tier.t2{ border-color:var(--fast);color:var(--fast) }
+.tier.t4{ border-color:var(--gold);color:var(--gold) }
+
+.colophon{
+  margin-top:8mm;padding-top:4mm;border-top:1.5px solid var(--ink);
+  font-family:var(--mono);font-size:7.8pt;line-height:1.7;color:var(--ink-faint);
+}
+.colophon b{ color:var(--ink-soft);font-weight:500 }
+
+/* ---------- the Ko-fi button ---------- */
+
+.cover-dl{
+  display:inline-block;
+  margin-top:9mm;
+  font-family:var(--mono);
+  font-size:8.4pt;
+  font-weight:600;
+  letter-spacing:.04em;
+  color:#fff;
+  background:var(--accent);
+  padding:3.4mm 6mm;
+  border-radius:24px;
+  text-decoration:none;
+}
+.cover-dl .ar{ font-weight:400;opacity:.85 }
+.cover-dl:hover{ background:#7d2230 }
+
+/* The button is a screen affordance; in print the reader already has the PDF. */
+@media print{ .cover-dl{ display:none } }
+
+/* ---------- screen presentation ---------- */
+
+/* Flow on screen, paginated in print. The page-break rules above are untouched,
+   so the PDF still starts every chapter on a fresh page; what changes here is
+   only that the reader gets one continuous column instead of a stack of cards.
+
+   The column is applied to every top-level section, not just .sheet, because
+   book-forge's flow matter arrives as a sibling <section class="bf-matter">
+   and its stylesheet deliberately declares no width -- it expects the host to
+   lay it out. Without this the copyright and about pages run full-bleed. */
+
+@media screen{
+  body{
+    background:var(--paper);
+    padding:0 0 72px;
+  }
+
+  body > section{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 32px;
+    background:var(--paper);
+    box-shadow:none;
+  }
+
+  /* Measures written in mm are sheet geometry. On screen the column is the
+     measure, so let the text fill it. */
+  .titlepage h1,
+  .titlepage .sub,
+  .titlepage .desc,
+  .titlepage .verdict,
+  .titlepage .byline,
+  .chapter h2,
+  .chapter .standfirst{ max-width:none }
+
+  .titlepage{ padding-top:44px;padding-bottom:8px }
+  .titlepage h1{ font-size:46pt }
+  .titlepage .kicker{ margin-bottom:10mm }
+
+  /* Chapters keep a boundary without pretending to be sheets of paper. */
+  section.chapter{ padding-top:38px }
+  body > section + section.chapter,
+  body > section + section.backmatter,
+  body > section.chapter + section{
+    border-top:1px solid var(--rule);
+    margin-top:38px;
+  }
+
+  /* The matter plates read as part of the book, at the book's own scale. */
+  .bf-matter{ padding-top:38px;font-size:10.6pt }
+  .bf-matter h2{ font-size:15pt }
+
+  /* the cover leads the page, wider than the text column, no card */
+  body > section.cover{
+    max-width:900px;
+    padding:0;
+    margin:0 auto 4px;
+    background:transparent;
+    overflow:hidden;
+  }
+  section.cover img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    box-shadow:none;
+  }
+}
+
+@media screen and (max-width:700px){
+  section.cover{ max-width:100% }
+}
+
+@media screen and (max-width:640px){
+  section.sheet{ padding:28px 22px 34px }
+  .cover h1{ font-size:34pt }
+  .chapter h2{ font-size:18pt }
+  .chapter-num{ font-size:44pt }
+  .bar{ grid-template-columns:20mm 1fr 14mm }
+  .cover-foot{ flex-direction:column;align-items:flex-start }
+}
+/* BOOK-FORGE:MATTER-CSS v1 sha=54d2d29db345 */
+/* book-forge matter -- flow mode.
+ *
+ * Injected into essays that were never built as books. Each has its own
+ * stylesheet, and they collide in specific, verified ways:
+ *
+ *   - they reuse `rule`, `lead`, `card`, `meta`, `small`, `cover`, `beat`,
+ *     `kicker`, `num`, `refs` for their own purposes, and two of them define
+ *     `preface` to mean a pull-quote. So every selector here is scoped under
+ *     .bf-matter and nothing is styled by element alone at document scope.
+ *
+ *   - they define the SAME custom property names with different values, and
+ *     idp-barbell has --crimson with no --accent at all. So the tokens below
+ *     are declared on .bf-matter (never :root, which a host's later :root
+ *     block would win) and each falls back through the names the hosts
+ *     actually use before reaching a literal.
+ *
+ * Type is deliberately NOT set: font-family inherits from the host, so the
+ * matter reads as part of the book it is bound into rather than as a graft.
+ */
+
+.bf-matter {
+  --bf-ink:    var(--ink, #161A21);
+  --bf-soft:   var(--ink-soft, var(--soft, #4E5665));
+  --bf-faint:  var(--ink-faint, var(--faint, #7C8593));
+  --bf-rule:   var(--rule, #D8DCE3);
+  --bf-paper:  var(--paper, #FFFFFF);
+  --bf-accent: var(--accent, var(--crimson, #9E2B3A));
+
+  box-sizing: border-box;
+  color: var(--bf-ink);
+  text-align: left;
+  font-style: normal;
+}
+
+.bf-matter *,
+.bf-matter *::before,
+.bf-matter *::after { box-sizing: border-box; }
+
+/* Do NOT impose a width or padding by default. Every host already lays its
+   own content out -- a bare `section` card at 820px in one, a `.wrap` at 740px
+   in another -- and overriding that made the matter render at a different
+   measure from the book it sits in, which reads as a different document.
+   Set matter.measure in meta.yaml only for a host that constrains nothing. */
+/* Deliberately declares NO max-width. `.bf-flow` outranks a host's bare
+   `section { max-width: 820px }`, so declaring one here -- even
+   `var(--bf-measure, none)` -- overrides the host and renders the matter at a
+   different width from the book around it. Hosts that constrain nothing can
+   opt in with matter.measure in meta.yaml, which appends a rule below. */
+.bf-flow {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media print {
+  .bf-flow { break-before: page; page-break-before: always; padding-top: 0; }
+}
+
+.bf-matter h2 {
+  margin: 0 0 6mm;
+  padding: 0 0 3mm;
+  border-bottom: 1px solid var(--bf-rule);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: var(--bf-ink);
+}
+
+.bf-matter h3 {
+  margin: 7mm 0 3mm;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bf-ink);
+}
+
+.bf-matter p {
+  margin: 0 0 3.5mm;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--bf-soft);
+}
+
+.bf-matter b { font-weight: 600; color: var(--bf-ink); }
+.bf-matter i { font-style: italic; }
+
+.bf-matter .work {
+  color: var(--bf-ink);
+  font-size: 1rem;
+}
+
+.bf-matter .grant {
+  margin: 5mm 0;
+  padding: 4mm 5mm;
+  border-left: 3px solid var(--bf-accent);
+  background: var(--bf-paper);
+}
+.bf-matter .grant p:last-child { margin-bottom: 0; }
+
+.bf-matter .signoff {
+  margin-top: 5mm;
+  color: var(--bf-faint);
+}
+
+.bf-matter .imprint {
+  margin-top: 7mm;
+  padding-top: 3mm;
+  border-top: 1px solid var(--bf-rule);
+  font-size: 0.8rem;
+  color: var(--bf-faint);
+}
+
+/* --- about the author ------------------------------------------------- */
+
+.bf-matter .bio p:last-child { margin-bottom: 0; }
+
+.bf-matter .qrpanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+  margin: 8mm 0 0;
+}
+@media (max-width: 34rem) {
+  .bf-matter .qrpanel { grid-template-columns: 1fr; }
+}
+
+.bf-matter .qrcard {
+  display: flex;
+  gap: 4mm;
+  align-items: flex-start;
+  padding: 4mm;
+  border: 1px solid var(--bf-rule);
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* The host may style a bare .code; this is more specific, so it wins. */
+.bf-matter .qrcard .code {
+  flex: 0 0 auto;
+  width: 24mm;
+  background: none;
+  padding: 0;
+  border: 0;
+}
+.bf-matter .qrcard .code svg,
+.bf-matter .qr { display: block; width: 24mm; height: 24mm; }
+
+.bf-matter .qrcard .what {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+  min-width: 0;
+}
+.bf-matter .qrcard .what b { font-size: 0.9rem; }
+.bf-matter .qrcard .what span {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--bf-soft);
+}
+.bf-matter .qrcard .what code {
+  font-size: 0.78rem;
+  color: var(--bf-accent);
+  background: none;
+  padding: 0;
+}
+
+.bf-matter .colophon {
+  margin-top: 9mm;
+  padding-top: 4mm;
+  border-top: 1px solid var(--bf-rule);
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--bf-faint);
+}
+.bf-matter .colophon b { color: var(--bf-soft); }
+/* /BOOK-FORGE:MATTER-CSS */
+
+</style>
+
+<!-- ============================ COVER ============================ -->
+<section class="sheet cover">
+  <img src="{{COVER_PAGE_URI}}" alt="Cover: the title A Monolith Wearing a Transformer, subtitled what we un-learned about decoupling, by Anuj Sadani.">
+</section>
+
+<!-- ============================ TITLE PAGE ============================ -->
+<section class="sheet titlepage">
+  <p class="kicker">A verified inquiry &middot; 2026</p>
+  <h1>A Monolith<br>Wearing a<br>Transformer</h1>
+  <div class="rule"></div>
+  <p class="sub">What we un-learned about decoupling.</p>
+  <p class="desc">A payments company announced a transformer trained on four
+    billion transactions, and proposed that routing, fraud, risk and checkout
+    all be served from it. The proposal arrived in a document containing a
+    latency specification that does not exist.</p>
+  <p class="desc">This paper takes the architecture seriously anyway. It asks
+    what service boundaries were for, what a shared backbone in the payment path
+    costs when it is wrong, and what the published evidence actually settles &mdash;
+    which is less than either side of the argument assumes.</p>
+  <p class="desc">The conclusion is not that the model is bad. It is that a
+    domain foundation model is a strong supporting system and a poor primary
+    one, and that the burden of proof runs the other way in infrastructure where
+    failure is expensive.</p>
+  <p class="byline">Anuj Sadani
+    <small>Every claim bound to a captured source</small>
+  </p>
+</section>
+
+<!-- BOOK-FORGE:FRONT-MATTER v1 sha=1e30a0e3e234 -->
+<section class="bf-matter bf-front bf-flow">
+  <h2>Copyright, permissions, and how this was made</h2>
+
+  <div class="legal">
+    <p class="work">A Monolith Wearing a Transformer &mdash; a verified inquiry into whether domain foundation models belong in the critical path of payment infrastructure.</p>
+
+    <p>Copyright &copy; 2026 Anuj Sadani.</p>
+
+    <div class="grant">
+      <p>All rights reserved. Quote it in a review or a piece of criticism with
+          attribution; anything further, please ask.</p>
+    </div>
+
+    <p>The sources are a separate matter. This paper is published alongside a
+      free companion archive &mdash; <span class="mono">tech.anujsadani.in/monolith-wearing-a-transformer</span>
+      &mdash; holding a saved copy of every source it cites, so that any claim can
+      be checked years from now even if the original page has moved or vanished.
+      Those saved copies remain the property of the publishers who wrote them and
+      are kept only as evidence.</p>
+    <p>Two claims in an earlier draft reached this paper at one remove &mdash; a
+      practitioner's account of Adyen's and Stripe's published work rather than
+      those publications themselves. Both were replaced with the primary sources
+      before publication, and both changed on contact with them; Section 6 says
+      how. One further claim, on the bulkhead pattern, cites an encyclopedia's
+      account of a book this author did not open, and Section 3 states that in
+      the text rather than here.</p>
+
+    <h3>A note on how this book was written</h3>
+
+    <p>An AI system drafted this book. Not "assisted with" &mdash; drafted it,
+      from the research through to the prose you are reading. I set the question
+      and its boundaries, made the judgment calls, argued with the drafts, and
+      put my name on the result. The errors are mine; the model does not get to
+      share the blame.</p>
+
+    <p>If that makes you wince, I understand the reflex. The internet is full of
+      confident, sourceless, frictionless text, and the reasonable response has
+      been to distrust anything that reads too smoothly. But the objection worth
+      taking seriously is not that a machine wrote it. It is that nobody checked
+      it.</p>
+
+    <p>So this book was built the other way round. Sources were captured to disk
+      and hashed before a word was drafted. Every factual sentence is bound to an
+      exact quotation inside one of those files, and a verification gate refused
+      to let the text ship until each binding checked out. The superscripts are
+      not decoration &mdash; they are the audit trail, and you can walk it
+      yourself in an afternoon.</p>
+
+    <p>That is the arrangement I would like to see become normal: let the machine
+      draft, and make the drafting answer for itself. If you compose every
+      sentence by hand, full respect &mdash; the craft shows. And if you notice
+      the em-dashes, they are mine. I have always written this way. Make your
+      peace with them.</p>
+
+    <p class="signoff">&mdash; A.S.</p>
+
+    <p class="imprint">First edition &middot; August 2026</p>
+  </div>
+
+</section>
+<!-- /BOOK-FORGE:FRONT-MATTER -->
+
+<!-- BOOK-FORGE:AFTER-COVER -->
+
+<!-- ===== SECTION 01 ===== -->
+<section class="sheet chapter">
+  <p class="chapter-num">01</p>
+    <h2>The number that does not exist</h2>
+    <p class="standfirst">A latency figure stated four times, in a comparison table, wearing a citation marker. It does not exist.</p>
+  <p class="dropcap">A research report crossed my desk describing a new payments foundation model.
+  Among its specifications was a latency figure: the model delivers inference
+  decisions within an ultra-low latency budget of <strong>29 milliseconds</strong>. The figure
+  appeared four times. Once in the prose. Once in a comparison table, against a
+  conventional-pipeline baseline of 200 to 800 milliseconds. Twice more in the
+  sections on serving infrastructure, where it was used to reason about what
+  hardware such a budget would demand.</p>
+  <p>Each instance carried a superscript citation marker.</p>
+  <p>The number does not exist.</p>
+  <p>Not in the vendor’s product page, not in its engineering blog, not in the launch
+  press release, not in the chief executive’s interview with a national
+  newspaper.<sup class="cite">c-008</sup> Those materials describe the model’s
+  decision speed the way marketing describes speed: “decisions made in
+  milliseconds” on the product page, “real time” and “instantly” everywhere else.
+  None of them states a numeric latency figure of any kind. Two targeted searches
+  turned up nothing further.</p>
+  <p>The 200-to-800-millisecond baseline it was measured against does not exist
+  either.</p>
+  <p>I want to be careful about what I am accusing here, because the interesting part
+  is not that someone lied. Nobody did. A language model produced a document about
+  a real system, with real numbers in it, and somewhere in the generation a
+  plausible latency landed in a slot that wanted one. The citation marker came
+  along because the surrounding sentences had citation markers. The comparison
+  table needed a left-hand column, so a range appeared. Everything downstream then
+  treated it as a specification, including the paragraphs that reasoned about GPU
+  requirements from it.</p>
+  <p>That is the failure worth understanding. Not fabrication as an act, but
+  fabrication as a <strong>shape</strong>: a document that looks cited, reads as technical, and
+  carries one load-bearing quantity that came from nowhere. The apparatus of rigor
+  survives intact while the thing it is attached to evaporates.</p>
+  <p>I checked the number because a verification pass forced me to. Every factual
+  sentence in this paper is bound to a passage in a source captured to disk, and a
+  gate refuses to publish when a binding is missing. The 29 milliseconds had no
+  binding available, which is a different experience from doubting it. I was not
+  suspicious of the figure. I liked the figure. It was the most concrete thing in
+  the document.</p>
+  <p class="beat">Why this opens a paper about architecture</p>
+  <p>Because the same document, on the strength of numbers assembled that way, made a
+  recommendation: that payment infrastructure should consolidate its many
+  task-specific models into a single shared transformer backbone. One model for
+  routing, fraud, risk, and checkout personalization, learning jointly, serving
+  every decision in the path.</p>
+  <p>That is not a small suggestion. It is a proposal to re-couple a system that an
+  industry spent fifteen years learning to decouple, in the one place where failure
+  is most expensive, on the authority of a document containing an invented
+  specification.</p>
+  <p>The recommendation might still be right. Architecture is not decided by the
+  provenance of the arguments made for it, and I will spend most of this paper
+  taking the case seriously. But there is a burden-of-proof question underneath,
+  and the 29 milliseconds is a useful way in, because it shows how little friction
+  there now is between <em>a claim about a system</em> and <em>a specification a reader will
+  design against</em>.</p>
+  <p class="beat">What the rest of this paper does</p>
+  <p>The next section sets out what was actually announced, separated from what was
+  asserted about it. Then the argument proper: what decoupling was for, why a
+  shared backbone in the payment path is a single point of failure by
+  construction, and what the evidence does and does not settle.</p>
+  <p>The conclusion, stated here so you can disagree with it early: <strong>a domain
+  foundation model is a strong supporting system and a poor primary one</strong>, and the
+  distinction is not about model quality. It is about what you can reason about
+  when it is three in the morning and the thing is wrong.</p>
+</section>
+
+<!-- ===== SECTION 02 ===== -->
+<section class="sheet chapter">
+  <p class="chapter-num">02</p>
+    <h2>What was actually announced</h2>
+    <p class="standfirst">What the company put on the record, what it left out, and the disclosure bar its own peers already clear.</p>
+  <p class="dropcap">Razorpay, an Indian payments company, announced a transformer-based foundation
+  model for payments called Vulcan. Stripped of the commentary that accreted around
+  it within forty-eight hours, here is what the company itself put on the record.</p>
+  <p><strong>The gains.</strong> Its product page states three: an 8–10% improvement in
+  success rates, five times more disputed transactions identified, and eight times
+  more international card fraud detected.<sup class="cite">c-001</sup></p>
+  <p><strong>The scale.</strong> Three trillion data points across four billion digital payments,
+  attributed to the company’s chief executive in a newspaper
+  interview.<sup class="cite">c-003</sup> The training and inference hardware is
+  reported as NVIDIA H100 GPUs with AWS supplying the cloud
+  infrastructure.<sup class="cite">c-004</sup></p>
+  <p><strong>The deployments.</strong> Blinkit, redBus and Bachatt are named in the launch
+  release.<sup class="cite">c-007</sup></p>
+  <p>All of that is real, correctly quoted, and worth taking seriously. A company
+  processing that volume has access to a signal nobody outside it has, and the
+  architectural idea — that a shared representation of transaction behavior
+  could serve routing and fraud and risk at once — is a genuinely good idea
+  that several serious engineering organizations are pursuing.</p>
+  <p class="beat">What is missing is the method</p>
+  <p>There is no baseline. No measurement window. No control. No confidence interval.
+  Not in the product page, not in the launch release, and not in the company’s own
+  engineering blog, which contains no benchmark, holdout, test set, precision or
+  recall figure at all.</p>
+  <p>This is not only my reading. Independent trade analysis reached it directly,
+  noting that enterprises “still lack baselines, testing methodology, confidence
+  intervals and independent validation needed for
+  assessment,”<sup class="cite">c-005</sup> and that the baseline for the
+  8–10% figure has not been released — leaving open what the
+  improvement was measured against.<sup class="cite">c-006</sup></p>
+  <p>Take the fraud figure, because it is the one that sounds most impressive. Eight
+  times more international card fraud detected. Against what detection rate?
+  Measured over what period? And — the question that decides whether the
+  number means anything — at what false-positive rate?</p>
+  <p>A fraud model can always detect more fraud. Decline everything and you detect all
+  of it. The only version of that claim which carries information is one that holds
+  the false-positive rate fixed, and no published Razorpay material does.</p>
+  <p class="beat">The disclosure bar its peers clear</p>
+  <p>I originally wrote this section as a criticism of the category. That was wrong,
+  and three sources corrected it.</p>
+  <p><strong>Plaid</strong>, publishing on its own sequential foundation model, states results at
+  named operating points: 26.5% more dollar value in returns prevented <em>at a fixed
+  1% action rate</em>, and default risk reduced 13.6% <em>at a 70% approval
+  rate</em>.<sup class="cite">c-019</sup> Both are vendor-published, exactly like
+  Razorpay’s. The difference is the clause after the comma. An operating point is
+  what makes a detection number readable, because it fixes the thing that could
+  otherwise be traded away to manufacture the headline.</p>
+  <p><strong>Stripe</strong>, writing first-hand about its own payments foundation model, names a
+  baseline and a specific attack class rather than a bare multiplier: “our detection
+  rate for attacks on large users significantly increased—from 59% to
+  97%”<sup class="cite">c-028</sup> for card-testing attacks. Same kind of company,
+  same kind of announcement, same commercial incentive. The difference is that a
+  reader can tell what improved and from where.</p>
+  <p>A consultancy survey of the category reports its figures with a stated sample of
+  60 enterprise pilots, though it reports ceilings — “up to” — rather
+  than typical results.<sup class="cite">c-020</sup> And practitioners observe that
+  firms in this space have been putting methods, and failures, on the public
+  record.<sup class="cite">c-023</sup></p>
+  <p>So the honest finding is narrower and harder than the one I first reached.
+  Transactional foundation models are not inherently unverifiable. <strong>Razorpay’s
+  disclosure sits below a bar its own peers already
+  clear.</strong><sup class="cite">c-024</sup></p>
+  <p class="beat">Why launch coverage does not help</p>
+  <p>Something worth noticing about the dozen trade articles that appeared alongside
+  the announcement: they are one source. Each restates the same release. Counting
+  them as corroboration is a category error, and NVIDIA and AWS — both named
+  commercial partners in the launch — are participants rather than
+  validators.</p>
+  <p>There is also a recency problem that cuts in Razorpay’s favor, and it should be
+  said plainly. The model was announced days before this research. Nothing has had
+  time to be independently verified. That is an absence of scrutiny, not evidence
+  of failure, and if a merchant publishes its own before-and-after next quarter,
+  much of this section becomes obsolete in the best way.</p>
+</section>
+
+<!-- ===== SECTION 03 ===== -->
+<section class="sheet chapter">
+  <p class="chapter-num">03</p>
+    <h2>What we un-learned about decoupling</h2>
+    <p class="standfirst">Service boundaries were not fashion. They were an answer to a question about what happens when one part of a system is wrong.</p>
+  <p class="dropcap">Fifteen years of payment engineering can be summarised as one long argument about
+  boundaries. Where to put them, what to pay for them, and what breaks when they are
+  removed. The argument was not about elegance and it was not about fashion, though
+  both were used as ammunition at various points. It was about a single question that
+  every senior engineer eventually learns to ask before any other:</p>
+  <p><em>When this part is wrong, what else is wrong?</em></p>
+  <p>That question is the whole of it. Everything the industry built between the
+  mid-2000s monolith and the service topologies of today — the circuit
+  breakers, the timeouts, the bounded contexts, the separate deployment pipelines,
+  the independent scaling groups, the per-service on-call rotations — is
+  machinery for producing a narrow answer to it.</p>
+  <p class="beat">The pattern has a name</p>
+  <p>The name is the bulkhead. It is defined as a technique “for isolating parts of an
+  application into pools or compartments so that failure of one component will not
+  cascade to other components,”<sup class="cite">c-030</sup> and the metaphor is
+  naval: a ship’s hull is divided into watertight sections so that a breach floods
+  one compartment rather than the vessel.</p>
+  <p>I should say where that definition comes from, because this paper opened by
+  objecting to a citation that pointed at nothing. The pattern’s canonical source is
+  Michael Nygard’s <em>Release It!</em>, published in 2007. I did not open that book. What I
+  am citing is an encyclopedia’s account of the pattern the book introduced, which is
+  a weaker citation than the book itself would be, and it is the one I actually have.</p>
+  <p>The definition is enough for the argument, because the argument turns on a single
+  word in it: <strong>cascade</strong>. A bulkhead does not prevent failure. Nothing prevents
+  failure. A bulkhead determines the <em>extent</em> of failure — it converts an
+  unbounded event into a bounded one. The ship still has a hole in it. It is a hole in
+  compartment four.</p>
+  <p class="beat">Blast radius is the entire argument</p>
+  <p>Once you see boundaries as blast-radius machinery, most of the microservices debate
+  collapses into something considerably less interesting than it was made to sound.</p>
+  <p>Service decomposition was never primarily about development velocity, though that
+  was the pitch on the conference circuit and it is what most organizations bought.
+  Velocity is a second-order benefit and, for a large number of teams, it never
+  arrived at all — distributed systems are harder to change than local ones, and
+  a great many companies discovered this the expensive way. The durable benefit was
+  narrower and less exciting: when the fraud scorer degrades, checkout still
+  completes. When the routing optimizer starts returning nonsense, authorization still
+  runs on a fallback path. When one model’s feature pipeline goes stale, the other
+  four do not.</p>
+  <p>That is not a performance property. It is a <strong>containment</strong> property, and it is the
+  one that determines what three in the morning looks like.</p>
+  <p>A payment system is unusual in how sharply this matters. Most software fails softly:
+  a page renders wrong, a report is late, a recommendation is poor. Payment
+  infrastructure fails in money, in both directions, at the rate of arriving traffic,
+  and it fails while the merchant is watching a real-time dashboard of transactions
+  not completing. The cost of a failure is not the failure. It is the failure
+  multiplied by the minutes it takes to work out which component is wrong.</p>
+  <p>Boundaries are how you divide that multiplication down.</p>
+  <p class="beat">What a shared backbone does to the boundary</p>
+  <p>Now put the proposal from Section 1 against that.</p>
+  <p>One transformer, trained jointly, serving routing, fraud, risk and checkout
+  personalization. Every decision in the payment path drawing on the same learned
+  representation of transaction behavior. The efficiency case is real and I do not
+  want to be cute about it: shared representation genuinely is more sample-efficient,
+  genuinely does let a signal learned in fraud inform routing, and genuinely does cut
+  the number of independently maintained feature pipelines from four to one.</p>
+  <p>The architectural cost is the exact thing the bulkhead was for. A shared backbone
+  serving all four decisions removes the compartment boundary that separates them,
+  which makes its failure a single point of failure <strong>by construction rather than by
+  misconfiguration</strong>.<sup class="cite">c-031</sup></p>
+  <p>The distinction between those two phrases is the reason this section exists.</p>
+  <p>A single point of failure by misconfiguration is a bug. Somebody put the replica in
+  the same availability zone as the primary; somebody forgot the timeout; somebody
+  scaled the group down to one. Bugs of that class get found, filed and fixed, and the
+  architecture is unchanged afterward.</p>
+  <p>A single point of failure by construction is not a bug. It is the design working as
+  intended. There is no configuration change that restores the compartment, because
+  the compartment was traded away deliberately in exchange for the shared
+  representation. You can add redundancy — more replicas of the same model, more
+  regions, faster failover — and none of it touches the failure mode that
+  matters here, which is not the model being <em>down</em> but the model being <em>wrong</em>.</p>
+  <p>Redundancy protects against a component that has stopped answering. It does nothing
+  whatsoever against a component that is answering confidently and incorrectly across
+  every decision it serves. Five replicas of a drifted model produce the same drifted
+  answer five times, quickly.</p>
+  <p class="beat">The failure mode that has no page</p>
+  <p>Consider how each architecture behaves under a subtle degradation — not an
+  outage, but a distribution shift that moves the model’s calibration.</p>
+  <p>In the decomposed system, the fraud model’s false-positive rate climbs. Somebody
+  notices, because the fraud model has an owner, a dashboard, a precision metric and
+  an alert threshold. The routing optimizer is unaffected, because it is a different
+  model with different inputs. The blast radius is one decision type, one team, one
+  rollback.</p>
+  <p>In the consolidated system, the shared representation shifts. Fraud gets worse.
+  Routing gets worse. Risk gets worse. Checkout personalization gets worse. They get
+  worse <em>together</em>, and correlated degradation across four unrelated metrics is
+  precisely the signal monitoring is worst at attributing, because every downstream
+  dashboard moves at once and none of them points at the cause. The first hypothesis
+  in the incident channel will not be “the backbone drifted.” It will be “something is
+  wrong with traffic,” and it will take a while.</p>
+  <p>Rollback is worse still. In the decomposed system you roll back one model and the
+  other three keep their current versions. In the consolidated system, rolling back
+  the backbone reverts every improvement every team shipped through it since the last
+  known-good checkpoint. The unit of reversion is no longer a change. It is the whole
+  brain.</p>
+  <p class="beat">The honest counter-case</p>
+  <p>There is a real argument on the other side and it deserves stating at full strength,
+  because a paper that only argues one way is doing the same thing as the document
+  that started this one.</p>
+  <p><strong>Boundaries are not free, and their cost is also paid in incidents.</strong> A decomposed
+  system has four feature pipelines that can independently go stale, four sets of
+  training-serving skew, four deployment paths, and a coordination problem whenever a
+  signal needs to cross a boundary. Distributed systems introduce failure modes that
+  monoliths simply do not have: partial failure, network partitions, cascading
+  timeouts, and the delightful class of bug where two services disagree about the
+  state of the same transaction. Nobody who has operated one believes the boundaries
+  are pure benefit.</p>
+  <p><strong>And “four models” is not four bulkheads.</strong> In most real payment stacks those
+  models already share a feature store, a streaming platform, an inference cluster and
+  an identity graph. The compartment walls are thinner than the architecture diagram
+  suggests. Consolidating the models may remove less isolation than this section
+  implies, because a good deal of it was already gone.</p>
+  <p>I accept both points, and they narrow the claim rather than defeat it. The claim is
+  not that decomposition is safe and consolidation is dangerous. It is that
+  <strong>consolidation moves a specific, well-understood, containable class of failure into
+  a class that is none of those things</strong>, and that this trade should be made
+  deliberately, with the containment cost named, rather than as a side effect of
+  adopting an architecture because it is the shape of the moment.</p>
+  <p>Which raises the obvious question, and it is what Section 4 is about: has anyone
+  actually tried this?</p>
+</section>
+
+<!-- ===== SECTION 04 ===== -->
+<section class="sheet chapter">
+  <p class="chapter-num">04</p>
+    <h2>Somebody already tried this</h2>
+    <p class="standfirst">A payments platform at comparable scale attempted the consolidation, published what broke, and intends to try again.</p>
+  <p class="dropcap">The argument in Section 3 is deduction. It reasons from what a boundary is to what
+  removing one costs, and deduction is the weakest kind of evidence this paper deals
+  in. So the honest next move is to go looking for somebody who actually attempted the
+  consolidation in production and said what happened.</p>
+  <p>One did, and published it. The account is more useful than the argument, and it is
+  more useful in a direction I did not expect.</p>
+  <p class="beat">What Adyen reported</p>
+  <p>Adyen — a payments platform operating at a scale comparable to the systems
+  this paper is about — has written publicly about the machine learning behind
+  its authorization-optimization work. Buried in that write-up is a sentence that
+  does more work than anything else in this corpus.</p>
+  <p>The company reports having “tried with bigger artifacts and complex deep learning
+  models” that combine multiple decisions, and having found that these would often
+  “compromise the engineering requirements (latency, uptime) of online deployments in
+  a critical flow.”<sup class="cite">c-025</sup></p>
+  <p>Read that slowly, because the specific words matter and I got them wrong the first
+  time. I originally reached this through a practitioner’s summary, which rendered it
+  as <em>tried it, failed, kept trying</em>. That rendering was directionally right and lost
+  the part that decides the question.</p>
+  <p><strong>What failed was not accuracy.</strong> Adyen does not report that the consolidated model
+  predicted worse. It reports that the consolidated model compromised <strong>latency and
+  uptime</strong>, and that this happened <strong>in a critical flow</strong>.</p>
+  <p>Those are the two axes on which payment infrastructure is actually judged, and
+  “critical flow” is the precise scope condition. Nobody is arguing that a large
+  shared model is a bad idea for a nightly batch scoring job or an offline
+  merchant-risk review. The claim under examination is specifically about the
+  synchronous path, where the transaction is waiting and the timeout is real, and that
+  is exactly the scope in which a company at this scale reports the approach failing.</p>
+  <p>This is the closest thing in the entire corpus to a measurement of the Section 3
+  argument. It arrives from a first-party engineering write-up rather than a
+  benchmark, which makes it a vendor source and imperfect evidence — but it is a
+  vendor reporting a failure of its own preferred direction, which is the kind of
+  vendor claim worth the most.</p>
+  <p class="beat">The half a selective reader would drop</p>
+  <p>Immediately alongside it, Adyen says something that cuts the other way, and this
+  paper would forfeit its standing if it printed the first quote without the second.</p>
+  <p>The company states that it keeps investigating that line of thinking and is
+  “expecting to move the whole pipeline to deep learning architectures in the short
+  future.”<sup class="cite">c-026</sup></p>
+  <p>So Adyen is not a witness against consolidation. Adyen is a witness that
+  consolidation is <strong>operationally hard in a critical flow today</strong>, while intending to
+  get there. The engineering constraint is real and current; the company treats it as
+  a constraint to be engineered past, not a law.</p>
+  <p>Quoting only the first sentence would have made this section much stronger and much
+  less true. It would also have been the same move Section 1 spent two pages
+  criticising: taking a real source and rendering it into the shape the argument
+  wanted. The difference between a citation and an argument is that a citation still
+  says what it says after you have finished needing it.</p>
+  <p class="beat">What they run instead</p>
+  <p>The third thing Adyen discloses is the one most useful to a team making this
+  decision on Monday, and it is not a negative result at all. It is an architecture.</p>
+  <p>The system, as described, “consists of a collection of machine learning models of
+  various natures that share awareness and knowledge,”<sup class="cite">c-027</sup>
+  optimized globally toward a shared objective rather than merged into a single model.</p>
+  <p>That sentence is worth more than the two before it. It describes a third option
+  which the monolith-versus-microservices framing tends to hide, because that framing
+  presents the choice as binary: one model that knows everything, or several models
+  that know nothing about each other.</p>
+  <p>The middle position is <strong>shared objective, separate artifacts</strong>. The models are
+  coordinated — they see each other’s signal, they optimize toward a common
+  outcome rather than four locally optimal ones, they are trained with awareness of
+  the whole — and they remain independently deployable, independently
+  rollbackable, independently ownable, independently <em>degradable</em>. You get most of the
+  joint-learning benefit that motivates a shared backbone. You keep the compartment.</p>
+  <p>It is a harder system to build than either extreme. It requires deciding what
+  “awareness” means between models, keeping shared representations from silently
+  drifting apart, and holding a global objective that four teams can each move toward
+  without one team’s improvement showing up as another’s regression. Nobody should
+  pretend this is the easy path. It is, however, the path the company that tried both
+  ends of the spectrum currently operates.</p>
+  <p class="beat">Single point of failure, single point of intelligence</p>
+  <p>Put Sections 3 and 4 together and the shape of the objection sharpens.</p>
+  <p>The problem with a shared backbone in the payment path is not that transformers are
+  unsuited to transaction data. The evidence on that question is genuinely thin in
+  both directions, which Section 5 is about. The problem is a governance one wearing
+  an architecture costume.</p>
+  <p>When one model serves routing, fraud, risk and checkout, four decisions with four
+  different owners, four different regulatory exposures, four different tolerances for
+  error and four different definitions of “wrong” all become <strong>one deployment</strong>.</p>
+  <p>Ask the ordinary operational questions of that arrangement and they stop having
+  ordinary answers:</p>
+  <ul>
+  <li>Who approves a release? The fraud team’s acceptable regression is the routing
+  team’s outage.</li>
+  <li>What does a canary measure? A canary needs a metric. This artifact has four, and
+  they do not move together.</li>
+  <li>Who is paged when it degrades? The alert fires on whichever downstream metric
+  crosses first, which is not the same as whichever decision broke.</li>
+  <li>What is the rollback unit? Everything, since the last checkpoint, for everyone.</li>
+  <li>What do you tell a regulator asking why a specific transaction was declined? The
+  answer now involves a model that was also, in the same forward pass, optimizing
+  conversion.</li>
+  </ul>
+  <p>That last one is not rhetorical. A model jointly trained on fraud and conversion has
+  a shared representation in which those objectives are entangled by design, and
+  “entangled by design” is a difficult phrase to use in a compliance conversation.</p>
+  <p>None of these are model-quality problems. A better transformer does not fix any of
+  them, because none of them are about the transformer being wrong. They are about
+  what happens to accountability when four decisions stop being four things.</p>
+  <p>That is the case against putting it in the critical path. Section 5 asks the fairer
+  question: what does the published evidence actually settle about whether it belongs
+  there at all?</p>
+</section>
+
+<!-- ===== SECTION 05 ===== -->
+<section class="sheet chapter">
+  <p class="chapter-num">05</p>
+    <h2>Nobody benchmarked this</h2>
+    <p class="standfirst">Every published benchmark in this literature stops five orders of magnitude short of where these systems run.</p>
+  <p class="dropcap">Here is the sentence this paper would most like to write, and cannot:</p>
+  <p><em>In a controlled comparison on production payment traffic, a consolidated
+  transformer backbone serving routing, fraud, risk and checkout was measured against
+  an equivalent set of task-specific models, and the result was X.</em></p>
+  <p>That study does not exist. Not in a form I could find, not from any of the companies
+  building these systems, not in the academic literature, and not in the trade
+  analysis that covers them. The most consequential architectural decision in this
+  category has no published head-to-head measurement behind it, on either side.</p>
+  <p>I want to be precise about what kind of absence that is, because the distinction
+  governs how much weight the rest of this paper can carry. There are three states
+  that get mistaken for each other constantly:</p>
+  <ol type="1">
+  <li><strong>Checked and absent.</strong> The evidence was looked for and is not there.</li>
+  <li><strong>Not checked.</strong> Nobody looked, or the search ran out of road.</li>
+  <li><strong>Unknowable from public sources.</strong> The data exists inside a company and is not
+  disclosed.</li>
+  </ol>
+  <p>The consolidated-versus-decomposed comparison is the third. Every company in a
+  position to run it has run some version of it internally — you do not deploy
+  one of these without an A/B test — and none of them has published the design.
+  What reaches the outside is the outcome of the winning arm, stated as a product
+  claim.</p>
+  <p class="beat">The literature that gets cited instead</p>
+  <p>When the case for a transformer backbone needs academic support, it reaches for the
+  tabular deep learning literature, and this is where the argument quietly breaks.</p>
+  <p>The benchmark most often cited for the opposing position — that gradient-boosted
+  trees still beat neural networks on structured data — scopes its own finding
+  explicitly. It reports that “tree-based models remain state-of-the-art on
+  medium-sized data ($$10K samples).”<sup class="cite">c-009</sup> Ten thousand
+  samples. The parenthesis is the authors’ own, in their own abstract, and it is a
+  scope condition rather than a hedge.</p>
+  <p>The system under discussion in this paper is trained on four billion payments and
+  three trillion data points.<sup class="cite">c-003</sup></p>
+  <p>That is a gap of roughly five to eight orders of magnitude depending on which
+  quantity you compare, and it means the literature cited to justify a transformer
+  backbone measures a data regime so far from the deployment regime that it <strong>neither
+  supports nor refutes</strong> the payments architecture.<sup class="cite">c-016</sup></p>
+  <p>This cuts both ways, and I should be explicit that it does not rescue my position
+  either. The “trees beat neural nets on tabular data” result is the single most
+  commonly deployed objection to models like these, and at four billion samples that
+  result is out of scope. Anyone using it as an argument against a payments foundation
+  model — and it gets used that way constantly — is citing a finding about
+  ten thousand rows to dispute a system trained on four billion. My argument in
+  Sections 3 and 4 has to stand on containment, not on accuracy, because the accuracy
+  literature does not reach.</p>
+  <p>The other pillar has a similar problem. The leading tabular foundation model’s
+  strong results were established largely in closed evaluation settings, and its
+  authors state plainly that “the majority of this research remains confined to closed
+  environments,” leaving its robustness in open ones an open
+  question.<sup class="cite">c-010</sup> A closed evaluation is a benchmark where the
+  distribution is fixed and known. A payment network is the opposite of that by
+  definition: adversaries adapt, merchants change mix, issuers change policy, and the
+  distribution moves because someone is being paid to move it.</p>
+  <p class="beat">The one measured comparison, and why it is not about payments</p>
+  <p>There is exactly one study in this corpus that measures a monolithic architecture
+  against a modular one on the same task. It is in network configuration repair, and
+  it found that “agentic architectures outperform base LLMs in repair efficacy (by 12%
+  on average) and safety (by 17% on average).”<sup class="cite">c-013</sup></p>
+  <p>That result runs against the consolidation thesis: the decomposed, coordinated
+  design beat the single-model baseline on both quality and safety. It is also, I must
+  say clearly, <strong>a different class of system in a different domain</strong>, and I would not
+  accept it as evidence if it pointed the other way.</p>
+  <p>I raise it for one reason. The source documents that started this inquiry cited the
+  monolithic-versus-modular question as settled in favour of consolidation, resting
+  that on an untraceable claim and on evidence drawn from a different class of system
+  — while the one measured comparison actually present in the corpus found
+  modular designs winning.<sup class="cite">c-018</sup> The evidence on this question
+  is genuinely mixed and thin. That is the finding. Anyone telling you the direction
+  is established, in either direction, is telling you about their priors.</p>
+  <p class="beat">What the vendors have shown, which is not nothing</p>
+  <p>Set the academic literature aside, because the strongest evidence in this category
+  is operational and comes from the companies themselves.</p>
+  <p>Stripe reports that after deploying its payments foundation model, “our detection
+  rate for attacks on large users significantly increased—from 59% to
+  97%”<sup class="cite">c-028</sup> for card-testing attacks. Plaid reports its
+  sequential model “prevented 26.5% more dollar value in returns at a fixed 1% action
+  rate.”<sup class="cite">c-019</sup> A consultancy analysis of the category reports
+  conversion uplift of up to 6% and an 86% reduction in manual risk rules across 60
+  enterprise pilots, though it reports ceilings rather than typical
+  results.<sup class="cite">c-020</sup></p>
+  <p>These are vendor-published and they are real. A jump from 59% to 97% on a named
+  attack class, against a stated baseline, is a substantial result that no amount of
+  architectural argument talks away. Something is working.</p>
+  <p>But notice what none of them measures. Every one is a <strong>capability</strong> result: the
+  model detects more, prevents more, converts better. Not one is a <strong>containment</strong>
+  result. None of them reports what happened when the model was wrong, how long
+  attribution took, what the rollback cost, or how correlated the degradation was
+  across the decisions it served.</p>
+  <p>That asymmetry is not a conspiracy. Capability results are what a launch post is
+  for, and containment results are what a post-incident review is for, and companies
+  publish the former far more readily than the latter. It does mean the public
+  evidence base is structurally biased toward the case for consolidation, because the
+  costs this paper is about are the costs that do not get written up.</p>
+  <p class="beat">What would settle it</p>
+  <p>The study is not hard to specify, which is part of why its absence is frustrating.
+  Take production traffic. Serve one arm from a consolidated backbone and one from
+  task-specific models with equivalent training data. Report:</p>
+  <ul>
+  <li>decision quality per task at fixed operating points, not headline multipliers;</li>
+  <li>p99 latency under peak load, in the critical flow;</li>
+  <li><strong>mean time to attribution</strong> during an induced degradation — the number this
+  entire paper is really about;</li>
+  <li>rollback blast radius, measured in reverted changes rather than minutes;</li>
+  <li>correlated-error rate across the four decision types.</li>
+  </ul>
+  <p>Three of those five have never been published by anyone in this category. Until they
+  are, the architectural argument is settled by whoever writes more confidently, which
+  is how the document in Section 1 came to recommend re-coupling a payment system on
+  the authority of a latency figure that did not exist.</p>
+</section>
+
+<!-- ===== SECTION 06 ===== -->
+<section class="sheet chapter">
+  <p class="chapter-num">06</p>
+    <h2>Beside the path, not in it</h2>
+    <p class="standfirst">A representation layer feeding specialists, and the five conditions that should gate anything moving into the path.</p>
+  <p class="dropcap">Everything so far has been an objection. Objections are cheap, and a paper that
+  stops at one is asking an engineering organization to do nothing, which is never the
+  right answer when a technology is this obviously useful.</p>
+  <p>So here is the position stated constructively.</p>
+  <p>A payments foundation model is a <strong>strong supporting system and a poor primary
+  one</strong>. The distinction is not about quality. It is about where in the path the
+  artifact sits, and what still works when it is wrong.</p>
+  <p>That sentence needs unpacking into something a team can act on, because “supporting
+  system” on its own is the kind of phrase everyone agrees with and nobody implements.</p>
+  <p class="beat">Three places it belongs, and one it does not</p>
+  <p><strong>As a representation layer.</strong> This is the highest-value position and the one with
+  the most evidence behind it. The model learns a compressed encoding of transaction
+  behavior; downstream task-specific models consume that encoding as features and make
+  the actual decisions.</p>
+  <p>Stripe describes exactly this shape. Its foundation model “compresses payments into
+  atomic embeddings, which we then leverage across multiple card testing use cases,
+  such as training classifiers on sequences of embeddings.”<sup class="cite">c-029</sup>
+  The foundation model produces representations. Classifiers, plural, consume them and
+  decide.</p>
+  <p>I want to flag a correction here rather than bury it, because I made the error this
+  paper exists to catch. I had originally written that Stripe positions its model as
+  “an addition, not a replacement” — a clean, quotable phrase that fit the
+  argument perfectly. It is not Stripe’s phrase. The word <em>replace</em> does not appear in
+  either of Stripe’s primary write-ups; the phrasing came from a practitioner’s
+  summary of them, and I repeated it as though it were the company’s own. What the
+  primary sources support is narrower and, as it turns out, architecturally stronger:
+  not a positioning statement about what the model is <em>not</em>, but a description of what
+  it actually <em>is</em> — a representation layer feeding specialists.</p>
+  <p>The containment properties follow directly. Each classifier keeps its own owner,
+  threshold, deployment and rollback. If the embeddings drift, the classifiers can be
+  retrained or pinned to a previous embedding version independently. The compartment
+  survives, because the shared thing produces <em>inputs</em> rather than <em>verdicts</em>.</p>
+  <p><strong>As a coordinated peer.</strong> The Adyen shape from Section 4: “a collection of machine
+  learning models of various natures that share awareness and
+  knowledge,”<sup class="cite">c-027</sup> optimized toward a global objective. Harder
+  to build, and it preserves the property that matters — separate artifacts,
+  separate deployment, shared purpose.</p>
+  <p><strong>Out of the synchronous path entirely.</strong> A large amount of what these models are
+  genuinely best at does not need to answer in single-digit milliseconds: post-hoc
+  fraud review, chargeback prediction, merchant risk scoring, dispute triage,
+  reconciliation anomaly detection, batch retry strategy. In asynchronous positions
+  the latency and uptime constraints Adyen ran into<sup class="cite">c-025</sup> stop
+  binding, and a wrong answer is caught by a human or a later pass rather than by a
+  declined transaction.</p>
+  <p><strong>Where it does not belong</strong> is the position the source document recommended: sole
+  authority over routing, fraud, risk and checkout in the synchronous path, with no
+  independent fallback for any of them.</p>
+  <p class="beat">Promotion criteria</p>
+  <p>A supporting system can earn its way into the critical path. It should have to, and
+  the bar should be written down before the model is built rather than negotiated
+  afterwards by whoever is most enthusiastic.</p>
+  <p>Five conditions. I would not promote without all five, and the third is the one
+  almost nobody has.</p>
+  <p><strong>1. A fallback that is exercised, not documented.</strong> Every decision the model serves
+  must have a rules-based or simpler-model path that produces an acceptable, if worse,
+  answer. The fallback must run in production regularly — a percentage of live
+  traffic, continuously — because an untested fallback is a comment in a runbook
+  and will not work on the night it is needed. This is what makes the failure
+  containable rather than catastrophic.</p>
+  <p><strong>2. Per-decision observability, not per-model.</strong> The model’s health must be
+  measurable separately for each decision it serves: fraud precision, routing success,
+  risk calibration, conversion. Aggregate model metrics are useless here, because the
+  failure mode of a shared backbone is one decision degrading while the average holds.</p>
+  <p><strong>3. A measured mean time to attribution.</strong> Induce a degradation in a staging
+  environment carrying replayed production traffic. Measure how long it takes the
+  on-call rotation to identify the shared backbone as the cause. If that number is
+  unknown, the organization does not know what an incident costs and is not ready to
+  take the trade. This is the number Section 5 asked for and nobody publishes.</p>
+  <p><strong>4. Independent rollback.</strong> It must be possible to revert one decision path to its
+  previous behavior without reverting the others. In practice this usually means
+  versioned embeddings with pinning, since rolling back the backbone itself cannot be
+  made granular.</p>
+  <p><strong>5. Regional and segment validation before scale.</strong> A model trained predominantly
+  on one market’s behavior can skew where regional payment behavior is
+  under-represented, producing both false positives and
+  negatives.<sup class="cite">c-012</sup> Cross-border and long-tail segments need
+  their own operating-point measurements before the model governs them, not after.</p>
+  <p class="beat">Why the burden of proof runs this way</p>
+  <p>There is a fair objection to all of the above: it is conservative, it is expensive,
+  and taken literally it would have blocked most of the good infrastructure of the
+  last decade.</p>
+  <p>The response is about <strong>asymmetry of consequence</strong>, and it is the reason this paper
+  does not generalise beyond its domain.</p>
+  <p>If a payments foundation model is deployed as a supporting system and turns out to
+  be excellent, the cost is a slower rollout and some duplicated inference spend. The
+  organization arrives at the same place, later, having spent more.</p>
+  <p>If it is deployed as the primary decision-maker and turns out to be subtly wrong,
+  the cost is money moving incorrectly at the rate of arriving traffic, across four
+  decision types simultaneously, with attribution slowed by the very correlation that
+  made the architecture attractive.</p>
+  <p>Those two errors are not the same size, and where the errors are not the same size,
+  the burden of proof belongs on the side with the larger one. That is not conservatism
+  about machine learning. It is the ordinary standard for infrastructure where failure
+  is expensive, and it is the standard this industry already applies to databases,
+  ledgers, and settlement systems without anyone finding it controversial.</p>
+  <p>The model is not the problem. The model is good. The question is only whether it is
+  load-bearing, and load-bearing is a decision about the building rather than about the
+  material.</p>
+</section>
+
+<!-- ===== SECTION 07 ===== -->
+<section class="sheet chapter">
+  <p class="chapter-num">07</p>
+    <h2>What would change my mind</h2>
+    <p class="standfirst">The evidence that would change this position, named in advance.</p>
+  <p class="dropcap">A position that cannot be dislodged by evidence is not a position, it is a
+  preference. So this section names, in advance, what would move mine — written
+  before anyone gets the chance to produce it, which is the only time such a list is
+  worth anything.</p>
+  <p class="beat">Five things that would change the conclusion</p>
+  <p><strong>A published attribution measurement.</strong> If any company operating a consolidated
+  backbone in the payment path published mean time to attribution during induced
+  degradation, and it were comparable to a decomposed system’s, the containment
+  argument in Sections 3 and 4 would be substantially weakened. This is the single
+  piece of evidence that matters most, and its absence is the load-bearing gap in the
+  whole category. I would rather have this than any accuracy result.</p>
+  <p><strong>A production A/B on architecture rather than capability.</strong> Consolidated backbone
+  against task-specific models, same traffic, same training data, decision quality
+  reported at fixed operating points, plus latency at p99 and correlated-error rate
+  across decision types. If consolidation won on quality <em>and</em> held on containment,
+  Section 6’s promotion criteria would be the right process arriving at the opposite
+  answer, and I would accept that.</p>
+  <p><strong>Adyen’s stated plan working.</strong> Adyen says it expects “to move the whole pipeline
+  to deep learning architectures in the short future.”<sup class="cite">c-026</sup> If
+  that happens and the company reports the latency and uptime constraints resolved in
+  a critical flow, the strongest piece of empirical evidence in this paper turns into
+  evidence for the other side. I have written this paper knowing that the company
+  whose failed attempt anchors my argument intends to try again, and I would consider
+  their success a more informative result than my reasoning.</p>
+  <p><strong>Regulatory clarity that entangled objectives are acceptable.</strong> A good deal of
+  Section 4’s governance objection assumes that jointly optimizing fraud and conversion
+  in one representation creates an explainability problem for a declined transaction.
+  If supervisors examined this arrangement and found it adequate for adverse-action
+  reasoning, the accountability half of my objection loses most of its force, leaving
+  only the operational half.</p>
+  <p><strong>Cheap, granular rollback.</strong> If versioned representations with per-decision pinning
+  become standard tooling rather than bespoke engineering, the “unit of reversion is
+  the whole brain” problem stops being structural and becomes a solved one. Much of
+  Section 3 is contingent on rollback being coarse. It does not have to stay that way.</p>
+  <p class="beat">What would not change it</p>
+  <p>Symmetrically, and more importantly: better headline numbers would not change it.</p>
+  <p>Another vendor reporting another multiplier — more fraud caught, more
+  conversion, higher detection — is evidence about capability, and this paper has
+  not disputed capability once. Stripe’s move from 59% to 97% on a named attack
+  class<sup class="cite">c-028</sup> is a genuinely strong result and it is compatible
+  with every word of my argument, because the argument was never that the model
+  predicts badly. A capability result cannot answer a containment question, and the
+  accumulation of capability results does not eventually add up to one.</p>
+  <p>Nor would an appeal to inevitability. “Everything consolidates eventually” is a
+  prediction, not a measurement, and it has been right about some layers of the stack
+  and wrong about others.</p>
+  <p class="beat">The disclosure point, restated as a request</p>
+  <p>The finding this research changed its mind on partway through deserves to be the last
+  substantive thing said, because it is the most actionable.</p>
+  <p>I began by treating unverifiability as a property of the category — that
+  transactional foundation models are inherently unmeasurable from outside. Three
+  sources corrected that. Plaid states results at fixed operating points, naming the
+  action rate and the approval rate its numbers hold at.<sup class="cite">c-019</sup>
+  Stripe names a baseline and a specific attack class.<sup class="cite">c-028</sup>
+  Adyen published an approach that did not work. Practitioners observe that companies
+  in this space “are putting their methods, and even their failures, on the public
+  record.”<sup class="cite">c-023</sup></p>
+  <p>So the honest, narrower finding is that Razorpay’s disclosure sits <strong>below a bar its
+  own peers already clear</strong>.<sup class="cite">c-024</sup> That is a fixable problem,
+  and fixing it costs nothing but a clause.</p>
+  <p>An 8–10% success-rate improvement, measured against what baseline, over what
+  window. Eight times more international card fraud detected, at what false-positive
+  rate. Five times more disputes identified, on what merchant segment. Each of those
+  is one subordinate clause away from being a number a reader can use, and the company
+  has the data, because you cannot claim the multiplier without it.</p>
+  <p>And there is a recency defence that should be granted plainly: the model was
+  announced days before this research began. Nothing has had time to be independently
+  verified. That is an absence of scrutiny rather than evidence of failure, and if a
+  named merchant publishes its own before-and-after next quarter, this paper’s second
+  section becomes obsolete in the best possible way.</p>
+  <p class="beat">Back to the number</p>
+  <p>Which returns us to the 29 milliseconds.</p>
+  <p>It was never the important thing. It was a symptom, and the disease is that the
+  distance between <em>a claim about a system</em> and <em>a specification a competent reader
+  will design against</em> has collapsed to nearly nothing. A document can now be
+  generated that is fluent, technical, cited in appearance, internally consistent, and
+  load-bearing on a quantity that came from nowhere — and the parts of it that
+  are true make the invented part harder to see, not easier.</p>
+  <p>The defence is not scepticism, which does not scale and which I did not have. I liked
+  the figure. It was the most concrete thing in the document. The defence is
+  mechanical: a rule that a claim without a locator in a captured source does not get
+  made, applied by something that does not care how good the sentence sounds.</p>
+  <p>This paper was written under that rule. It has thirty-one claims in its ledger; one
+  of them failed verification and is therefore cited nowhere in these pages, which is
+  the system working rather than a defect in it. Two claims I originally wrote were
+  withdrawn and replaced when I found the primary sources and discovered that the
+  secondhand renderings had improved on them.</p>
+  <p>That is what verification actually feels like from the inside. Not catching a liar.
+  Catching yourself, holding a number you liked, that turned out to have no source.</p>
+  <p>The architectural argument may be wrong. The containment reasoning in Section 3 is
+  deduction, its central claim is marked low confidence in the ledger for that reason,
+  and Section 5 is an admission that the measurement which would settle the question
+  has never been published by anyone. If someone runs that study and it goes the other
+  way, this paper was a well-sourced argument for the wrong conclusion.</p>
+  <p>But it will have been checkable, and the thing it argued against was not.</p>
+</section>
+
+<!-- BOOK-FORGE:ABOUT v1 sha=418623dc6a25 -->
+<section class="bf-matter bf-about bf-flow">
+  <h2>About the author</h2>
+
+  <div class="bio">
+    <p>Anuj Sadani builds AI systems and the teams that build them. He spent a
+      decade at NVIDIA, has worked inside AI-first organizations, and has led
+      multicultural engineering pods across Europe &mdash; sixteen-plus years,
+      most of them on the AI era's unglamorous half: turning hype into systems
+      that ship, and systems that ship into outcomes that hold up in production.
+      That work has fed into industry recognition from Gartner and Everest Group,
+      and an Innovator of the Year nod.</p>
+
+    <p>He is the author of <i>The Clean Vibe Coder: A Code of Conduct for
+      Programmers in the Age of AI Agents</i> and <i>Borrow the Line. Own the
+      Move.</i>, and writes about engineering, leadership, and what stays human
+      when the tools get good. He still believes the best technology is the kind
+      that makes the people around it braver.</p>
+  </div>
+
+  <div class="qrpanel">
+    <div class="qrcard">
+      <div class="code">{{QR_AUTHOR}}</div>
+      <div class="what">
+        <b>Writing and work</b>
+        <span>Essays, books, and what he is building.</span>
+        <code>anujsadani.in</code>
+      </div>
+    </div>
+    <div class="qrcard">
+      <div class="code">{{QR_TECH}}</div>
+      <div class="what">
+        <b>This book, and the evidence</b>
+        <span>Read this online, walk the claim ledger, open every source.</span>
+        <code>tech.anujsadani.in</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="colophon">
+    <b>A Monolith Wearing a Transformer</b> &mdash; a verified inquiry by Anuj Sadani, 2026.<br>
+      Read online: <b>tech.anujsadani.in/monolith-wearing-a-transformer</b>
+  </div>
+
+</section>
+<!-- /BOOK-FORGE:ABOUT -->
+
+<!-- BOOK-FORGE:BEFORE-END -->

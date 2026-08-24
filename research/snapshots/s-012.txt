@@ -1,0 +1,401 @@
+Skip to main content
+
+Products
+
+Payments
+
+OverviewExplore payments solutions
+
+AuthVerified account and routing numbers
+
+IdentityBank account-holder information
+
+BalanceReal-time balance checks
+
+SignalACH payment risk platform
+
+TransferACH, RTP, and FedNow payment processing
+
+Investments MoveStreamline asset transfers. Unlock growth.
+
+Fraud & risk
+
+OverviewExplore fraud and risk solution
+
+Identity VerificationGlobal KYC and anti-fraud
+
+BeaconAnti-fraud network
+
+MonitorAML watchlist screening
+
+SignalACH payment risk platform
+
+IdentityBank account-holder information
+
+ProtectFraud intelligence system
+
+Personal finance insights
+
+OverviewExplore the personal finance insights solution
+
+TransactionsUp to 24 months of categorized data
+
+InvestmentsRetirement, brokerage, and crypto data
+
+LiabilitiesCredit card and mortgage data
+
+EnrichCleanse and categorize internal transactions
+
+Credit underwriting
+
+OverviewExplore our credit underwriting solutions
+
+Income & UnderwritingCredit risk insights powered by Plaid Check
+
+LendScoreA credit risk score powered by unique insights
+
+Open finance
+
+OverviewExplore open finance solution
+
+Core ExchangeIndustry-aligned API connectivity
+
+Permissions ManagerEmbeddable consumer permissions management
+
+App DirectoryApp insights to help manage risk and compliance
+
+Onboarding
+
+OverviewExplore onboarding solutions
+
+LinkIndustry-leading bank connections for 12,000+ institutions
+
+LayerCapture identity, contact and bank info in a single click.
+
+Solutions
+
+Use cases
+
+Open finance
+
+Fraud & risk prevention
+
+Onboarding & identity verification
+
+KYC & AML compliance
+
+Income verification & underwriting
+
+Inbound bank payments
+
+Outbound bank payments
+
+Personal financial management
+
+Business financial management
+
+Earned wage access
+
+Industries
+
+AI companies
+
+Auto
+
+Banks & credit unions
+
+Billing & recurring payments
+
+Consumer lending
+
+Gaming
+
+Government & public sector
+
+Healthcare
+
+Insurance
+
+Mortgage
+
+Platforms & marketplaces
+
+Property management
+
+Developers
+
+Quickstart
+
+API documentation
+
+Libraries
+
+GitHub
+
+Product demos
+
+Resources
+
+For builders
+
+What's new
+
+Blog
+
+Library
+
+Industry resources
+
+Customer stories
+
+Events
+
+Annual conference
+
+What is Plaid
+
+Intelligent finance
+
+For users
+
+Troubleshoot account connection
+
+Trust and safety
+
+Control your data with Plaid Portal
+
+Plaid Check Consumer Help Center
+
+Pricing
+
+Log in Contact sales
+
+June 25, 2026
+
+engineering
+
+Learning the grammar of money with a sequential foundation model
+
+Raghu Chetlapalli
+
+Wen Yao
+
+Finance looks like a ledger, but it behaves like a language. Transactions have semantics. Financial sequences have grammar. When you read the language, you can build intelligent financial products that actually understand people and adapt to their financial lives.
+
+Plaid builds models to improve how financial services work, making financial products more personalized, useful and safe. Earlier this year, we introduced a transaction foundation model that understands the meaning of individual financial events, powering enhanced categorization, entity recognition, and income detection across many of our products.
+
+Now, our sequential foundation model is learning the grammar of money: how financial events combine, in what order, and over what cadence to reveal how financial behavior unfolds over time. Plaid's network spans thousands of financial institutions and millions of consumers, giving the model exposure to a wide variety of financial formats, income levels, and economic behaviors, encompassing the breadth needed to learn patterns that generalize across real financial lives. For fintechs and enterprises building on Plaid, understanding these patterns and reading the language of money is what separates a confident lending decision from a costly one, or a fraudulent transfer caught early from a missed one.
+
+Why sequence matters
+
+Consider two consumers with nearly identical 90 day summaries: same monthly income, same average balance, same rent amount, same number of overdraft fees, and similar category-level spending.
+
+For the first consumer, income arrives, rent and utilities clear, discretionary spending follows, and a single overdraft appears after an unusual home repair expense. The account recovers on the next paycheck and returns to its prior rhythm.
+
+For the second consumer, the same events appear in a different order. A paycheck lands, a short-term loan repayment and credit card payment drain the account within 24 hours, small transfers bridge the gap, an ACH debit hits before the next payroll deposit, an overdraft fee posts, and the cycle repeats two weeks later.
+
+A flat feature set may see similar income, balances, spend, fees, and repayment activity. The sequence tells a different story: one user experienced a temporary shock and recovered; the other is caught in a recurring liquidity squeeze.
+
+For almost every use case that depends on understanding financial behavior, the most valuable signal is in transactions' order, cadence, and relationship to one another:
+
+For credit risk and underwriting, the overall composition of a borrower's financial life often matters more than their current balance. Better behavioral signals mean lenders can make more informed decisions, approving creditworthy borrowers while reducing defaults.
+
+For ACH payment risk, the signal is rarely a single blatantly bad transaction, and more likely a transaction that looks wrong compared to past observed patterns. Better risk signals here mean catching fraud before it even happens.
+
+How our sequential foundation model works
+
+The model represents individual financial events using several complementary sources of information. One captures the meaning of the transaction itself through representations learned from large-scale financial data. Another captures timing, including the order of events, the spacing between them, and recurring calendar patterns. A third incorporates available account and transaction attributes such as amounts, account characteristics, and other contextual signals. These inputs are combined into a unified representation of financial activity over time. Rather than viewing a transaction as an isolated event, the model learns to interpret it within the broader flow of a user's financial behavior.
+
+For example, a $100 transfer may reflect routine saving behavior when it follows payroll deposits and regular household spending. The same transfer can carry a different meaning of potential financial strain when it appears alongside overdraft activity or short-term liquidity events. Context allows the model to distinguish between superficially similar transactions that arise from very different underlying situations.
+
+These event representations are processed by a sequence foundation model designed to learn relationships across a user's financial history. Instead of relying on manually labeled examples, the model is pretrained using self-supervised learning tasks derived directly from transaction sequences.
+
+Several complementary objectives are trained jointly to help shape the representation:
+
+Contrastive Predictive Coding (CPC) encourages the model to learn patterns that make future financial activity more predictable, helping it capture recurring routines, income cadence, and evolving behavioral trends.
+
+Replaced Token Detection (RTD) trains the model to recognize events that appear plausible on their own but are inconsistent with the surrounding sequence, improving its ability to identify anomalous or potentially risky activity.
+
+Temporal Contrastive Learning (TCL) reinforces stable behavioral characteristics by encouraging representations from different periods of the same user's history to remain more closely aligned than those from different users.
+
+Taken together, these objectives teach the model distinct but reinforcing skills: anticipating how financial behavior is likely to evolve, recognizing activity that appears out of place in its broader context, and maintaining a coherent understanding of a user's long-term financial patterns. The resulting representations capture both short-term dynamics and persistent behavioral signals, providing a foundation for downstream applications such as risk assessment and cash flow intelligence.
+
+What this unlocks: early results
+
+The sequential foundation model is already in testing with two of our most consequential use cases, and early results suggest it captures behavioral signals that traditional models miss.
+
+For ACH payment risk, the sequential model prevented 26.5% more dollar value in returns at a fixed 1% action rate. For our customers, that means catching more risk without flagging more legitimate transactions, creating a better experience for end users and less revenue impact from returns.
+
+For credit underwriting, we reduced the default risk by 13.6% at a 70% approval rate. Same volume of loans, meaningfully less risk.
+
+These gains come without designing new bespoke product features. As Plaid incorporates the sequential model into our existing products, the lift in risk detection and underwriting performance flows through automatically. Better outcomes for our customers and their users from the same integration.
+
+From bespoke features to shared sequential infrastructure
+
+Historically, building a behavioral risk or underwriting model has meant hand-designing thousands of summary features: rolling averages, days since last cash advance, fee-to-deposit ratios. These features collapse the sequence into a few numbers, losing order and timing, and are often repeated for every new use case with small variations.
+
+A sequential foundation model changes that equation. Teams pretrain once on a large, unlabeled corpus of financial activity, then adapt that shared model to each task with a small amount of labeled data. Improvements to the foundation model propagate to every product built on top of it—so the behavioral intelligence available to customers gets better over time, compounding in the same way we already see with the transaction foundation model.
+
+What's next
+
+Today, the model understands the grammar of money to tell a financial story. The next chapter expands its vocabulary to tell the story more fluently.
+
+Balance events show not just what someone spent, but what liquidity remained. Account connection events capture changes in financial footprint, since linking a BNPL app or short-term lender is itself a meaningful signal. Identity and product usage events become more informative when interpreted over time rather than as isolated facts. Each new event type increases the signal available to every downstream product, without customers having to integrate those events directly.
+
+Together, the transaction and sequential foundation models help us understand people’s financial lives and make better decisions for them, enabling true intelligent finance.
+
+If you're building AI-powered financial experiences and want to go deeper on how these models power use cases like cash flow underwriting or ACH risk, we'd love to connect.
+
+Products
+
+Auth
+
+Identity
+
+Balance
+
+Signal
+
+Transfer
+
+Identity Verification
+
+Monitor
+
+Transactions
+
+Investments
+
+Liabilities
+
+Enrich
+
+Assets
+
+Income
+
+Underwriting
+
+Plaid Link
+
+Layer
+
+Investments Move
+
+Protect
+
+Cash Advance Index
+
+LendScore
+
+About us
+
+Company
+
+Careers
+
+Contact
+
+Partners
+
+Press
+
+Safety
+
+Legal
+
+Use cases
+
+AML & KYC
+
+Auto
+
+Banks & credit unions
+
+Billing & recurring payments
+
+Fraud & risk prevention
+
+Gaming
+
+Government & public sector
+
+Healthcare
+
+Inbound bank payments
+
+Mortgage
+
+Open finance
+
+Outbound bank payments
+
+Property management
+
+For consumers
+
+Troubleshoot account connection
+
+Trust and safety
+
+How it works
+
+Plaid Portal
+
+Delete my data
+
+End User Privacy Policy
+
+Biometric Policy
+
+FAQs
+
+Plaid Check Consumer Help Center
+
+Resources
+
+Pricing
+
+Global coverage
+
+Plaid Blog
+
+Industry resources
+
+Annual conference
+
+Customer stories
+
+Intelligent finance
+
+Developers
+
+Quickstart
+
+API documentation
+
+Libraries
+
+GitHub
+
+Product demos
+
+For financial institutions
+
+Open Finance Solution
+
+Core Exchange
+
+Permissions Manager
+
+App Directory
+
+© 2026 Plaid Inc.
+
+Choose...
+
+United States
+
+United Kingdom
+
+European Union

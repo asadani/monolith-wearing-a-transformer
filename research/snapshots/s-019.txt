@@ -1,0 +1,256 @@
+Jump to content
+
+Main menu
+
+Main menu
+
+move to sidebar
+hide
+
+Navigation
+
+Main page
+
+Contents
+
+Current events
+
+Random article
+
+About Wikipedia
+
+Contact us
+
+Contribute
+
+Help
+
+Learn to edit
+
+Community portal
+
+Recent changes
+
+Upload file
+
+Special pages
+
+Search
+
+Search
+
+Appearance
+
+Donate
+
+Create account
+
+Log in
+
+Personal tools
+
+Donate
+
+Create account
+
+Log in
+
+Contents
+
+move to sidebar
+hide
+
+(Top)
+
+1
+History
+
+2
+See also
+
+3
+References
+
+Toggle the table of contents
+
+Bulkhead pattern
+
+Add languages
+
+Add links
+
+Article
+
+Talk
+
+English
+
+Read
+
+Edit
+
+View history
+
+Tools
+
+Tools
+
+move to sidebar
+hide
+
+Actions
+
+Read
+
+Edit
+
+View history
+
+General
+
+What links here
+
+Related changes
+
+Upload file
+
+Permanent link
+
+Page information
+
+Cite this page
+
+Get shortened URL
+
+Switch to legacy parser
+
+Print/export
+
+Download as PDF
+
+Printable version
+
+In other projects
+
+Wikidata item
+
+Appearance
+
+move to sidebar
+hide
+
+From Wikipedia, the free encyclopedia
+
+Software architecture design pattern
+
+Bulkhead pattern is a design pattern used in software architecture and distributed computing for isolating parts of an application into pools or compartments so that failure of one component will not cascade to other components.[1][2] The term comes from the compartmentalized hull design of ships, where watertight sections (bulkheads) limit the flooding to a single area and thus preserve the integrity of the vessel.[3] In software systems, this pattern is often implemented by partitioning resources such as thread pools, connection pools, or service instances, so that problems such as latency, resource exhaustion or crashes in one partition don't impact the whole system.[4]
+
+The bulkhead pattern is a common pattern used in microservices and cloud computing environments to improve system resilience and fault tolerance.[5] It is often combined with other resilience patterns such as circuit breakers and retries to form a complete fault handling strategy.[6] Although effective, improper partitioning can lead to underutilization of resources or increased system complexity, necessitating careful design and monitoring.[7]
+
+History
+[edit]
+
+The bulkhead pattern was introduced to software engineering by Michael Nygard in his 2007 book Release It!: Design and Deploy Production-Ready Software, published by the Pragmatic Bookshelf.[1] Drawing on years of experience stabilizing high-traffic production systems, Nygard catalogued a set of stability patterns — including circuit breakers, timeouts, and bulkheads — intended to prevent localized failures from bringing down entire applications. The nautical metaphor was deliberate: just as a ship's hull is divided into watertight compartments so that a breach in one section does not sink the vessel, Nygard argued that software systems should partition their resources so that failure in one area cannot drain the whole.[1]
+
+The pattern gained significant industry traction after Netflix applied it at scale in its streaming infrastructure. Beginning in 2011, the Netflix API team developed Hystrix, an open-source Java library designed to control access to remote systems and third-party services in distributed environments. Hystrix used the bulkhead pattern as a core mechanism, assigning each downstream dependency its own dedicated thread pool so that latency or failure in one service could saturate only that pool's threads, leaving the rest of the application unaffected.[8] Netflix open-sourced Hystrix in late 2012 under the Apache License 2.0, bringing the pattern to a wide audience of Java developers.[8]
+
+The wider adoption of microservices architectures through the mid-2010s cemented the bulkhead pattern as a standard approach to resilience engineering. Cloud providers and platform vendors began incorporating it into formal design pattern libraries; Microsoft documented it as one of its core Azure cloud design patterns,[2] and Amazon Web Services included it in its own resilience guidance.[6] As Hystrix entered maintenance mode in 2018, successor libraries such as Resilience4j for the JVM and Polly for .NET carried the pattern forward, offering both thread pool and semaphore-based isolation strategies.[4]
+
+See also
+[edit]
+
+Circuit breaker pattern
+
+Fail-fast
+
+Fault tolerance
+
+Microservices
+
+Load balancing
+
+References
+[edit]
+
+1 2 3 Release It!, Michael T. Nygard (2007). Release It!: Design and Deploy Production-Ready Software. Pragmatic Bookshelf.
+
+1 2 "Bulkhead Pattern". Microsoft. Retrieved 2026-04-30.
+
+↑ Fowler, Martin (2018). Patterns of Enterprise Application Architecture. Addison-Wesley.
+
+1 2 "Bulkhead Isolation". Resilience4j Documentation. Retrieved 2026-04-30.
+
+↑ Newman, Sam (2015). Building Microservices. O'Reilly Media.
+
+1 2 "Cloud Design Patterns". Amazon Web Services. Retrieved 2026-04-30.
+
+↑ Dragoni, Nicola (2017). "Microservices: Yesterday, Today, and Tomorrow". Present and Ulterior Software Engineering.
+
+1 2 "Netflix Hystrix – Latency and Fault Tolerance for Complex Distributed Systems". InfoQ. December 2012. Retrieved 2026-04-30.
+
+This software article is a stub. You can help Wikipedia by adding missing information.
+
+v
+
+t
+
+e
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Bulkhead_pattern&oldid=1370497970"
+
+Categories:
+
+Software design patterns
+
+Distributed computing architecture
+
+Software architecture
+
+Software stubs
+
+Hidden categories:
+
+Articles with short description
+
+Short description matches Wikidata
+
+All stub articles
+
+This page was last edited on 21 August 2026, at 13:07 (UTC).
+
+Page was rendered with Parsoid.
+
+Text is available under the Creative Commons Attribution-ShareAlike 4.0 License;
+additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+
+Privacy policy
+
+About Wikipedia
+
+Disclaimers
+
+Contact Wikipedia
+
+Legal & safety contacts
+
+Code of Conduct
+
+Developers
+
+Statistics
+
+Cookie statement
+
+Mobile view
+
+Search
+
+Search
+
+Toggle the table of contents
+
+Bulkhead pattern
+
+Add languages
+
+Add topic

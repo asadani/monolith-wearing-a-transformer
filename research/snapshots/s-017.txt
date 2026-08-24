@@ -1,0 +1,1083 @@
+Products
+
+Solutions
+
+Developers
+
+Resources
+
+Pricing
+
+Contact sales
+
+Back
+
+Products
+
+Solutions
+
+Developers
+
+Resources
+
+Pricing
+
+Payments
+
+Payments
+
+Online payments
+
+Managed Payments
+
+Merchant of record solution
+
+Payment links
+
+No-code payments
+
+Checkout
+
+Prebuilt payment UIs
+
+Elements
+
+Flexible UI components
+
+Payment methods
+
+Access to 125+
+
+Terminal
+
+In-person payments
+
+Authorization Boost
+
+Acceptance optimizations
+
+Link
+
+Accelerated checkout
+
+Financial Connections
+
+Linked financial account data
+
+Revenue
+
+Billing
+
+Recurring revenue
+
+Metronome
+
+Usage-based billing
+
+Subscriptions
+
+Subscription management
+
+Invoicing
+
+One-time or recurring
+
+Tax
+
+Sales tax & VAT automation
+
+Revenue Recognition
+
+Accounting automation
+
+Stripe Sigma
+
+Custom reports
+
+Data Pipeline
+
+Data sync
+
+Money management
+
+Treasury
+
+Business finances
+
+Global Payouts
+
+Payouts to third parties
+
+Capital
+
+Business financing
+
+Crypto
+
+Wallet, stablecoin issuing, and card infrastructure
+
+Crypto Onramp
+
+Embeddable crypto purchases
+
+Platforms and marketplaces
+
+Connect
+
+Payments for platforms
+
+Capital for platforms
+
+Customer financing
+
+Treasury for platforms
+
+Embedded financial services
+
+Issuing
+
+Physical and virtual cards
+
+More
+
+Product roadmap
+
+See what’s ahead
+
+Radar
+
+Fraud prevention
+
+Atlas
+
+Startup incorporation
+
+Climate
+
+Carbon removal
+
+Identity
+
+Online identity verification
+
+Stripe Sessions 2026
+
+See how Stripe is building the economic infrastructure for AI.
+
+Watch now
+
+By stage
+
+Enterprises
+
+Startups
+
+By use case
+
+Agentic commerce
+
+Crypto
+
+Ecommerce
+
+Embedded finance
+
+Finance automation
+
+Global businesses
+
+In-app payments
+
+Marketplaces
+
+Money management
+
+Platforms
+
+SaaS
+
+By industry
+
+AI companies
+
+Creator economy
+
+Gaming
+
+Hospitality, travel, and leisure
+
+Insurance
+
+Media and entertainment
+
+Nonprofits
+
+Professional services
+
+Retail
+
+Ecosystem
+
+Partners
+
+Stripe App Marketplace
+
+Documentation
+
+Stripe docs
+
+API reference
+
+Libraries and SDKs
+
+Stripe Apps
+
+Guides
+
+Accept online payments
+
+Implement a prebuilt checkout
+
+Build a platform or marketplace
+
+Manage subscriptions
+
+Offer usage-based billing
+
+Issue stablecoin-backed cards
+
+Provision and manage services with agents
+
+Resources
+
+App integrations
+
+Code samples
+
+Developers blog
+
+API status
+
+Learn
+
+Blog
+
+Customer stories
+
+Guides
+
+Support
+
+Get support
+
+Managed support plans
+
+Professional services
+
+Company
+
+Product roadmap
+
+Sessions annual conference
+
+Careers
+
+Newsroom
+
+Stripe Press
+
+Contact
+
+Contact sales
+
+Become a partner
+
+Start now
+
+Contact sales
+
+Payments
+
+Payments
+
+Online payments
+
+Managed Payments
+
+Merchant of record solution
+
+Payment links
+
+No-code payments
+
+Checkout
+
+Prebuilt payment UIs
+
+Elements
+
+Flexible UI components
+
+Payment methods
+
+Access to 125+
+
+Terminal
+
+In-person payments
+
+Authorization Boost
+
+Acceptance optimizations
+
+Link
+
+Accelerated checkout
+
+Financial Connections
+
+Linked financial account data
+
+Revenue
+
+Billing
+
+Recurring revenue
+
+Metronome
+
+Usage-based billing
+
+Subscriptions
+
+Subscription management
+
+Invoicing
+
+One-time or recurring
+
+Tax
+
+Sales tax & VAT automation
+
+Revenue Recognition
+
+Accounting automation
+
+Stripe Sigma
+
+Custom reports
+
+Data Pipeline
+
+Data sync
+
+Money management
+
+Treasury
+
+Business finances
+
+Global Payouts
+
+Payouts to third parties
+
+Capital
+
+Business financing
+
+Crypto
+
+Wallet, stablecoin issuing, and card infrastructure
+
+Crypto Onramp
+
+Embeddable crypto purchases
+
+Platforms and marketplaces
+
+Connect
+
+Payments for platforms
+
+Capital for platforms
+
+Customer financing
+
+Treasury for platforms
+
+Embedded financial services
+
+Issuing
+
+Physical and virtual cards
+
+More
+
+Product roadmap
+
+See what’s ahead
+
+Radar
+
+Fraud prevention
+
+Atlas
+
+Startup incorporation
+
+Climate
+
+Carbon removal
+
+Identity
+
+Online identity verification
+
+Stripe Sessions 2026
+
+See how Stripe is building the economic infrastructure for AI.
+
+Watch now
+
+By stage
+
+Enterprises
+
+Startups
+
+By use case
+
+Agentic commerce
+
+Crypto
+
+Ecommerce
+
+Embedded finance
+
+Finance automation
+
+Global businesses
+
+In-app payments
+
+Marketplaces
+
+Money management
+
+Platforms
+
+SaaS
+
+By industry
+
+AI companies
+
+Creator economy
+
+Gaming
+
+Hospitality, travel, and leisure
+
+Insurance
+
+Media and entertainment
+
+Nonprofits
+
+Professional services
+
+Public sector
+
+Retail
+
+Ecosystem
+
+Partners
+
+Stripe App Marketplace
+
+Documentation
+
+Stripe docs
+
+API reference
+
+Libraries and SDKs
+
+Stripe Apps
+
+Guides
+
+Accept online payments
+
+Implement a prebuilt checkout
+
+Build a platform or marketplace
+
+Manage subscriptions
+
+Offer usage-based billing
+
+Issue stablecoin-backed cards
+
+Provision and manage services with agents
+
+Resources
+
+App integrations
+
+Code samples
+
+Developers blog
+
+API status
+
+Learn
+
+Blog
+
+Customer stories
+
+Guides
+
+Support
+
+Get support
+
+Managed support plans
+
+Professional services
+
+Company
+
+Product roadmap
+
+Sessions annual conference
+
+Careers
+
+Newsroom
+
+Stripe Press
+
+Contact
+
+Contact sales
+
+Become a partner
+
+Blog
+
+Product
+
+Stripe on X
+
+The ML flywheel: How we continually improve our models to reduce card testing
+
+December 12, 2024
+
+Ryan Drapeau
+Payment Intelligence
+
+Inayat Khosla
+Advanced Attacks
+
+Illustration by Carolina Moscoso
+
+Card testing is one of the most significant fraud threats to Stripe, its users, and the broader financial ecosystem. It is also one of the most challenging to detect and block, both because it blends in easily with legitimate traffic and because bad actors are constantly changing their tactics.
+
+That’s why the systems we use to prevent it need to be both accurate—correctly distinguishing card testing from legitimate traffic—and nimble, built to adapt to the evolving landscape of threats. Stripe’s machine learning–based approach to combat card testing prioritizes these qualities through rapid detection and retraining. It’s a flywheel: detection enables us to add new data labels and features, which we then feed back into ML models (at different levels of abstraction) for retraining and redeployment. As a result of this approach, successful attacks on Stripe have decreased by 80% over the last two years, even as Stripe’s payment volume had expanded to over $1 trillion last year.
+
+Testing for stolen card details that are still active
+
+Card testing is a form of payment fraud in which bad actors seek to validate which stolen card numbers can be successfully charged in the future. Attacks usually occur in one of two ways: verification or enumeration.
+
+A verification attack is when a tester iterates through a known and finite set of stolen card credentials by attempting small or zero-dollar transactions in order to “verify” which ones haven’t been canceled or expired. An enumeration attack is more like guessing: a fraudulent actor tries to “enumerate” card numbers, often within a specific numeric range, in an attempt to differentiate between chargeable and nonchargeable cards. Once a card passes this initial testing phase, it is deemed active and unblocked, and its value to the fraudulent actor dramatically increases. They might then use the card to make substantial purchases, or they might sell the card details on the illegal market, both of which can have a significant impact on targeted businesses. These attacks represent a small percentage of all transactions, and the tactics underlying them are always changing—two factors that make identifying card testing with high precision a challenging ML problem.
+
+Setting block thresholds with multiple layers of ML
+
+At its most basic, ML generates a probabilistic guess about whether a transaction is card testing: above a certain threshold, the transaction is blocked; below that threshold, it proceeds. But determining the right threshold is a nuanced calculation. To generate it, we apply ML models at multiple levels of abstraction:
+
+At the highest level of abstraction, we use ML to estimate the overall prevalence of card testing on Stripe. This allows us to update our risk posture on a daily basis.
+
+At the next level down, we apply ML to estimate where card testing is likely to be taking place—which businesses, issuers, or surfaces are experiencing an attack. It’s not always obvious: a spike in transactions could be card testing, or it could be a flash sale.
+
+Finally, at the bottom of the abstraction hierarchy, we apply ML to individual transactions, leveraging a wide variety of signals.
+
+The outputs of these three models work together to dynamically update the threshold at which we block potential card testing attacks. This allows us to intervene in real time on a small, precise slice of traffic, and ease our controls as soon as the attack subsides—thereby minimizing the impact on legitimate traffic.
+
+But the models are only as good as the data they’re trained on. To make sure they are tuned to the most current card testing trends, we’ve created an operating framework that enables rapid data labeling, retraining, and redeployment.
+
+Labeling breakthrough attempts
+
+Unlike disputes or declines, card testing doesn’t yield explicit labels that can be used to train models or evaluate prevalence or performance. Instead, labels need to be derived. We do this through a combination of processes. They include consolidating intelligence around newly identified attack vectors, automating discovery of hidden patterns by combining weaker signals, and applying manual expert review. The output of this combined review exercise is a refined set of transactions that we can label as card testing fraud. This allows us to act with confidence on both the suspicious transactions we were unsure about initially and to proactively block new forms of card testing. It’s the first step in a virtuous cycle where reactive recognition of breakthrough attacks turns into proactive identification within hours.
+
+Rapid retraining
+
+Once we have labels, we need to engineer features that will become new inputs to our redeployed ML models. And given how quickly card testing attacks can manifest, we need to be able to do this quickly. Our next-generation feature engineering platform, Shepherd, makes this easy. Shepherd—which we built through a partnership with Airbnb—allows multiple teams at Stripe with different skill sets to generate new features with minimal code changes.
+
+Once we have these features, we need to test them. We do this using Shepherd and Flyte—an ML orchestration platform—which facilitates experimentation through standardized, automated workflows. We retrain our models using the proposed feature, deploy them on offline data, and evaluate the results. Then we select the highest precision features and conduct blue-green tests between the old model and the new one; if those go well, we deploy the refreshed model. All of this takes place as part of our immediate incident response.
+
+Foundation models also play a role
+
+This flywheel process has allowed us to reduce card testing on Stripe while keeping the false positive rate low. While this approach is effective for identifying historical patterns, it’s less able to spot fully novel or particularly subtle types of attacks on large businesses, where card testing attacks blend in with much higher transaction volume. To address these limitations, we augment our smaller, card testing–specific models with a large transformer model trained on billions of global transactions. It can detect patterns that are not easily discerned by simpler models. It also compresses payments into atomic embeddings, which we then leverage across multiple card testing use cases, such as training classifiers on sequences of embeddings to determine whether an entity is undergoing an attack in real time.
+
+Attempts are up, but successful attempts are way down
+
+The overall result of this work is that successful card testing attacks on Stripe have declined significantly. If you’re a Stripe user interested in learning more about how Stripe protects your business from card testing, check out our documentation. And if you find this work exciting, come join us.
+
+Subscribe to the Stripe Blog
+
+Stay connected with Stripe and receive new blog posts in your inbox.
+
+Something went wrong on our end. Sorry about that. You can still contact us at sales@stripe.com.
+
+We're sorry, but we're unable to serve your request.
+
+Subscribe
+
+Stripe will handle your data pursuant to its Privacy Policy
+
+By submitting this form, you acknowledge and consent that your personal data will be processed in accordance with Stripe's Privacy Policy and that your data will be stored outside of China in accordance with Stripe's Privacy Policy.
+
+Thank you for subscribing.
+You'll receive blog updates in your inbox soon.
+
+Like this post? Join our team.
+
+Stripe builds financial tools and economic infrastructure for the internet.
+
+View roles
+
+Have any feedback or questions?
+
+We’d love to hear from you.
+
+Contact us
+
+United States (English)
+
+Australia
+
+English
+
+Austria
+
+Deutsch
+
+English
+
+Belgium
+
+Nederlands
+
+Français
+
+Deutsch
+
+English
+
+Brazil
+
+Português
+
+English
+
+Bulgaria
+
+English
+
+Canada
+
+English
+
+Français
+
+Croatia
+
+English
+
+Italiano
+
+Cyprus
+
+English
+
+Czech Republic
+
+English
+
+Denmark
+
+English
+
+Estonia
+
+English
+
+Finland
+
+English
+
+Svenska
+
+France
+
+Français
+
+English
+
+Germany
+
+Deutsch
+
+English
+
+Gibraltar
+
+English
+
+Greece
+
+English
+
+Hong Kong SAR, China
+
+English
+
+简体中文
+
+Hungary
+
+English
+
+India
+
+English
+
+Ireland
+
+English
+
+Italy
+
+Italiano
+
+English
+
+Japan
+
+日本語
+
+English
+
+Latvia
+
+English
+
+Liechtenstein
+
+Deutsch
+
+English
+
+Lithuania
+
+English
+
+Luxembourg
+
+Français
+
+Deutsch
+
+English
+
+Mainland China
+
+简体中文
+
+English
+
+Malaysia
+
+English
+
+简体中文
+
+Malta
+
+English
+
+Mexico
+
+Español
+
+English
+
+Netherlands
+
+Nederlands
+
+English
+
+New Zealand
+
+English
+
+Norway
+
+English
+
+Poland
+
+English
+
+Portugal
+
+Português
+
+English
+
+Romania
+
+English
+
+Singapore
+
+English
+
+简体中文
+
+Slovakia
+
+English
+
+Slovenia
+
+English
+
+Italiano
+
+Spain
+
+Español
+
+English
+
+Sweden
+
+Svenska
+
+English
+
+Switzerland
+
+Deutsch
+
+Français
+
+Italiano
+
+English
+
+Thailand
+
+ไทย
+
+English
+
+United Arab Emirates
+
+English
+
+United Kingdom
+
+English
+
+United States
+
+English
+
+Español
+
+简体中文
+
+Products & pricing
+
+Pricing
+
+Atlas
+
+Authorization Boost
+
+Billing
+
+Capital
+
+Checkout
+
+Climate
+
+Connect
+
+Crypto
+
+Data Pipeline
+
+Elements
+
+Financial Connections
+
+Identity
+
+Invoicing
+
+Issuing
+
+Link
+
+Managed Payments
+
+Payment links
+
+Payments
+
+Payouts
+
+Radar
+
+Revenue Recognition
+
+Stripe Sigma
+
+Tax
+
+Terminal
+
+Treasury
+
+Solutions
+
+Enterprises
+
+Startups
+
+Agentic commerce
+
+Crypto
+
+Ecommerce
+
+Embedded finance
+
+Finance automation
+
+Global businesses
+
+In-app payments
+
+Marketplaces
+
+Money management
+
+Platforms
+
+SaaS
+
+AI companies
+
+Creator economy
+
+Gaming
+
+Hospitality, travel, and leisure
+
+Insurance
+
+Media and entertainment
+
+Nonprofits
+
+Professional services
+
+Public sector
+
+Retail
+
+Integrations & custom solutions
+
+Stripe App Marketplace
+
+Stripe Partner ecosystem
+
+Professional services
+
+Developers
+
+Documentation
+
+API reference
+
+API status
+
+API changelog
+
+Libraries and SDKs
+
+Stripe Projects
+
+Developer blog
+
+Resources
+
+Guides
+
+Customer stories
+
+Blog
+
+Community
+
+Sessions annual conference
+
+Privacy & terms
+
+Prohibited & restricted businesses
+
+Licenses
+
+Sitemap
+
+Cookie settings
+
+Your privacy choices
+
+More resources
+
+Company
+
+Product roadmap
+
+Careers
+
+Newsroom
+
+Stripe Press
+
+Contact sales
+
+Support
+
+Get support
+
+Managed support plans
+
+CA residents:
++1 888 926 2289
+
+Sign in
+
+© 2026 Stripe, LLC

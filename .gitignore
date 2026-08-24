@@ -1,0 +1,18 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# book-forge build cache (cover page, staged PDFs)
+.bf-cache/
+*.staged
+*.new.pdf
+
+# The typeset PDF is distributed from Ko-fi, not from this repository.
+*.pdf

@@ -1,0 +1,116 @@
+Payments
+
+Business Banking Plus
+
+Exclusive
+
+Forex
+
+Online Commerce
+
+Payroll
+
+Customer Stories
+
+Inspiration Brew
+
+Policies with Dr. Poli
+
+Blog » AI Products » One Foundation Model, Built for India’s Payments Ecosystem
+
+In
+
+AI Products
+
+One Foundation Model, Built for India’s Payments Ecosystem
+
+August 18, 2026
+
+5 Mins Read
+
+Share
+
+Share on Facebook
+
+Share on Twitter
+
+LinkedIn
+
+Email
+
+India’s digital payments story over the last decade has been nothing short of phenomenal. We’ve built an ecosystem that processes billions of transactions seamlessly. Yet, we know that beneath the surface of this massive growth lies a quieter, persistent gap.
+
+It’s the payment that inexplicably fails. The OTP that arrives ten seconds too late. The card compromised by a sophisticated fraud ring. For millions of first-time shoppers, a single moment of checkout friction is often enough to send them right back to cash.
+
+Earlier this year, driven by our CEO Harshil Mathur’s push to explore fundamental AI research, we asked ourselves a critical question: If companies can train massive AI models to understand human language, why can’t we train one to understand the language of payments for India?
+
+Today, we are thrilled to announce the Razorpay Vulcan, India’s first AI Payments Foundation Model, purpose-built specifically to make every digital payment more reliable, safer, and predictable.
+
+This foundation model was created from the ground up through a massive cross-functional engineering effort, spanning our Data Science, ML Engineering, and Data Engineering teams. Fueled by NVIDIA’s accelerated computing and AWS’s cloud infrastructure, we have built a single, unified intelligence layer for the Indian internet.
+
+Our partner, Amazon SageMaker AI, handled the complexity of model training and auto-scaling inference, letting our engineers iterate faster on the payments model itself rather than managing the infrastructure and dependencies beneath it.
+
+Navigating Unique Complexity of Indian Payments
+
+Globally, digital payments often converge into simpler, unified methods like cards or wallets. The Indian ecosystem is entirely different. We offer consumers incredible flexibility—a single transaction can be routed via UPI, credit or debit cards, net banking, wallets, or Cash on Delivery, spanning hundreds of complex banking rails and gateways.
+
+Historically, the industry tackled this by building separate, specialized ML models operating in silos. We had one model for routing, another for fraud, and a third for checkout. They didn’t talk to each other. If a transaction failed in India, it wasn’t necessarily due to a lack of funds; it was often because, out of several possible routing paths, one was briefly the wrong choice at that exact millisecond.
+
+We realized we didn’t just need better fixes; we needed a system capable of getting a transaction to its natural endpoint where it is likeliest to succeed.
+
+Building the Vocabulary of Money Movement
+
+Large Language Models (LLMs) are complex models that predict the next word, having been trained on how humans communicate based on hundreds of years of data.  The Razorpay Foundation Model is a brain that has created a vocabulary for how Indians transact.
+
+It learns from the entire payments ecosystem’s data points simultaneously. Unlike a traditional ML model built for a single, narrow job, our foundation model learns the fundamental patterns of how money moves. This understanding automatically extends to new use cases without needing a complete retraining cycle.
+
+What makes Razorpay uniquely positioned to solve this at scale?
+
+Training a foundational model requires an astronomical amount of clean, contextual data. Today, Razorpay handles almost 4 billion customer-to-merchant payments every year. That sheer volume gives us the unique ability—and responsibility—to build this foundation model.
+
+Both the architecture and the training data are entirely proprietary and built from the ground up. By routing every transaction through one continuously learning intelligence layer, we can make holistic decisions instantly. Here is what the model is already doing in production:
+
+Hyper-Precision Routing: The model scores every possible route in real-time and dynamically sends the payment down the path most likely to succeed before the attempt is even made.
+
+Network-Level Fraud Protection: It spots bad actors and fraud patterns visible only when looking across thousands of merchants, instantly flagging a stolen card the moment it’s used across unrelated sellers.
+
+Smart Offer Targeting & Checkout Personalisation: It dynamically recommends the payment method most likely to succeed. Furthermore, it understands buyer intent—allowing merchants to protect their marketing spend by showing discounts only to price-sensitive customers, rather than cannibalizing revenue from customers who would have purchased anyway.
+
+Looking Ahead
+
+For businesses, having a superior payment stack directly correlates to overall GMV growth. It translates to fewer lost sales, protected ad spend, lower fraud losses, and minimized RTOs. For consumers, it simply means that payments work.
+
+We see this launch as the starting line. We are pushing the envelope on what is possible with fundamental AI research in fintech, from building our own routers to working with cutting-edge inferencing providers. Our goal is for every single payment decision on Razorpay to be powered by this continuously learning model. Every payment that flows through Razorpay today teaches the system something new, ensuring that the next payment tomorrow is even faster, safer, and smarter.
+
+This is the groundwork for the future of Indian e-commerce demands, and we are just getting started.
+
+Author
+Vaidehee Joshi
+
+Related Posts
+
+The Winner Doesn’t Take it All
+
+August 4, 2026
+
+Razorpay Engineers Built Slash. Slash Builds the Rest.
+
+May 18, 2026
+
+Go from Idea to Revenue: Monetize your App with Razorpay on OpenAI’s Codex
+
+April 9, 2026
+
+Facebook
+
+Twitter
+
+Instagram
+
+YouTube
+
+LinkedIn
+
+© Razorpay 2020 All Rights Reserved
+
+Top

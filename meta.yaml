@@ -1,0 +1,106 @@
+# A Monolith Wearing a Transformer -- book-forge configuration.
+#
+# Flow mode: a ~30-page journal for engineering leadership, one continuous page
+# on screen, paginated in print. Research workspace lives in research/ -- 19
+# captured sources, 31 claims, each <sup class="cite">c-0NN</sup> resolving to a
+# row in research/claims.jsonl.
+
+slug: monolith-wearing-a-transformer
+title: "A Monolith Wearing a Transformer"
+subtitle: "What we un-learned about decoupling"
+theme: sheet-oxblood
+
+source:
+  template: book.html.in
+output:
+  html: index.html
+  pdf: monolith-wearing-a-transformer.pdf
+
+page:
+  size: A4
+
+cover:
+  art: assets/monolith-wearing-a-transformer-cover.png
+  fit: crop
+  trim_top_share: 0.47
+  dpi: 300
+
+qr:
+  - slot: QR_AUTHOR
+    target: https://anujsadani.in
+    label: "Writing and work"
+  - slot: QR_TECH
+    target: https://tech.anujsadani.in/monolith-wearing-a-transformer/
+    label: "This paper, and the evidence"
+
+folio:
+  font: IBMPlexMono-Regular.ttf
+  size: 8
+  color: [0.49, 0.52, 0.58]
+  skip_pages: [1]
+  first_number: 1
+
+matter:
+  mode: flow
+  front:
+    heading: "Copyright, permissions, and how this was made"
+    anchor_before: '<!-- BOOK-FORGE:AFTER-COVER -->'
+    work_line: "A Monolith Wearing a Transformer &mdash; a verified inquiry into
+      whether domain foundation models belong in the critical path of payment
+      infrastructure."
+    ai_disclosure: verified
+    sources_html: |
+      <p>The sources are a separate matter. This paper is published alongside a
+        free companion archive &mdash; <span class="mono">tech.anujsadani.in/monolith-wearing-a-transformer</span>
+        &mdash; holding a saved copy of every source it cites, so that any claim can
+        be checked years from now even if the original page has moved or vanished.
+        Those saved copies remain the property of the publishers who wrote them and
+        are kept only as evidence.</p>
+      <p>Two claims in an earlier draft reached this paper at one remove &mdash; a
+        practitioner's account of Adyen's and Stripe's published work rather than
+        those publications themselves. Both were replaced with the primary sources
+        before publication, and both changed on contact with them; Section 6 says
+        how. One further claim, on the bulkhead pattern, cites an encyclopedia's
+        account of a book this author did not open, and Section 3 states that in
+        the text rather than here.</p>
+    imprint: "First edition &middot; August 2026"
+  about:
+    heading: "About the author"
+    anchor_before: '<!-- BOOK-FORGE:BEFORE-END -->'
+    qr_override:
+      - index: 1
+        blurb: "Read this online, walk the claim ledger, open every source."
+        code: "tech.anujsadani.in"
+  colophon_html: |
+    <b>A Monolith Wearing a Transformer</b> &mdash; a verified inquiry by Anuj Sadani, 2026.<br>
+      Read online: <b>tech.anujsadani.in/monolith-wearing-a-transformer</b>
+
+license:
+  id: all-rights-reserved
+
+edition: "First edition"
+date: 2026
+
+links:
+  read_online: https://tech.anujsadani.in/monolith-wearing-a-transformer/
+
+verify:
+  cover_probes: ["Monolith"]
+  body_probes:
+    # One probe per section, each a phrase that is load-bearing rather than
+    # decorative -- if the phrase is gone, the section's argument changed.
+    - "does not exist"                                    # 1
+    - "below a bar its own peers"                         # 2
+    - "will not cascade to other components"              # 3
+    - "in a critical flow"                                # 4
+    - "medium-sized data"                                 # 5
+    - "atomic embeddings"                                 # 6
+    - "mean time to attribution"                          # 7
+    - "at a fixed 1% action rate"
+  matter_probes:
+    - "Copyright, permissions"
+    - "About the author"
+  allow_system_fonts: false
+  min_images: 0
+  expect_pages: 29
+  page_tolerance: 4

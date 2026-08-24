@@ -1,0 +1,1102 @@
+Products
+
+Solutions
+
+Developers
+
+Resources
+
+Pricing
+
+Guide me
+
+Contact sales
+
+Back
+
+Products
+
+Solutions
+
+Developers
+
+Resources
+
+Pricing
+
+Not sure where to start? Tell us about your business to get personalized Stripe product recommendations.
+
+Find what's right for you
+
+Payments
+
+Payments
+
+Online payments
+
+Managed Payments
+
+Merchant of record solution
+
+Payment links
+
+No-code payments
+
+Checkout
+
+Prebuilt payment UIs
+
+Elements
+
+Flexible UI components
+
+Payment methods
+
+Access to 125+
+
+Terminal
+
+In-person payments
+
+Authorization Boost
+
+Acceptance optimizations
+
+Link
+
+Accelerated checkout
+
+Financial Connections
+
+Linked financial account data
+
+Revenue
+
+Billing
+
+Recurring revenue
+
+Metronome
+
+Usage-based billing
+
+Subscriptions
+
+Subscription management
+
+Invoicing
+
+One-time or recurring
+
+Tax
+
+Sales tax & VAT automation
+
+Revenue Recognition
+
+Accounting automation
+
+Stripe Sigma
+
+Custom reports
+
+Data Pipeline
+
+Data sync
+
+Money management
+
+Treasury
+
+Business finances
+
+Global Payouts
+
+Payouts to third parties
+
+Capital
+
+Business financing
+
+Crypto
+
+Wallet, stablecoin issuing, and card infrastructure
+
+Crypto Onramp
+
+Embeddable crypto purchases
+
+Platforms and marketplaces
+
+Connect
+
+Payments for platforms
+
+Capital for platforms
+
+Customer financing
+
+Treasury for platforms
+
+Embedded financial services
+
+Issuing
+
+Physical and virtual cards
+
+More
+
+Product roadmap
+
+See what’s ahead
+
+Radar
+
+Fraud prevention
+
+Atlas
+
+Startup incorporation
+
+Climate
+
+Carbon removal
+
+Identity
+
+Online identity verification
+
+Stripe Sessions 2026
+
+See how Stripe is building the economic infrastructure for AI.
+
+Watch now
+
+By stage
+
+Enterprises
+
+Startups
+
+By use case
+
+Agentic commerce
+
+Crypto
+
+Ecommerce
+
+Embedded finance
+
+Finance automation
+
+Global businesses
+
+In-app payments
+
+Marketplaces
+
+Money management
+
+Platforms
+
+SaaS
+
+By industry
+
+AI companies
+
+Creator economy
+
+Gaming
+
+Hospitality, travel, and leisure
+
+Insurance
+
+Media and entertainment
+
+Nonprofits
+
+Professional services
+
+Retail
+
+Ecosystem
+
+Partners
+
+Stripe App Marketplace
+
+Documentation
+
+Stripe docs
+
+API reference
+
+Libraries and SDKs
+
+Stripe Apps
+
+Guides
+
+Accept online payments
+
+Implement a prebuilt checkout
+
+Build a platform or marketplace
+
+Manage subscriptions
+
+Offer usage-based billing
+
+Issue stablecoin-backed cards
+
+Provision and manage services with agents
+
+Resources
+
+App integrations
+
+Code samples
+
+Developers blog
+
+API status
+
+Learn
+
+Blog
+
+Customer stories
+
+Guides
+
+Support
+
+Get support
+
+Managed support plans
+
+Professional services
+
+Company
+
+Product roadmap
+
+Sessions annual conference
+
+Careers
+
+Newsroom
+
+Stripe Press
+
+Contact
+
+Contact sales
+
+Become a partner
+
+Start now
+
+Contact sales
+
+Payments
+
+Payments
+
+Online payments
+
+Managed Payments
+
+Merchant of record solution
+
+Payment links
+
+No-code payments
+
+Checkout
+
+Prebuilt payment UIs
+
+Elements
+
+Flexible UI components
+
+Payment methods
+
+Access to 125+
+
+Terminal
+
+In-person payments
+
+Authorization Boost
+
+Acceptance optimizations
+
+Link
+
+Accelerated checkout
+
+Financial Connections
+
+Linked financial account data
+
+Revenue
+
+Billing
+
+Recurring revenue
+
+Metronome
+
+Usage-based billing
+
+Subscriptions
+
+Subscription management
+
+Invoicing
+
+One-time or recurring
+
+Tax
+
+Sales tax & VAT automation
+
+Revenue Recognition
+
+Accounting automation
+
+Stripe Sigma
+
+Custom reports
+
+Data Pipeline
+
+Data sync
+
+Money management
+
+Treasury
+
+Business finances
+
+Global Payouts
+
+Payouts to third parties
+
+Capital
+
+Business financing
+
+Crypto
+
+Wallet, stablecoin issuing, and card infrastructure
+
+Crypto Onramp
+
+Embeddable crypto purchases
+
+Platforms and marketplaces
+
+Connect
+
+Payments for platforms
+
+Capital for platforms
+
+Customer financing
+
+Treasury for platforms
+
+Embedded financial services
+
+Issuing
+
+Physical and virtual cards
+
+More
+
+Product roadmap
+
+See what’s ahead
+
+Radar
+
+Fraud prevention
+
+Atlas
+
+Startup incorporation
+
+Climate
+
+Carbon removal
+
+Identity
+
+Online identity verification
+
+Stripe Sessions 2026
+
+See how Stripe is building the economic infrastructure for AI.
+
+Watch now
+
+Not sure where to start? Tell us about your business to get personalized Stripe product recommendations.
+
+Find what's right for you
+
+By stage
+
+Enterprises
+
+Startups
+
+By use case
+
+Agentic commerce
+
+Crypto
+
+Ecommerce
+
+Embedded finance
+
+Finance automation
+
+Global businesses
+
+In-app payments
+
+Marketplaces
+
+Money management
+
+Platforms
+
+SaaS
+
+By industry
+
+AI companies
+
+Creator economy
+
+Gaming
+
+Hospitality, travel, and leisure
+
+Insurance
+
+Media and entertainment
+
+Nonprofits
+
+Professional services
+
+Public sector
+
+Retail
+
+Ecosystem
+
+Partners
+
+Stripe App Marketplace
+
+Documentation
+
+Stripe docs
+
+API reference
+
+Libraries and SDKs
+
+Stripe Apps
+
+Guides
+
+Accept online payments
+
+Implement a prebuilt checkout
+
+Build a platform or marketplace
+
+Manage subscriptions
+
+Offer usage-based billing
+
+Issue stablecoin-backed cards
+
+Provision and manage services with agents
+
+Resources
+
+App integrations
+
+Code samples
+
+Developers blog
+
+API status
+
+Learn
+
+Blog
+
+Customer stories
+
+Guides
+
+Support
+
+Get support
+
+Managed support plans
+
+Professional services
+
+Company
+
+Product roadmap
+
+Sessions annual conference
+
+Careers
+
+Newsroom
+
+Stripe Press
+
+Contact
+
+Contact sales
+
+Become a partner
+
+Blog
+
+Product
+
+Stripe on X
+
+Using AI to optimize payments performance with the Payments Intelligence Suite
+
+May 15, 2025
+
+John Affaki
+Payments Business Lead
+
+Illustration by Ibrahim Rayintakath
+
+Businesses face mounting pressure to maximize revenue while navigating increasingly complex payment processes. They often have to hire dedicated teams to keep up with card network rules, handle evolving regulations, mitigate sophisticated fraud threats, and optimize each part of the payments funnel.
+
+That’s where AI can help. Payments are a data-rich domain requiring hundreds of microdecisions in real time, making it ripe for AI-powered optimizations. In fact, a recent Stripe survey found that 43% of companies already use some form of AI or machine learning tools to optimize payments, while another 32% plan to implement them within the next two years.
+
+Stripe has been using AI in our payments products for over a decade, and we’re continuing to expand how we put AI to use on your behalf. Last week at Stripe Sessions, we introduced our Payments Intelligence Suite, which uses AI to make hundreds of automated, real-time decisions to maximize your profits—with no effort required.
+
+Here’s a closer look at some of the products that make this possible—including products that Stripe has been offering for years and others that we announced last week at Stripe Sessions, such as Authorization Boost, Smart Disputes, and multiprocessor support for Radar.
+
+Increase authorization and reduce costs with Authorization Boost
+
+False declines—legitimate transactions mistakenly rejected due to suspected fraud—are a significant problem for online businesses, costing US online retailers an estimated $81 billion in lost sales.
+
+To combat this, we launched Authorization Boost, a new way for you to increase authorization rates and reduce costs. It gives you access to network tokens in more than 45 markets and real-time card account updater across all major card networks, plus proprietary messaging, formatting, cost, and retry optimizations that are always improving.
+
+In particular, it includes excessive retry prevention, which blocks certain transactions that are likely to get rejected and helps you reduce your network costs.
+
+We also upgraded the AI architecture that powers our retry logic, allowing us to more accurately identify which transactions to retry in order to maximize your revenue. This resulted in more than $6 billion in legitimate declined transactions recovered for our users in 2024—a record amount.
+
+Altogether, businesses using Authorization Boost’s real-time optimizations can increase their acceptance rate by 3.8% on average, with some seeing up to 7%.
+
+Reduce fraud and disputes with expanded authentication controls, smarter interventions, and more
+
+Radar, our fraud prevention tool, has been learning from Stripe data for over a decade, and we’re continuously refining our models as both fraud and technology evolve. We constantly tweak our algorithms, test which attributes are most relevant to mitigating fraud, and incorporate updated signals to identify and block many different kinds of fraud. This has allowed us to reduce dispute rates for Radar users by 17% last year, even as industry-wide ecommerce fraud increased 15%.
+
+Last week, we announced major upgrades to Radar to make your fraud prevention experience even better.
+
+We expanded Radar’s authentication controls to include intelligent interventions. When enabled, Radar intelligently triggers 3DS, creating a two-factor authentication flow and typically shifting liability to issuers. We can now use 3DS to authenticate transactions that are risky, but that don’t quite meet our block threshold. Backed by a new multihead model and decisioning layer, early users have seen an over 30% reduction in fraud on eligible transactions, representing one of the largest ever improvements to Radar.
+
+Radar’s risk scores and recommended actions are now also available for payments processed by other PSPs, giving you the strength of Radar’s fraud protection across all of your transactions—no matter which processor you use. DoorDash has seen a 10% reduction in chargeback costs by using these scores to reduce risk for transactions both on and off Stripe.
+
+We’re also extending Radar’s fraud prevention to new payment methods: you can now automatically screen and block fraudulent ACH and SEPA transactions without reducing conversion rates for legitimate users. On average, Radar users see a 42% reduction in SEPA fraud and a 20% reduction in ACH fraud.
+
+We are expanding our fraud prevention capabilities to new fraud types, starting with account fraud. Using models trained on data from more than 14,000 platforms, you can now detect fraudulent connected accounts, set custom account-level rules, intervene on suspicious transactions, and access advanced analytics to optimize your risk strategy.
+
+Even with strong fraud protection, disputes still happen, which cost businesses industry-wide about $55 billion each year. To help you mitigate their impact, we introduced Smart Disputes, a new AI-powered tool that automatically compiles and submits evidence on your behalf. Trained on Stripe’s extensive data, it tailors evidence for each dispute, helping Vimeo and Squarespace recover 13% more chargebacks. And if we counter a dispute and you lose, we’ll cover the cost to fight it.
+
+Understand baseline payments performance with comprehensive analytics and new, AI-driven anomaly alerts
+
+Many businesses lack an end-to-end view of their payments conversion funnel, missing key information such as the distribution of different payment methods used by customers, reasons for failed payments, and dispute win rates. Without this visibility, businesses tell us that they struggle to make decisions on how to improve their payments performance and maximize revenue.
+
+We built Payments analytics to give you a powerful, comprehensive view of your payments funnel, allowing you to proactively identify and implement high-impact opportunities. Payments analytics now surfaces additional quantifiable recommendations to help you increase your revenue, such as showing how much revenue you could gain by adding a digital wallet at checkout. We also introduced disputes analytics, which offers visibility into your dispute rate across key factors such as card brand and reason, as well as your evidence submission and dispute win rate.
+
+We also launched anomaly alerts that use AI to catch authorization changes with over 90% precision. When enrolled, you are proactively alerted to these changes, so you can address potential issues before they impact your revenue.
+
+The future of our AI models
+
+Historically, we’ve built specialized AI models for individual tasks such as fraud detection, authorization, and dispute management. But now, we’re going a step further in how we put AI to use for you, with our Payments Foundation Model—an industry first. It’s trained on tens of billions of transactions, and it distills almost everything about each payment on Stripe down to a single, versatile embedding. These embeddings capture not just the obvious things such as bank or ZIP code, but hundreds of subtle signals that no human—and no previous model—could track on their own. We can then use these embeddings to make a lot of different kinds of predictions about each future transaction in real time as it comes through.
+
+Card testing, where bad actors test which cards can be charged in the future, is an excellent example of its impact. While attacks are up industry-wide, they are down 80% on Stripe. That’s because we’ve invested significantly to fight card testing: engineering new features, labeling emerging attack patterns, and rapidly retraining our models. But there was a particularly sophisticated and important slice of card testing that couldn’t be prevented with traditional methods—novel attack types that fraudulent actors sprinkle across the volumes of the world’s biggest companies. Then we deployed our Payments Foundation Model. By classifying sequences of embeddings, our detection rate for attacks on large users significantly increased—from 59% to 97%—overnight.
+
+This is just the beginning: we’re exploring ways to roll out our Payments Foundation Model across our products to improve your payments performance and help you grow your revenue.
+
+Learn more about the Payments Intelligence Suite, or get in touch with an expert from our team. For more information about how global business leaders are using AI in payments, download our guide.
+
+Subscribe to the Stripe Blog
+
+Stay connected with Stripe and receive new blog posts in your inbox.
+
+Something went wrong on our end. Sorry about that. You can still contact us at sales@stripe.com.
+
+We're sorry, but we're unable to serve your request.
+
+Subscribe
+
+Stripe will handle your data pursuant to its Privacy Policy
+
+By submitting this form, you acknowledge and consent that your personal data will be processed in accordance with Stripe's Privacy Policy and that your data will be stored outside of China in accordance with Stripe's Privacy Policy.
+
+Thank you for subscribing.
+You'll receive blog updates in your inbox soon.
+
+Like this post? Join our team.
+
+Stripe builds financial tools and economic infrastructure for the internet.
+
+View roles
+
+Have any feedback or questions?
+
+We’d love to hear from you.
+
+Contact us
+
+United States (English)
+
+Australia
+
+English
+
+Austria
+
+Deutsch
+
+English
+
+Belgium
+
+Nederlands
+
+Français
+
+Deutsch
+
+English
+
+Brazil
+
+Português
+
+English
+
+Bulgaria
+
+English
+
+Canada
+
+English
+
+Français
+
+Croatia
+
+English
+
+Italiano
+
+Cyprus
+
+English
+
+Czech Republic
+
+English
+
+Denmark
+
+English
+
+Estonia
+
+English
+
+Finland
+
+English
+
+Svenska
+
+France
+
+Français
+
+English
+
+Germany
+
+Deutsch
+
+English
+
+Gibraltar
+
+English
+
+Greece
+
+English
+
+Hong Kong SAR, China
+
+English
+
+简体中文
+
+Hungary
+
+English
+
+India
+
+English
+
+Ireland
+
+English
+
+Italy
+
+Italiano
+
+English
+
+Japan
+
+日本語
+
+English
+
+Latvia
+
+English
+
+Liechtenstein
+
+Deutsch
+
+English
+
+Lithuania
+
+English
+
+Luxembourg
+
+Français
+
+Deutsch
+
+English
+
+Mainland China
+
+简体中文
+
+English
+
+Malaysia
+
+English
+
+简体中文
+
+Malta
+
+English
+
+Mexico
+
+Español
+
+English
+
+Netherlands
+
+Nederlands
+
+English
+
+New Zealand
+
+English
+
+Norway
+
+English
+
+Poland
+
+English
+
+Portugal
+
+Português
+
+English
+
+Romania
+
+English
+
+Singapore
+
+English
+
+简体中文
+
+Slovakia
+
+English
+
+Slovenia
+
+English
+
+Italiano
+
+Spain
+
+Español
+
+English
+
+Sweden
+
+Svenska
+
+English
+
+Switzerland
+
+Deutsch
+
+Français
+
+Italiano
+
+English
+
+Thailand
+
+ไทย
+
+English
+
+United Arab Emirates
+
+English
+
+United Kingdom
+
+English
+
+United States
+
+English
+
+Español
+
+简体中文
+
+Products & pricing
+
+Pricing
+
+Atlas
+
+Authorization Boost
+
+Billing
+
+Capital
+
+Checkout
+
+Climate
+
+Connect
+
+Crypto
+
+Data Pipeline
+
+Elements
+
+Financial Connections
+
+Identity
+
+Invoicing
+
+Issuing
+
+Link
+
+Managed Payments
+
+Payment links
+
+Payments
+
+Payouts
+
+Radar
+
+Revenue Recognition
+
+Stripe Sigma
+
+Tax
+
+Terminal
+
+Treasury
+
+Solutions
+
+Enterprises
+
+Startups
+
+Agentic commerce
+
+Crypto
+
+Ecommerce
+
+Embedded finance
+
+Finance automation
+
+Global businesses
+
+In-app payments
+
+Marketplaces
+
+Money management
+
+Platforms
+
+SaaS
+
+AI companies
+
+Creator economy
+
+Gaming
+
+Hospitality, travel, and leisure
+
+Insurance
+
+Media and entertainment
+
+Nonprofits
+
+Professional services
+
+Public sector
+
+Retail
+
+Integrations & custom solutions
+
+Stripe App Marketplace
+
+Stripe Partner ecosystem
+
+Professional services
+
+Developers
+
+Documentation
+
+API reference
+
+API status
+
+API changelog
+
+Libraries and SDKs
+
+Stripe Projects
+
+Developer blog
+
+Resources
+
+Guides
+
+Customer stories
+
+Blog
+
+Community
+
+Sessions annual conference
+
+Privacy & terms
+
+Prohibited & restricted businesses
+
+Licenses
+
+Sitemap
+
+Cookie settings
+
+Your privacy choices
+
+More resources
+
+Company
+
+Product roadmap
+
+Careers
+
+Newsroom
+
+Stripe Press
+
+Contact sales
+
+Support
+
+Get support
+
+Managed support plans
+
+CA residents:
++1 888 926 2289
+
+Sign in
+
+© 2026 Stripe, LLC

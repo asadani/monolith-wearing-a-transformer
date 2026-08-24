@@ -1,0 +1,105 @@
+Content Paint
+
+Home
+
+About
+
+Partner
+
+Summit
+
+Search
+
+Sign in
+
+Membership
+
+Financial Services
+
+Stripe's semantics-of-money AI turns heads. Can it adapt?
+
+Foundational model shows big results, but fraud doesn't stand still
+
+Phillip de Wet
+
+May 28, 2025
+
+-
+3 min read
+
+Image credit: https://unsplash.com/@elibetvm
+
+When it started building the transformer-based foundational model it is now integrating across its stack to detect fraud and improve products, Stripe didn't actually know if an "LLM-style approach" would work in its sphere.
+
+"It wasn’t obvious that it would—payments [are] like language in some ways (structural patterns similar to syntax and semantics, temporally sequential) and extremely unlike language in others (fewer distinct ‘tokens’, contextual sparsity, fewer organizing principles akin to grammatical rules)", said Gautam Kedia, who leads applied ML for Stripe.
+
+It turned out to work well, especially in areas such as fraud detection and its real-time management. In one set of numbers Stripe touted, it recorded a 64% improvement in the rate of detecting card-testing attacks on large businesses "overnight", compared to a two-year slog to achieve an 80% reduction in such attacks using a specialised model.
+
+For a company that processed $1.4 trillion in payment volume in 2024 (equivalent to some 1.3% of global GDP) the impact was significant.
+
+And the foundational model's performance "keeps getting better", Stripe's head of information Emily Sands said, offering advantages that "weren't possible with traditional methods", which is how the company now refers to what was cutting-edge ML not all that long ago.
+
+Stripe's more detailed numbers suggest its foundational model achieves big results for its big users, while performing just about the same as (or slightly less well than) its previous generation of systems that dealt with everything from smart credential selection to automatic currency conversion.
+
+The limited performance data Stripe released has attracted attention across the payments sector, while its company-wide use of a foundational model has been noted far beyond the sector. The more academically-minded, meanwhile, have been drawn to Stripe's claim that its model suggests payments have semantic meaning, and can be profitably analysed in terms of its grammar.
+
+Stripe is pulling in data from across its products – including customers that use its anti-fraud tech while not processing transactions via Stripe – to plot transactions in a vector space that runs to hundreds of dimensions. It has vast transaction volumes across industries and countries, and the benefit of recurring interactions with factors that remain immutable over time and use, such as card numbers.
+
+It also has a data set that largely pre-dates the use of agentic AI with autonomous transaction authority (such as those Stripe itself is enabling with specialised toolsets) and the use of AI by attackers.
+
+Stripe co-founder John Collison bridged out of a question on the use of AI systems by adversaries to focus instead on new AI businesses instead, but not everyone is convinced its foundational system will continue to beat the odds as threats change.
+
+"If the model is fed years of data reflecting outdated fraud patterns or regional payment behaviors, its predictions may be skewed, potentially leading to both false positives and negatives," commented Paolo Baldriga, who advises on AI for Bain & Company and is the chief AI officer for pay-as-you-drive insurance infrastructure provider Octo Telematics.
+
+What happens when fraudsters not only use their own AI systems to obfuscate and randomise, but for real time adaptation – or worse?
+
+AI systems can themselves be a new attack surface, said Katharine Wooller, chief financial strategist at Softcat, with active data poisoning to corrupt models "leading to incorrect or biased outputs".
+
+Sign up for The Stack
+
+Interviews, insight, intelligence, and exclusive events for digital leaders.
+
+Subscribe
+
+Email sent! Check your inbox to complete your signup.
+
+No spam. Unsubscribe anytime.
+
+The link has been copied!
+
+Older Post
+
+Newer Post
+
+The Stack
+
+Interviews, insight, intelligence, and exclusive events for digital leaders.
+
+Processing your request...
+Please check your inbox and click the link to confirm your subscription.
+
+Sign up
+
+Privacy Policy
+
+© 2026 The Stack
+
+©  2026 The Stack
+
+Search the site
+
+X
+
+Your link has expired. Please request a new one.
+
+Your link has expired. Please request a new one.
+
+Your link has expired. Please request a new one.
+
+Great! You've successfully signed up.
+
+Great! You've successfully signed up.
+
+Welcome back! You've successfully signed in.
+
+Success! You now have access to additional content.

@@ -1,0 +1,62 @@
+phase: reported
+question: >
+  Do transaction-native foundation models such as Razorpay Vulcan deliver the
+  operational gains claimed for them, does a shared transformer backbone beat
+  task-specific models on structured payment data, and does the monolithic
+  versus modular argument rest on anything measurable?
+lens: technical
+target_documents:
+  - deep-research-report.md
+  - Domain Foundation Models Architectural Analysis.md
+started: 2026-08-23T14:40:58Z
+updated: 2026-08-24T00:00:00Z
+sources: 11
+sources_by_tier: {T1: 0, T2: 4, T3: 3, T4: 4}
+disconfirming_captured: [s-005, s-006, s-008, s-009, s-011]
+unreachable: [opaque.co article body (JS-rendered, only nav captured)]
+claims: 18
+claims_passing: 17
+claims_failed: [c-014]
+auditor_runs: [c-008 (failed as first written, rewritten to the auditor's narrower wording)]
+contested: [c-018]
+gate: PASS (0 hard failures, 18 warnings)
+report: research/report.md
+claims_cited: 16
+
+second_pass:
+  added_sources: [s-012 Plaid, s-013 Thoughtworks, s-014 practitioner survey]
+  added_claims: [c-019 .. c-024]
+  revises: >
+    The first report treated unverifiability as a property of the category. The
+    comparators disclose operating points and sample sizes, so the finding is
+    narrower: Razorpay sits below a bar its peers already clear.
+  at_one_remove: [c-021 Stripe positioning, c-022 Adyen failed monolith]
+  sources: 14
+  claims: 20
+
+third_pass:
+  added_sources: [s-016 Adyen Uplift (first-party), s-017 Stripe PFM, s-018 Stripe card testing, s-019 bulkhead pattern]
+  added_claims: [c-025 .. c-031]
+  supersedes:
+    c-011: superseded by c-028 -- trade-press Stripe figure replaced by the first-party 59%-to-97%
+    c-021: superseded by c-029 -- "an addition, not a replacement" is NOT Stripe's phrase; withdrawn
+    c-022: superseded by c-025 -- the primary says latency and uptime in a critical flow, not accuracy
+  resolves: >
+    Both at-one-remove attributions from the second pass are now bound to
+    primaries, and both changed on contact with them. The bulkhead pattern is
+    cited from an encyclopedia because Nygard's Release It! was not obtained;
+    the text states that rather than hiding it.
+  not_obtained: [Nygard, Release It! (2007) -- cited at one remove via s-019]
+  sources: 19
+  claims: 31
+  claims_failed: [c-014]
+  gate: PASS (0 hard failures, 26 warnings)
+  claims_cited: 27
+
+deliverable:
+  title: A Monolith Wearing a Transformer -- What we un-learned about decoupling
+  sections: 7
+  pages: 29
+  build: PASS (book-forge, flow mode, A4)
+  paths: [book/01-sections/, book.html.in, index.html, monolith-wearing-a-transformer.pdf]
+

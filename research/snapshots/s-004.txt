@@ -1,0 +1,425 @@
+News
+
+Open Item
+
+News
+
+Stores and Shopping
+
+AWS
+
+Devices
+
+Entertainment
+
+Artificial Intelligence
+
+Workplace
+
+Sustainability
+
+Community
+
+About Us
+
+Open Item
+
+About Us
+
+What We Do
+
+Working at Amazon
+
+Leadership Principles
+
+Shareholder Letters
+
+Reports
+
+Our Impact
+
+Open Item
+
+Our Impact
+
+Sustainability
+
+Community
+
+Small Businesses
+
+Jobs and Investments
+
+Amazon Future Ready
+
+Subscribe
+
+en
+
+International sites
+
+Global
+
+Global Press Center
+
+Amazon News Global
+
+Press Releases
+
+Asia Pacific
+
+Australia
+
+About Amazon (English)
+
+India
+
+About Amazon (English)
+
+Press Center (English)
+
+Japan
+
+About Amazon (日本語)
+
+Press Center (日本語)
+
+Singapore
+
+About Amazon (English)
+
+Press Centre (English)
+
+Europe
+
+European Union
+
+About Amazon (English)
+
+France
+
+About Amazon (Français)
+
+Press Center (Français)
+
+Germany
+
+About Amazon (Deutsch)
+
+Newsroom (Deutsch)
+
+Italy
+
+About Amazon (Italiano)
+
+Press Room (Italiano)
+
+Poland
+
+About Amazon (Polski)
+
+Spain
+
+About Amazon (Español)
+
+Sala de prensa (Español)
+
+United Kingdom
+
+About Amazon (English)
+
+Press Center (English)
+
+Americas
+
+United States
+
+About Amazon (English)
+
+México
+
+About Amazon (Español)
+
+Canada
+
+About Amazon (English)
+
+About Amazon (Français)
+
+Press Center (English)
+
+Brazil
+
+About Amazon (Português)
+
+Amazon.com | Conditions of Use | © 1996-2026 Amazon.com, Inc. or its affiliates
+
+Menu
+
+Submit Search
+Search Query
+
+Close
+
+Show Search
+
+News
+
+Open Item
+
+News
+
+Stores and Shopping
+
+AWS
+
+Devices
+
+Entertainment
+
+Artificial Intelligence
+
+Workplace
+
+Sustainability
+
+Community
+
+About Us
+
+Open Item
+
+About Us
+
+What We Do
+
+Working at Amazon
+
+Leadership Principles
+
+Shareholder Letters
+
+Reports
+
+Our Impact
+
+Open Item
+
+Our Impact
+
+Sustainability
+
+Community
+
+Small Businesses
+
+Jobs and Investments
+
+Amazon Future Ready
+
+Subscribe
+
+en
+Open Item
+
+International sites
+
+Global
+
+Global Press Center
+
+Amazon News Global
+
+Press Releases
+
+Asia Pacific
+
+Australia
+
+About Amazon (English)
+
+India
+
+About Amazon (English)
+
+Press Center (English)
+
+Japan
+
+About Amazon (日本語)
+
+Press Center (日本語)
+
+Singapore
+
+About Amazon (English)
+
+Press Centre (English)
+
+Europe
+
+European Union
+
+About Amazon (English)
+
+France
+
+About Amazon (Français)
+
+Press Center (Français)
+
+Germany
+
+About Amazon (Deutsch)
+
+Newsroom (Deutsch)
+
+Italy
+
+About Amazon (Italiano)
+
+Press Room (Italiano)
+
+Poland
+
+About Amazon (Polski)
+
+Spain
+
+About Amazon (Español)
+
+Sala de prensa (Español)
+
+United Kingdom
+
+About Amazon (English)
+
+Press Center (English)
+
+Americas
+
+United States
+
+About Amazon (English)
+
+México
+
+About Amazon (Español)
+
+Canada
+
+About Amazon (English)
+
+About Amazon (Français)
+
+Press Center (English)
+
+Brazil
+
+About Amazon (Português)
+
+Press Center
+
+Press Releases
+
+Images & Videos
+
+Investor Relations
+
+Contact Us
+
+Aws International
+
+August 18, 2026
+
+Razorpay Launches Vulcan, India's First AI Payments Foundation Model, Fueled by NVIDIA and AWS - Re-architecting Payments for a $350 Bn E-Comm Future by 2030
+
+[MEDIA ALERT]
+
+A single AI system trained on nearly 3 trillion data points across 4 bn payments, aiming to make every digital payment in India faster, safer, and smarter
+
+INDIA, Bangalore, 18th August 2026: India’s digital payments story has been one of growth and innovation - yet a quieter gap remains: a payment that doesn't go through, an OTP that arrives late, a subscription that silently lapses, a card compromised by fraud. For millions of first-time or small-town shoppers, one such experience is often enough to send them back to cash.
+
+Today, Razorpay, India's Omnichannel Payments Platform for Businesses, announced the launch of the Razorpay Vulcan, India's First Transformer-based AI Foundation Model built for payments, designed to make every digital payment in India more reliable, safer, and predictable. Built with NVIDIA and AWS technology, it combines Razorpay's payments data powered by NVIDIA's accelerated computing and AWS's cloud infrastructure - groundwork that India's e-commerce market needs as it heads toward a projected $350 bn by 2030.
+
+An internal Razorpay study across 1.5 million shoppers and 51,000+ businesses found the same payment friction - failed transactions, drop-offs, delays - surfacing identically from a metro high street to a small-town market. That’s what convinced Razorpay to build a single shared model rather than keep refining each one separately.
+
+The Impact so far: Ahead of today’s full launch, early components of the Razorpay Foundation Model have been running across 3 trillion data points on the company's network - testing routing, fraud, and risk decisions on live transactions. Customers including Blinkit, Bachatt, and redBus, among others, have already started seeing the benefits of these capabilities in live payment environments.
+
+8-10% improvement in payment success rates
+
+⁠⁠8x more international card fraud detected and stopped
+
+⁠⁠5x more fraudulent or disputed transactions identified, without increasing the number of alerts
+
+40% more shoppers see their preferred UPI app on Razorpay Magic Checkout, helping complete 1-2 lakh more purchases every month
+
+Why Razorpay: Most companies see only one slice of a payment. Razorpay sees payments moving across merchants, instruments, issuers, and gateways at once - the breadth needed to understand India's payments ecosystem as a whole.
+
+Why this matters for India: India's payments landscape is unlike any other: a single purchase can be processed via UPI, cards, net banking, wallets, or Cash on Delivery across hundreds of banks and gateways.
+
+Take Meera, buying running shoes for ₹2,400 at 9 pm: she taps "Pay" and sees "Payment unsuccessful. Please try again." Her card, bank, and money are all fine - her payment simply had several possible routes, and one was briefly the wrong choice at that moment.
+
+This pattern, repeated across millions of Indians, led Razorpay to build a model that scores every route in real time and picks the healthiest one before a payment is attempted.
+
+What's been missing till now: The industry has tackled this with separate, specialised models - one each for routing, fraud, risk, and checkout - that don't talk to each other, even though the same signals matter to all of them in one way or the other. It's like several doctors examining a patient, each reading only their own test results.
+
+The Solution: One shared intelligence layer for every payment
+
+The Razorpay AI Payments Foundation Model learns from the entire payments ecosystem's data points at once, and keeps improving with every transaction it processes - instead of solving one narrow problem at a time. Built on transformer technology - the same family of AI architecture behind many of today's AI systems like LLMs - it is adapted specifically for the patterns hidden inside Indian payments data.
+
+Not another ML model, and not an LLM either: A traditional ML model is built for one job; solve a new problem, and you start over. A foundation model learns how payments move, so that understanding extends to new use cases without re-training. And while the term comes from LLMs, this isn't one - LLMs understand text; this model understands the language of the movement of money.
+
+By the numbers:
+
+Trained on approximately 3 trillion data points across 4 bn payments
+
+Learns from roughly 3,000 signals per transaction
+
+Built entirely as a proprietary, ground-up model - both the architecture and the training data belong to Razorpay
+
+Generic LLMs understand text. This model understands the complex movement of money at a massive scale
+
+Powering training and live decisions with NVIDIA and AWS: Training a model on 3 trillion data points across 4 bn payments needs serious computational muscle. NVIDIA's GPUs powered the training and running of the model at scale; AWS's cloud infrastructure, including Amazon SageMaker, supported development, training, and deployment.
+
+For businesses, this means fewer lost sales, reduced OTP drop-offs, lower fraud losses, and fewer RTO returns
+
+For consumers, it means payments that simply work, every time
+
+Harshil Mathur, CEO & Founder of Razorpay, said, “India's appetite for digital payments is real, but it isn't universal yet - for a large part of the country, going digital still comes down to one thing: does it work, every single time? That's the customer we built this for: the one still deciding whether to trust a screen over cash in hand. An AI-led payments foundation model doesn't just solve today's problem and stop there. Every payment teaches the system something that makes the next payment better. That's what makes this feel less like a product launch, and more like the starting point for how payments in India keep getting better on their own, for years to come.”
+
+Pahal Patangia, Head of Global Industry Business Development and Payments, NVIDIA said, “India’s rapidly evolving digital economy is creating an opportunity to make payments more intelligent, reliable, and secure. NVIDIA’s work with Razorpay in partnership with AWS on AI payments foundation models has opened up a new frontier, turning complex payments data into real-time contextual intelligence. This has a proprietary and purpose-built semantic AI layer that can help advance the next generation of digital financial services.”
+
+Kiran Jagannath, Head of FSI and Conglomerates, AWS India and South Asia, said, "Razorpay is reimagining payments intelligence at India scale with an AI Foundation Model - built on Amazon SageMaker - that consolidates billions of transaction insights into a single, continuously learning intelligence layer, replacing fragmented ML models with unified AI that delivers higher payment success rates, rapid iteration, and enterprise-grade security for mission-critical payment flows. As India's digital economy grows, we are excited to power the AI infrastructure behind payments that simply work for every Indian."
+
+What Razorpay’s AI Payments Foundational Model can do
+
+Hyper-Precision Routing: Sends each payment down the path most likely to succeed, in real time
+
+Network-Level Fraud Detection: Spots fraud visible only across merchants, flagging a stolen card the moment it's used across unrelated sellers
+
+RTO Risk Intelligence: Flags risky Cash on Delivery orders before checkout
+
+Predictive Checkout Personalisation: Recommends the payment method most likely to work for each customer.
+
+Looking ahead: Razorpay sees this as the starting point, not the destination - with the goal that every payment decision, from authentication to routing to fraud to lending, is eventually powered by one continuously learning model. With India's digital e-commerce market projected to reach $350 bn by 2030, Razorpay sees the AI Payments Foundation Model as part of the groundwork that growth will need.
+
+***
+
+About Razorpay: Razorpay, an omnichannel payments platform for businesses, strives to help Indian businesses with innovative solutions built with technology to address the payment and banking journey for businesses. Established in 2014 by alumni of IIT Roorkee, Shashank Kumar and Harshil Mathur, the company strives to provide technology payment solutions to many businesses. A few angel investors have also invested in Razorpay’s mission to simplify payments and business banking.
+
+Press Center
+
+Investor Resources
+
+Amazon News
+
+Images and videos
+
+Contact Amazon PR
+
+Shop Amazon.com
+
+Careers
+
+Amazon.com | Conditions of Use | © 1996-2026 Amazon.com, Inc. or its affiliates

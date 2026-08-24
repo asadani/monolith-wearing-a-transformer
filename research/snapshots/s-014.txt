@@ -1,0 +1,245 @@
+Payments Strategy Breakdown by Dwayne Gefferie
+
+SubscribeSign in
+
+Transaction Foundation Models
+
+Why Stripe, Adyen, Visa, Mastercard and Revolut are all training AI on payment data, what it changes for merchants and margins, and who actually gets to play.
+
+Dwayne Gefferie
+
+Jul 17, 2026
+
+9
+
+2
+
+1
+
+Share
+
+In April, Revolut published a research paper. One AI model, trained on its customers’ transaction histories, replaced six production systems at once. Credit scoring improved by 130%.
+
+The same paper reports that the model lost on money-laundering detection. Down 47% against the system it replaced.
+
+Thanks for reading Payments Strategy Breakdown by Dwayne Gefferie! Subscribe for free to receive new posts and support my work.
+
+Subscribe
+
+Both numbers come from the same team, in the same paper. That honesty is the story, and this edition is about what sits between those two figures, and why it matters to anyone running payments strategy rather than a data science team.
+
+Revolut isn’t alone. Stripe shipped a payments foundation model in May 2025, Visa published one in November, and Mastercard is building one with NVIDIA and Databricks. Nubank runs one in production for credit in Brazil, and Plaid trained one across 12,000 institutions.
+
+This is the same pattern we’ve tracked all arc. Usage-based billing was about owning the meter. Machine-to-machine was about owning identity and settlement. This is the same instinct applied to a different layer: own the intelligence that sits atop the transaction, because that’s where the next margin is.
+
+Two questions run through everything below. Is the value real, or is it data scientists admiring their own work? And can anyone outside the giants build one?
+
+Let’s break it down.
+
+A decade of groundwork, not a six-month launch
+
+While the announcements all happened in the last six months. The work behind them took ten years.
+
+Stripe launched Radar in 2016 and has published its progress in fraud modeling almost every year since. Adyen was catching marketplace fraud with graph-based models and running dozens of model versions in parallel long before anyone used the phrase foundation model.
+
+Every company on this list walked the same road, in the same order: store the data, build the analytics, train one model per task, then compress what those models learned into a single reusable form.
+
+The foundation model is the last step on that road, not the first. This matters strategically, because it tells you who can follow. A competitor doesn’t reach this by reading Revolut’s paper and copying it. They reach it by having spent ten years pouring the floors underneath it: the data pipelines, the labeling, the model infrastructure. If your organization hasn’t started, the paper isn’t a shortcut. It’s a map of how far ahead the leaders already are.
+
+What these models actually are
+
+Here’s the idea in one line: instead of building a separate model for every job, you build one model that understands your customers, and every job draws from it.
+
+Think about how a “modern” payments business works today. It runs a zoo of specialist models, one for fraud, one for credit, one for churn, each built and maintained by its own team, each fed its own hand-picked signals. Six specialists, six projects, and none of them shares what it learned with the others.
+
+A foundation model reads the customer’s full history once and turns it into a single summary that every team can use. That summary is called an embedding: a compact string of numbers that captures how a customer behaves. Fraud, credit, and retries all read from the same summary instead of each building their own.
+
+The technical unlock, for those who want it, is self-supervision, the same method behind ChatGPT. The model learns from raw history without anyone labeling it first, the way a child picks up language by hearing it rather than studying a textbook. That removed the labeling bottleneck that had kept these systems small and single-purpose. If that’s a layer of detail you don’t need, the takeaway is simpler: one model now does the learning that used to take six teams.
+
+To be fair on the history, models that read transaction sequences aren’t new. Call it one-third genuine breakthrough, two-thirds a new name on work that was already underway. The one-third is the part worth your attention.
+
+Where you sit decides what you can learn
+
+Before looking at any company’s results, ask a more useful question than “how good is the model.” Ask what the model can even see. In payments, that depends entirely on where you sit in the flow, and no two seats see the same thing.
+
+Issuers and neobanks see the person. Revolut and Nubank watch a customer’s whole financial life: the salary landing, the rent leaving, the FX trade, the phone plan, the insurance, the savings. Every product they add is another feed into the same picture of that customer. That’s why their strongest results are in credit. Nobody knows the borrower better than the bank that watches their money all month.
+
+Acquirers and processors see the merchant side. Stripe and Adyen watch millions of businesses at once, so their models learn what an attack looks like across the whole economy rather than one shop. The card-testing pattern that hits a gaming platform on Monday hits a ticketing site on Wednesday, and a processor’s model has already seen it twice.
+
+The networks see everyone. Visa and Mastercard sit between all the issuers and all the acquirers, the widest view in payments, and they’re turning that view into AI-powered services they sell back to both sides.
+
+Keep this map in mind for the rest of the piece. What each model is good at follows directly from what its owner can see, and the recent wave of acquisitions, which we’ll come back to, is largely about buying a wider view.
+
+Reading the results without a PhD
+
+Now the numbers. And here’s a shift worth naming, because it’s rare in this industry.
+
+Payments has always been a business of hidden moats. You did not publish how your fraud engine worked; that was the edge. What’s changed is that the AI world Revolut, Visa and the rest now compete in for talent runs on openness. The OpenAI and Anthropic model is to publish, because publishing is how you attract researchers and how others validate that your claims are real. So these companies are putting their methods, and even their failures, on the public record. Revolut’s paper was co-published with NVIDIA. Visa’s, Nubank’s and Featurespace’s are on arXiv too. For a data scientist and strategist like myself, that’s a gift: for once, I can check the work rather than trust the brochure.
+
+The useful way to read a claim is to ask one question. Was this graded by the company selling it, or by an outside process anyone can inspect? Published research you can check. A press-release number you take on faith. Both can be true; they don’t carry the same weight.
+
+But the number that should decide whether you care isn’t the accuracy score. It’s whether the improvement shows up as money, and whether a merchant would ever feel it. So for each builder below, the question isn’t “how clever is the model,” it’s “what did it move, and does it reach the merchant?”
+
+The issuer side. Revolut’s PRAGMA is the strongest public evidence in the category. It trained on over 20 billion events from 25 million customers, and it published the results: +130% on credit scoring, +65% on fraud recall, and that honest −47% on money-laundering detection. The credit number is the one that matters, because for a lender, a better credit model is directly fewer defaults and more approvals. That’s not a benchmark; that’s the P&L.
+
+Nubank reports a 1.2% accuracy gain over its already heavily tuned models. Tiny, until you translate it: Nubank frames it as worth two to three years of normal improvement, and at their scale a fraction of a percent is worth millions in avoided losses. This is the honest shape of these gains. They look small on a slide and land large on the balance sheet.
+
+The acquirer side, and why merchants should care. Stripe is the clearest example of the long road. For years it ground down card testing with specialist models: catch an attack, label it, retrain, redeploy, all inside an incident. That work cut successful card-testing attacks by 80% over two years, on more than $1 trillion of volume.
+
+Then the foundation model arrived, and Stripe describes it as an addition, not a replacement: a large model trained on billions of transactions that catches novel attacks the specialists miss and turns each payment into an embedding that the rest of the stack reuses. On its hardest slice, fraud hidden inside big merchants’ volume, detection jumped from 59% to 97%.
+
+Here’s why that reaches the merchant, which is the whole point. That same embedding now feeds into Stripe’s retries, authentication choices, and acceptance optimization. Better fraud detection means fewer good customers wrongly blocked. Better acceptance means more sales clear. This is not a back-office metric; it’s conversion and revenue that a merchant sees in their own dashboard. One model, many jobs, all of them pointed at the merchant’s top line.
+
+Adyen took a path no one else on this list took: its own data centers across five regions, with the GPU fleet sitting physically next to the data. The engineering discipline shows in the pace. A single model runs 10 to 25 versions at once, half of them changing every week or two, and moving tuning to GPUs made a two- to three-day job 40 times faster. Faster iteration is not a vanity metric here; it’s how quickly a better model reaches a merchant’s checkout.
+
+From Adyen’s published Uplift work: +22% fraud recall, a 46% cut in authorization-rate loss, and a 13% gain on issuer refusals. Every one of those is a merchant-facing number: more approved payments and fewer false declines. And Adyen offered the most instructive admission in the category: it tried replacing its many models with one global model and, in its own words, tried, failed, and will keep trying. A company with hundreds of petabytes and its own hardware telling you the single-model future is hard even with every advantage. Read that as a caution against anyone claiming they’ve already cracked it.
+
+The network side. Visa’s TransactionGPT is published research that beats Visa’s production model by 22.5% on a business metric the paper doesn’t name. Mastercard says its model outperforms advanced machine learning in early testing, though the metric isn’t public yet. Both are building this into the value-added-services layer, the part of a network’s business that grows faster than the rails, and the part they can sell to everyone else.
+
+The result that ties it together. Featurespace trained on 5.1 billion transactions from 180 European banks and reports up to 140% improvement over hand-built signals, tested at banks the model had never seen. That last detail is the important one strategically: it means the learning travels. A model trained on other institutions’ data still worked at a new one, which is exactly what makes a rentable, buy-it-off-the-shelf version of this possible.
+
+The reality check. One piece of independent research keeps everyone grounded. A major 2022 academic study found that conventional models, the tree-based workhorses most teams already run, still lead on medium-sized data. Even NVIDIA’s own demo admits that its embeddings alone lost to a plain conventional model and only won when combined with existing signals.
+
+So the honest verdict, and the one to take into a strategy meeting: a foundation model is worth it when you’re moving enormous volume across many use cases at once. On a single task at ordinary scale, the model you already run probably matches it, costs a rounding error, and can explain its decisions. The foundation model is a freight locomotive. Most companies need a delivery van.
+
+The bill, and the three things that actually gate you
+
+Most people assume these models need a frontier-lab budget. The public numbers say otherwise, and this is where many strategy conversations go wrong.
+
+The training run is cheap. Visa’s runs cost roughly $700 to $1,400 each in cloud time. Nubank’s came in near $1,500. Revolut’s billion-parameter model cost somewhere between $21,000 and $40,000. The single most expensive model in payments costs less to train than a junior analyst’s salary.
+
+So compute is not the gate, contrary to what chip vendors imply. Three other things are, and they stack.
+
+Data. You need roughly 5 million labeled customer records before this even beats the model you already run, and tens of millions before it’s worth the trouble. That’s not something money buys quickly; it’s years of history. This is the real moat, and it’s why the acquisitions matter.
+
+Team. Ten to fifteen machine-learning and infrastructure engineers, permanently. The $2,000 training run is nothing next to the $3 million a year it takes to keep the thing alive.
+
+A decision you own. A point where the model’s output becomes money: the authorization, the credit line, the retry, the checkout. A brilliant score with no decision attached is a weather report for a field you don’t farm.
+
+Networks, large PSPs and big neobanks hold all three. A mid-sized player usually holds none, and that single fact is the whole “can everyone do this” debate.
+
+One apparent exception, since it comes up: Adyen’s data centers look like proof you need to pour concrete to compete. You don’t. Those buildings exist for regulatory control and uptime, and the GPUs moved into infrastructure Adyen already owned for other reasons.
+
+Follow the money behind the story
+
+Most of what’s been written about this category has been co-published by the companies that sell the tools to build it. NVIDIA co-announced Stripe’s model and Mastercard’s, supplies Revolut’s and Adyen’s stacks, and publishes a “build your own transaction model” guide. NVIDIA sells the compute, the clouds rent it, and Databricks preps the data. They profit whichever model owner wins, which makes them the most reliable beneficiaries in the room, and the most motivated storytellers.
+
+So grade the narratives the way you grade the numbers. “You need a data center” sells hardware, and the training costs above show it’s overstated. “Our data moat is unassailable” flatters incumbents, and it’s half true: data is the gate, but 5 million records is a lower bar than the marketing implies.
+
+There are two honest ways out for everyone else. Rent it: Mastercard, Plaid and Featurespace are all building versions you can buy, which doesn’t remove the moat so much as move it to the vendor. Federate it: Swift and Google Cloud have a dozen banks training a shared fraud model without any of them handing over data, still a sandbox, fraud only, but the one genuine opening for a player without a giant dataset of its own.
+
+The regulator already read the paper
+
+There’s a constraint the launch announcements skip, and it decides where this value is actually allowed to land.
+
+The EU AI Act treats credit scoring as high-risk, and it specifically exempts fraud detection. The high-risk obligations begin from 2 August 2026, with some deadlines still being finalized. Europe’s top court got there earlier: its SCHUFA ruling held that a score which effectively decides a loan is itself a decision, with a right to explanation attached. The US demands the same through the reason codes on every decline.
+
+The tension in plain terms: the law requires you to explain the “no,” and an embedding can’t. It may be the best-informed judgment in the building, but it can’t fill in the reason code a declined applicant is legally owed.
+
+Now line that up against the results. The biggest published gains are in credit; credit is exactly where a black box is hardest to use, and fraud, the exempted task, is where every one of these models went live first. That’s not a coincidence. Regulation is quietly directing where the models get deployed, toward fraud and conversion, away from autonomous credit decisions. For anyone planning a build, that routing is the single most important design constraint, and the reason the emerging answer everywhere is a hybrid: the foundation model reads, an explainable model decides, a human signs off on credit.
+
+Two different AI bets, landing at once
+
+It’s worth separating two AI stories that are easy to blur, because they call for different decisions.
+
+One is the foundation model, built on transaction data you own, sitting underneath your risk and credit decisions. The other is the frontier labs- OpenAI, Anthropic, Google- renting out reasoning that sits on top of workflows: investigating a fraud case, drafting a credit memo, handling a dispute. Anthropic powers FIS’s financial-crimes agent with the data staying at FIS. OpenAI and Stripe built a checkout protocol, not a risk model. The labs don’t train on your transactions, and the data owners won’t rent theirs out. Two markets, stacked, not one, and you’ll buy from both.
+
+There’s one place they may collide, and readers of the machine-to-machine edition will see it coming. Agent-initiated purchases don’t behave like human ones, and Stripe already tells businesses to update their risk models to tell good bots from bad. If agent traffic breaks today’s fraud signals, it creates fresh demand for exactly this kind of model. Plausible, not yet proven.
+
+What to actually do about it
+
+Strip away the hype, and the guidance is specific by cohort.
+
+Networks and top-tier PSPs: build. You hold the data, the team, and the decision points. Aim at fraud and conversion, where the gains convert straight to volume and dodge credit’s regulatory weight.
+
+Neobanks: build. You’re the archetype this was made for. Every product you add deepens the same customer picture, and credit is where it pays off.
+
+Banks: rent and buy before you build. Rent reasoning on the FIS model, buy embeddings where you can, and build in-house only where you own a distinctive decision and have tens of millions of records.
+
+Mid-sized players: don’t build below the bar. Under roughly 5 million labeled records and a ten-person team, the model won’t beat what you run and the team will cost more than the lift. Federate for fraud, rent scores where you can, and keep your existing model, which at your scale matches the giant on any single task and can explain itself.
+
+Where this goes
+
+Look at the deal sheet through this lens and a pattern jumps out.
+
+Global Payments bought Worldpay, which had just bought Ravelin, a machine-learning fraud firm. Adyen bought Orb and Talon.One, adding the meter and the loyalty data on top of the payment. Nuvei and Payoneer changed hands. And Stripe has reportedly put a $53 billion bid on the table for PayPal, which would give a merchant-side processor access to the consumer-side behavior of hundreds of millions of wallets.
+
+Read each of those twice: once as the strategy on the press release, and once as what it feeds a foundation model. More history, more products per customer, more decisions where a score becomes money. Consolidation in payments is increasingly, among other things, a way to buy the one input money can’t create quickly: data with depth and time behind it.
+
+Four signals will tell you where the category settles:
+
+The first network or PSP to report revenue attributable to the model, a hard authorization or fraud-loss number. That moves this from research to P&L.
+
+A mid-sized player shipping a competitive model on rented GPUs. That would break the “only giants” story.
+
+A regulator ruling on foundation models in credit. That decides the biggest prize.
+
+A rentable model reaching real scale. That means the capability is commoditizing, and the margin moves to whoever owns the decision.
+
+My read: the value is real, it’s narrower than the headlines, and it concentrates where deep data, real teams, and owned decisions already sit.
+
+Which closes the loop across this arc. The meter is worth more than the rail. Identity and settlement beat the transfer. And now the transaction record itself becomes the asset because it is what trains the intelligence.
+
+Everyone can afford the training run. Almost no one can buy the data. That’s the whole game.
+
+Thank you for reading.
+
+P.S. If you’re reading this and are looking for the insights to help you improve your own strategy, that’s exactly what I help payments companies figure out.
+
+20+ years in payments data and strategy. From being the First Data Scientist at Adyen, to being the First VP of Data Science & Analytics at Checkout.com, to helping over 50 of the top 150 acquirers and issuers globally through my consultancy.
+
+For Advisory. Speaking. Consultancy. Email me or DM me to set up a call.
+
+Or, if you just want to keep fueling these breakdowns and deep dives, buy me a coffee.
+
+Thanks for reading Payments Strategy Breakdown by Dwayne Gefferie! Subscribe for free to receive new posts and support my work.
+
+Subscribe
+
+9
+
+2
+
+1
+
+Share
+
+Discussion about this post
+
+CommentsRestacks
+
+Ben Botes | GP & 4x Founder
+
+Jul 21
+
+Liked by Dwayne Gefferie
+
+<p>One model replacing six production systems is the kind of thing that should terrify every legacy credit bureau. If Revolut can do this with transaction data alone, the question is what happens to the bureaus when every neobank follows.</p>
+
+Reply
+
+Share
+
+Ben Botes | GP & 4x Founder
+
+Jul 22
+
+<p>I wonder whether the transaction data moat is as deep as the payment companies think it is. Merchants give the same data to multiple processors, so the unique training set might be smaller than it looks once you account for overlap.</p>
+
+Reply
+
+Share
+
+TopLatestDiscussions
+
+No posts
+
+Ready for more?
+
+Subscribe
+
+© 2026 Dwayne Gefferie · Privacy ∙ Terms ∙ Collection notice
+
+Start your SubstackGet the app
+
+Substack is the home for great culture

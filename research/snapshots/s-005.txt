@@ -1,0 +1,196 @@
+Skip to content
+
+×
+
+Search for:
+
+MEDIANAMA
+
+Technology and policy in India
+
+Latest
+
+Workshop
+
+Newsletter
+
+Insights
+
+Reasoned
+
+Focus
+
+Privacy
+
+Consultations
+
+Freedom Of Expression
+
+E-commerce
+
+Competition
+
+Net Neutrality
+
+Platform Regulation
+
+Guides
+
+For You
+
+Anonymous Tip
+
+Ask us to file an RTI
+
+Support a MediaNama event
+
+Menu
+
+Razorpay launches Vulcan, an AI foundation model for payments. But what does it train on?
+
+Aakriti BansalonAugust 18, 2026August 18, 2026 4 minute read
+
+4 minute read
+
+Razorpay has launched Vulcan, which it calls “India’s first transformer-based AI foundation model for payments.” The model works on payment routing, fraud, risk and personalisation, and Razorpay built it with Nvidia and Amazon Web Services (AWS). According to Entrackr, customers including Blinkit, Bachatt and redBus have started using some of its capabilities in live payments.
+
+4 billion payments. 3 trillion data points. One model trained on all of it.
+
+Meet @Razorpay Vulcan – India’s first transformer-based AI foundation model for payments.
+
+Built, trained and hosted in India, in partnership with @nvidia and @awscloud.
+
+Until now, every payments… pic.twitter.com/1vNuqmeHkL
+— Harshil Mathur (@harshilmathur) August 18, 2026
+
+What is a foundation model? One large model trained on broad data that many tasks draw on, instead of a separate narrow model for each task. Founder Harshil Mathur likened Vulcan to a large language model (LLM). “Like LLMs are trained on text to understand language, Vulcan is trained on payments to understand how money moves,” he wrote.
+
+What do we know about it?
+
+Training scale: “4 billion payments. 3 trillion data points. One model trained on all of it,” Mathur wrote. The model uses around 3,000 signals per transaction, and Razorpay built, trained and hosted it in India.
+
+What it draws on: Signals across merchants, payment instruments, issuers and gateways, which the model uses to pick the route most likely to spot fraud patterns across merchants.
+
+Ownership: Razorpay developed Vulcan from the ground up, with its architecture and training data proprietary to the company.
+
+Origin: Before building Vulcan, Razorpay ran an internal study of 1.5 million shoppers and more than 51,000 businesses that found the same payment friction across metros and smaller markets.
+
+Business model: Razorpay is not charging merchants for Vulcan.
+
+What does Razorpay claim it delivers?
+
+“8-10% improvement in payment success rates.”
+
+“8x more international card fraud detected.”
+
+“5x more fraudulent or disputed transactions identified,” which Razorpay says it achieved without increasing the number of alerts.
+
+Through Magic Checkout, 40% more shoppers shown their preferred UPI app, completing an additional 1-2 lakh purchases a month.
+
+These are Razorpay’s own beta results. It has not published the methodology, baseline or sample period behind them.
+
+Who benefits? Razorpay pitches Vulcan as built for consumers. Mathur said it aims to make payments dependable for people “still deciding whether to trust digital transactions over cash,” and the product page calls it “powered for a billion Indians.” The benefits Razorpay lists go to merchants: fewer failed payments, lower fraud losses, fewer undelivered orders and higher checkout conversion. For consumers, Razorpay says only that they “could benefit from more reliable payment experiences.”
+
+What do we not know? Razorpay has not disclosed three things that matter for a model trained on live payments:
+
+Whether merchants can opt out. Razorpay has not said whether a merchant can keep its transactions out of Vulcan’s training, or what happens to what the model has already learned if a merchant leaves.
+
+Whose data it trains on. The company describes Vulcan’s signals as spanning merchants, payment instruments, issuers and gateways. It has not said whether the 3 trillion data points also include data that identifies individual consumers. That distinction decides whether the DPDP Act applies to the training at all.
+
+The legal basis for training. Razorpay owns Vulcan and its training data, but for much of the transaction data it handles, it is a processor acting for merchants, not the owner. It has not said what allows it to use that data to train a model of its own.
+
+Why does the legal basis matter? Across several products, Razorpay acts as a data processor for merchants, with the merchant classified as the data fiduciary for end-customer data. Its own Agent Studio privacy policy sets this out under Section 8(2) of the Digital Personal Data Protection Act, 2023 (DPDP Act). A data processor may use data only on the fiduciary’s instructions and for the fiduciary’s purposes.
+
+Training a model Razorpay owns is a separate purpose from processing a merchant’s individual transactions. Under the DPDP Act, consent must be free, specific and informed. Whether the consent Razorpay’s merchants and their customers gave covers training Vulcan on that data is not something the company has made public.
+
+What does Razorpay plan next? Razorpay says it will expand Vulcan to authentication and lending, using one AI layer across more of the payment journey. Lending is where it matters most. A model trained on transaction patterns to score payments, then extended to score creditworthiness, raises separate questions on fairness and explainability, including whether a declined borrower can be told why.
+
+The expansion comes as Razorpay heads toward a public listing. It secured shareholder approval in May for a Rs 2,700 crore fresh issue. Vulcan improves with every transaction and Razorpay owns it outright, which makes the data feeding it a commercial asset ahead of that listing.
+
+How does this fit Razorpay’s AI push? Razorpay launched Agent Studio in March, which drew questions on AI-driven dark patterns and price discrimination in payments. It also built a voice AI agent with Sarvam AI. On liability there, Razorpay said “the introduction of agentic shopping does not rewrite the rules of commercial liability,” placing commercial disputes with the merchant and payment security with itself. A misrouted payment or a wrongly flagged transaction falls closer to payment security, which the company owns, it has not said who absorbs that loss.
+
+MediaNama has sent the folllowing questions to Razorpay.
+
+Do Vulcan’s training data points include data that identifies individual consumers, or only merchant, payment instrument, issuer and gateway signals?
+
+On what legal basis does Razorpay use merchant transaction data to train Vulcan? Razorpay is a data processor for merchants under the DPDP Act. Does the training rest on merchant contracts, fresh consent, or a specific provision of the Act?
+
+Can a merchant opt its transactions out of Vulcan’s training?
+
+If a merchant leaves Razorpay, does Vulcan retain what it learned from that merchant’s data?
+
+What baseline, sample size and time period do the 8 to 10% success-rate figures cover?
+
+Will Razorpay publish the methodology behind the beta results?
+
+This article will be updated on a response.
+
+Also read:
+
+Razorpay Launches AI Agent Studio, But Questions Loom Over Dark Patterns, Price Discrimination
+
+Razorpay and NPCI launch pilot programme for agentic payments via ChatGPT
+
+For You
+
+Read Reasoned by Nikhil Pahwa: How AI is changing our world
+
+Sign up for MediaNama's Daily Newsletter to receive regular updates
+
+Sponsor a MediaNama Event
+
+CategoriesNewsDiscover moreArtificial IntelligenceFintech LendingPaymentsRazorPay
+
+Related Stories
+
+MobiKwik plans to scale merchant payments and lending with NBFC to drive growth: Q4 FY26 earnings
+
+IPO-Bound Razorpay Slips Into the Red In FY25 Despite 65% Revenue Growth
+
+Razorpay and NPCI launch pilot programme for agentic payments via ChatGPT
+
+Razorpay Launches Biometric Authentication for Card Payments: What It Means for India’s Digital Payments
+
+Exclusive: Razorpay gets shareholder approval for Rs 2,700 crore IPO
+
+Razorpay explains how its AI voice agent pays for you and what happens when it goes wrong
+
+Razorpay chief product officer on AI Agent Studio pricing, compliance concerns
+
+Razorpay Launches AI Agent Studio, But Questions Loom Over Dark Patterns, Price Discrimination
+
+Post navigation
+
+News
+
+Spotify will label AI artists; India’s rules demand labels on the music too
+
+Spotify is introducing AI Persona labels for synthetic artists. India’s rules take a different approach by requiring disclosures on synthetic content itself.
+
+News
+
+Delhi HC asks CBFC, Centre to decide on how to add accessibility features in cinema, OTT for differently-abled people
+
+The Delhi High Court has asked the Centre, CBFC, filmmakers and other stakeholders to deliberate on measures to make films accessible to persons with disabilities across cinemas and OTT platforms.
+
+MediaNama is the premier source of information and analysis on Technology Policy in India. More about MediaNama, and contact information, here.
+
+© 2024 Mixed Bag Media Pvt. Ltd.
+
+Contact Us
+
+About
+
+Events
+
+Careers at MediaNama
+
+Support
+
+Terms Of Use
+
+Privacy Policy
+
+Proudly powered by WordPress
+|
+Theme: Justread by GretaThemes.

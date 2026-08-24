@@ -1,0 +1,619 @@
+<style>
+{{FONT_FACES}}
+/* ============================================================
+   Speed Is the Moat — designed edition
+   Print-first: A4, chapter recto starts, running feet stamped
+   post-hoc. Screen presentation wraps each section as a card.
+   ============================================================ */
+
+:root{
+  --ink:#161A21;
+  --ink-soft:#4E5665;
+  --ink-faint:#7C8593;
+  --rule:#D8DCE3;
+  --rule-strong:#B9C1CC;
+  --paper:#FFFFFF;
+  --wash:#F2F4F7;
+  --accent:#9E2B3A;          /* oxblood — the single loud color */
+  --accent-wash:#F6E9EB;
+  --fast:#1F4E79;            /* data: the quick end of the curve */
+  --slow:#9BA5B2;            /* data: the slow end */
+  --gold:#8A6212;
+
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Serif 4",Iowan Old Style,"Palatino Linotype",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+
+*{box-sizing:border-box}
+
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:11.2pt;
+  line-height:1.62;
+  text-rendering:optimizeLegibility;
+  font-kerning:normal;
+}
+
+/* ---------- page geometry ---------- */
+
+@page{ size:A4; margin:24mm 21mm 22mm 21mm; }
+@page :first{ margin:0; }
+
+section.sheet{ page-break-after:always; break-after:page; }
+section.sheet:last-of-type{ page-break-after:auto; break-after:auto; }
+
+/* ---------- cover: full-bleed artwork, page 1 ---------- */
+
+section.cover{
+  width:210mm;
+  height:297mm;
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+  background:#0E1116;
+}
+section.cover img{
+  display:block;
+  width:210mm;
+  height:297mm;
+  object-fit:cover;
+  object-position:center center;
+}
+
+/* ---------- title page ---------- */
+
+.titlepage{ padding-top:6mm }
+.titlepage .kicker{
+  font-family:var(--mono);
+  font-size:8pt;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 16mm;
+}
+.titlepage h1{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:40pt;
+  line-height:.96;
+  letter-spacing:-.028em;
+  margin:0 0 6mm;
+}
+.titlepage .rule{ width:34mm;height:2px;background:var(--accent);margin:0 0 8mm }
+.titlepage .sub{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:13.5pt;
+  line-height:1.34;
+  color:var(--ink-soft);
+  margin:0 0 10mm;
+  max-width:120mm;
+}
+.titlepage .verdict{
+  font-size:12pt;
+  line-height:1.52;
+  max-width:122mm;
+  margin:0 0 16mm;
+}
+.titlepage .verdict b{ color:var(--accent) }
+.titlepage .byline{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:13pt;
+  letter-spacing:.02em;
+  margin:0;
+  padding-top:6mm;
+  border-top:1.5px solid var(--ink);
+}
+.titlepage .byline small{
+  display:block;
+  font-family:var(--mono);
+  font-weight:400;
+  font-size:7.6pt;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-top:2.5mm;
+}
+
+/* ---------- title page description ---------- */
+
+.titlepage .desc{
+  font-size:11.4pt;
+  line-height:1.6;
+  margin:0 0 5mm;
+  max-width:124mm;
+}
+.titlepage .desc:last-of-type{ margin-bottom:14mm }
+
+/* ---------- copyright plate ---------- */
+
+.plate h3{ margin-top:6mm }
+.legal{
+  font-size:10.2pt;
+  line-height:1.58;
+}
+.legal p{ margin:0 0 3.4mm }
+.legal .work{
+  font-style:italic;
+  color:var(--ink-soft);
+}
+.legal .grant{
+  border-left:3px solid var(--accent);
+  padding:0 0 0 5mm;
+  margin:5mm 0;
+}
+.legal .imprint{
+  font-family:var(--mono);
+  font-size:7.6pt;
+  letter-spacing:.05em;
+  color:var(--ink-faint);
+  margin-top:4mm;
+  padding-top:2.5mm;
+  border-top:1px solid var(--rule);
+}
+.signoff{
+  font-family:var(--mono);
+  font-size:8.4pt;
+  letter-spacing:.1em;
+  color:var(--ink-faint);
+  margin-top:3mm;
+}
+
+/* ---------- tier legend ---------- */
+
+.tierkey{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3mm 7mm;
+  margin:5mm 0 6mm;
+  padding:4.5mm 5mm;
+  background:var(--wash);
+  border:1px solid var(--rule);
+  break-inside:avoid;
+}
+.tierkey .row{ display:grid;grid-template-columns:9mm 1fr;gap:3mm;align-items:start }
+.tierkey .row > span:last-child{
+  font-size:9.2pt;
+  line-height:1.42;
+  color:var(--ink-soft);
+}
+.tierkey b{
+  font-family:var(--display);
+  font-weight:600;
+  color:var(--ink);
+}
+.tierkey .lead{
+  grid-column:1 / -1;
+  font-size:9.4pt;
+  line-height:1.45;
+  color:var(--ink-soft);
+  margin:0 0 1mm;
+}
+
+/* ---------- about the author ---------- */
+
+.about .bio{ font-size:11pt;line-height:1.62;max-width:128mm }
+.qrpanel{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8mm;
+  margin:9mm 0 0;
+  padding-top:6mm;
+  border-top:1.5px solid var(--ink);
+}
+.qrcard{ display:flex;gap:5mm;align-items:flex-start }
+.qrcard .code{
+  width:26mm;
+  flex:0 0 auto;
+  padding:2mm;
+  border:1px solid var(--rule-strong);
+  background:#fff;
+}
+.qrcard .code svg{ display:block;width:100%;height:auto }
+.qrcard .what{ padding-top:1mm }
+.qrcard .what b{
+  display:block;
+  font-family:var(--display);
+  font-weight:600;
+  font-size:10pt;
+  margin-bottom:1.5mm;
+}
+.qrcard .what span{
+  display:block;
+  font-size:9.4pt;
+  line-height:1.45;
+  color:var(--ink-soft);
+  margin-bottom:2mm;
+}
+.qrcard .what code{
+  font-family:var(--mono);
+  font-size:8pt;
+  color:var(--accent);
+}
+
+/* ---------- front matter ---------- */
+
+.plate{ padding-top:4mm }
+.plate h2, .backmatter h2{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:15pt;
+  letter-spacing:-.01em;
+  margin:0 0 5mm;
+}
+.abstract{
+  font-size:11.6pt;
+  line-height:1.66;
+}
+.abstract .lead{
+  font-size:13pt;
+  line-height:1.5;
+  color:var(--ink);
+  font-weight:600;
+  margin:0 0 6mm;
+}
+
+ol.contents{
+  margin:8mm 0 0;padding:0;list-style:none;
+  counter-reset:toc;
+}
+ol.contents li{
+  counter-increment:toc;
+  display:grid;grid-template-columns:8mm 1fr;
+  gap:4mm;padding:2.6mm 0;
+  border-bottom:1px solid var(--rule);
+  font-size:10.6pt;
+}
+ol.contents li::before{
+  content:counter(toc,decimal-leading-zero);
+  font-family:var(--mono);font-size:8.4pt;color:var(--accent);
+  padding-top:.8mm;
+}
+ol.contents li.app::before{ content:"—";color:var(--ink-faint) }
+ol.contents b{ grid-column:2;font-family:var(--display);font-weight:600 }
+ol.contents span{ grid-column:2;display:block;color:var(--ink-soft);font-size:9.8pt;line-height:1.45 }
+ol.contents li{ break-inside:avoid }
+
+/* ---------- chapters ---------- */
+
+.chapter{ padding-top:2mm }
+.chapter-num{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:58pt;
+  line-height:.8;
+  color:var(--wash);
+  letter-spacing:-.04em;
+  margin:0 0 -6mm;
+  user-select:none;
+}
+.chapter h2{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:22pt;
+  line-height:1.08;
+  letter-spacing:-.022em;
+  margin:0 0 3mm;
+  max-width:132mm;
+}
+.chapter .standfirst{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:11.4pt;
+  line-height:1.45;
+  color:var(--ink-soft);
+  margin:0 0 7mm;
+  padding-bottom:5mm;
+  border-bottom:1px solid var(--rule);
+  max-width:126mm;
+}
+
+p{ margin:0 0 3.6mm;orphans:2;widows:2 }
+p.dropcap::first-letter{
+  float:left;
+  font-family:var(--display);
+  font-weight:700;
+  font-size:34pt;
+  line-height:.82;
+  padding:1mm 2mm 0 0;
+  color:var(--accent);
+}
+
+h3{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:11.6pt;
+  letter-spacing:.005em;
+  margin:7mm 0 2.5mm;
+  break-after:avoid;
+}
+
+.beat{
+  font-family:var(--mono);
+  font-size:7.6pt;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:8mm 0 3mm;
+  break-after:avoid;
+}
+
+blockquote.pull{
+  margin:6mm 0;
+  padding:0 0 0 5mm;
+  border-left:3px solid var(--accent);
+  font-family:var(--display);
+  font-weight:500;
+  font-size:13pt;
+  line-height:1.36;
+  letter-spacing:-.008em;
+  color:var(--ink);
+  break-inside:avoid;
+}
+blockquote.pull .who{
+  display:block;
+  font-family:var(--mono);
+  font-weight:400;
+  font-size:8pt;
+  letter-spacing:.06em;
+  color:var(--ink-faint);
+  margin-top:3mm;
+  text-transform:none;
+}
+
+blockquote.quote{
+  margin:5mm 0;padding:0 0 0 5mm;
+  border-left:1px solid var(--rule-strong);
+  font-size:10.4pt;color:var(--ink-soft);
+  break-inside:avoid;
+}
+
+sup.cite{
+  font-family:var(--mono);
+  font-size:6.6pt;
+  color:var(--accent);
+  letter-spacing:.02em;
+  vertical-align:.42em;
+  line-height:0;
+  white-space:nowrap;
+  padding-left:.5px;
+}
+
+.num{ font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums }
+
+/* data callout */
+.data{
+  background:var(--wash);
+  border:1px solid var(--rule);
+  padding:5mm 5.5mm;
+  margin:6mm 0;
+  break-inside:avoid;
+}
+.data .label{
+  font-family:var(--mono);font-size:7.2pt;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-faint);
+  margin:0 0 3.5mm;display:block;
+}
+.data table{ width:100%;border-collapse:collapse;font-size:9.6pt }
+.data th{
+  text-align:left;font-family:var(--mono);font-weight:500;
+  font-size:7.4pt;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-faint);padding:0 3mm 2mm 0;
+  border-bottom:1px solid var(--rule-strong);
+}
+.data td{
+  padding:2mm 3mm 2mm 0;border-bottom:1px solid var(--rule);
+  vertical-align:top;
+}
+.data td.n{ font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap }
+.data tr:last-child td{ border-bottom:0 }
+
+/* bar figure */
+.bars{ margin:5mm 0 0 }
+.bargroup{ margin-bottom:4.5mm }
+.bargroup:last-child{ margin-bottom:0 }
+.bargroup .cap{
+  display:flex;justify-content:space-between;gap:4mm;
+  font-family:var(--mono);font-size:8pt;color:var(--ink-soft);
+  border-bottom:1px solid var(--rule);padding-bottom:1.6mm;margin-bottom:2.4mm;
+}
+.bargroup .cap b{ color:var(--accent);font-weight:600 }
+.bar{
+  display:grid;grid-template-columns:24mm 1fr 16mm;
+  align-items:center;gap:3mm;margin-bottom:1.6mm;
+  font-family:var(--mono);font-size:8pt;
+}
+.bar .track{ display:block;background:#E3E7ED;height:4.4mm;position:relative;overflow:hidden }
+.bar .fill{ display:block;height:100%;background:var(--slow) }
+.bar .fill.fast{ background:var(--fast) }
+.bar .v{ text-align:right;color:var(--ink-soft);font-variant-numeric:tabular-nums }
+
+/* epistemic note — where the evidence is thin */
+.ledger{
+  border:1px solid var(--accent);
+  background:var(--accent-wash);
+  padding:4.5mm 5mm;
+  margin:6mm 0;
+  font-size:10pt;
+  line-height:1.55;
+  break-inside:avoid;
+}
+.ledger .label{
+  font-family:var(--mono);font-size:7.2pt;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);
+  display:block;margin:0 0 2.5mm;
+}
+.ledger p{ margin:0 0 2.5mm }
+.ledger p:last-child{ margin:0 }
+
+/* in-practice list */
+ol.practice{ counter-reset:pr;list-style:none;padding:0;margin:5mm 0 0 }
+ol.practice li{
+  counter-increment:pr;
+  display:grid;grid-template-columns:7mm 1fr;gap:3.5mm;
+  padding:3mm 0;border-top:1px solid var(--rule);
+  break-inside:avoid;
+}
+ol.practice li:last-child{ border-bottom:1px solid var(--rule) }
+ol.practice li::before{
+  content:counter(pr);
+  font-family:var(--mono);font-weight:600;font-size:9pt;
+  color:var(--accent);padding-top:.6mm;
+}
+ol.practice p{ margin:0 }
+ol.practice b{ font-family:var(--display);font-weight:600 }
+
+ul.plain{ list-style:none;padding:0;margin:4mm 0 }
+ul.plain li{
+  padding:2.6mm 0 2.6mm 5mm;position:relative;
+  border-top:1px solid var(--rule);font-size:10.4pt;line-height:1.55;
+}
+ul.plain li:last-child{ border-bottom:1px solid var(--rule) }
+ul.plain li::before{
+  content:"";position:absolute;left:0;top:5.6mm;
+  width:2.6mm;height:1px;background:var(--rule-strong);
+}
+
+/* ---------- back matter ---------- */
+
+.backmatter{ padding-top:2mm }
+.backmatter .beat:first-child{ margin-top:0 }
+
+table.refs{ width:100%;border-collapse:collapse;font-size:8.6pt;margin-top:4mm }
+table.refs th{
+  text-align:left;font-family:var(--mono);font-weight:500;font-size:7pt;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);
+  border-bottom:1.5px solid var(--ink);padding:0 2.5mm 2mm 0;
+}
+table.refs td{
+  padding:1.8mm 2.5mm 1.8mm 0;border-bottom:1px solid var(--rule);
+  vertical-align:top;line-height:1.42;
+}
+table.refs td.sid{ font-family:var(--mono);color:var(--ink-faint);white-space:nowrap }
+table.refs td.t{ white-space:nowrap }
+table.refs td.pub{ color:var(--ink-soft);white-space:nowrap }
+table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var(--rule-strong) }
+.tier{
+  font-family:var(--mono);font-size:6.8pt;font-weight:600;letter-spacing:.05em;
+  border:1px solid var(--rule-strong);padding:.3mm 1.2mm;color:var(--ink-soft);
+}
+.tier.t1{ border-color:#1F6B4A;color:#1F6B4A }
+.tier.t2{ border-color:var(--fast);color:var(--fast) }
+.tier.t4{ border-color:var(--gold);color:var(--gold) }
+
+.colophon{
+  margin-top:8mm;padding-top:4mm;border-top:1.5px solid var(--ink);
+  font-family:var(--mono);font-size:7.8pt;line-height:1.7;color:var(--ink-faint);
+}
+.colophon b{ color:var(--ink-soft);font-weight:500 }
+
+/* ---------- the Ko-fi button ---------- */
+
+.cover-dl{
+  display:inline-block;
+  margin-top:9mm;
+  font-family:var(--mono);
+  font-size:8.4pt;
+  font-weight:600;
+  letter-spacing:.04em;
+  color:#fff;
+  background:var(--accent);
+  padding:3.4mm 6mm;
+  border-radius:24px;
+  text-decoration:none;
+}
+.cover-dl .ar{ font-weight:400;opacity:.85 }
+.cover-dl:hover{ background:#7d2230 }
+
+/* The button is a screen affordance; in print the reader already has the PDF. */
+@media print{ .cover-dl{ display:none } }
+
+/* ---------- screen presentation ---------- */
+
+/* Flow on screen, paginated in print. The page-break rules above are untouched,
+   so the PDF still starts every chapter on a fresh page; what changes here is
+   only that the reader gets one continuous column instead of a stack of cards.
+
+   The column is applied to every top-level section, not just .sheet, because
+   book-forge's flow matter arrives as a sibling <section class="bf-matter">
+   and its stylesheet deliberately declares no width -- it expects the host to
+   lay it out. Without this the copyright and about pages run full-bleed. */
+
+@media screen{
+  body{
+    background:var(--paper);
+    padding:0 0 72px;
+  }
+
+  body > section{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 32px;
+    background:var(--paper);
+    box-shadow:none;
+  }
+
+  /* Measures written in mm are sheet geometry. On screen the column is the
+     measure, so let the text fill it. */
+  .titlepage h1,
+  .titlepage .sub,
+  .titlepage .desc,
+  .titlepage .verdict,
+  .titlepage .byline,
+  .chapter h2,
+  .chapter .standfirst{ max-width:none }
+
+  .titlepage{ padding-top:44px;padding-bottom:8px }
+  .titlepage h1{ font-size:46pt }
+  .titlepage .kicker{ margin-bottom:10mm }
+
+  /* Chapters keep a boundary without pretending to be sheets of paper. */
+  section.chapter{ padding-top:38px }
+  body > section + section.chapter,
+  body > section + section.backmatter,
+  body > section.chapter + section{
+    border-top:1px solid var(--rule);
+    margin-top:38px;
+  }
+
+  /* The matter plates read as part of the book, at the book's own scale. */
+  .bf-matter{ padding-top:38px;font-size:10.6pt }
+  .bf-matter h2{ font-size:15pt }
+
+  /* the cover leads the page, wider than the text column, no card */
+  body > section.cover{
+    max-width:900px;
+    padding:0;
+    margin:0 auto 4px;
+    background:transparent;
+    overflow:hidden;
+  }
+  section.cover img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    box-shadow:none;
+  }
+}
+
+@media screen and (max-width:700px){
+  section.cover{ max-width:100% }
+}
+
+@media screen and (max-width:640px){
+  section.sheet{ padding:28px 22px 34px }
+  .cover h1{ font-size:34pt }
+  .chapter h2{ font-size:18pt }
+  .chapter-num{ font-size:44pt }
+  .bar{ grid-template-columns:20mm 1fr 14mm }
+  .cover-foot{ flex-direction:column;align-items:flex-start }
+}
+</style>

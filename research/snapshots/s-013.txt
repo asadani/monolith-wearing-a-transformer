@@ -1,0 +1,541 @@
+Menu
+
+Close
+
+India | English
+
+Australia
+
+English
+
+Brazil
+
+English
+|
+
+Português
+
+Canada
+
+English
+
+Chile
+
+English
+|
+
+Español
+
+China
+
+English
+|
+
+Chinese
+
+Ecuador
+
+English
+|
+
+Español
+
+Germany
+
+English
+|
+
+Deutsch
+
+India
+
+English
+
+Singapore
+
+English
+
+Spain
+
+English
+|
+
+Español
+
+Thailand
+
+English
+
+United Kingdom
+
+English
+
+United States
+
+English
+
+Worldwide
+
+English
+
+Search
+
+Close
+
+Ask Tai
+
+India | English
+
+Australia
+
+English
+
+Brazil
+
+English
+|
+
+Português
+
+Canada
+
+English
+
+Chile
+
+English
+|
+
+Español
+
+China
+
+English
+|
+
+Chinese
+
+Ecuador
+
+English
+|
+
+Español
+
+Germany
+
+English
+|
+
+Deutsch
+
+India
+
+English
+
+Singapore
+
+English
+
+Spain
+
+English
+|
+
+Español
+
+Thailand
+
+English
+
+United Kingdom
+
+English
+
+United States
+
+English
+
+Worldwide
+
+English
+
+What we do
+
+Go to overview
+
+AI/works™
+
+Who we work with
+
+Go to overview
+
+Industries
+
+Automotive
+
+Public Sector
+
+Energy
+
+Media and Publishing
+
+Retail and E-commerce
+
+Financial Services
+
+Not-for-profit
+
+Travel and Transport
+
+Utilities
+
+Manufacturing and Engineering
+
+Life Sciences and Medtech
+
+Insights
+
+Go to overview
+
+Publications and Tools
+
+Technology Radar
+
+An opinionated guide to today's technology landscape
+
+Perspectives
+
+A no-nonsense publication for digital leaders
+
+Decoder
+
+The business execs' A-Z guide to technology
+
+Looking Glass
+
+Bringing the tech-led business changes into focus
+
+All Insights
+
+Articles
+
+In-depth insights to help your business grow
+
+Blogs
+
+Expert advice on design, engineering, AI and careers
+
+Books
+
+Explore our extensive library to keep learning
+
+Podcasts
+
+Conversations on the latest in business and tech
+
+Engineering
+
+Careers
+
+Go to overview
+
+Application Process
+
+What to expect as you interview with us
+
+Graduates and Career Changers
+
+Thoughtworks University: Preparing future leaders
+
+Search Jobs
+
+Find open positions in your region
+
+Stay Connected
+
+Sign up for our monthly newsletter
+
+Learning and Development
+
+Explore how we support career growth
+
+Benefits
+
+See how we take care of our people
+
+About
+
+Go to overview
+
+Contact
+
+Search
+
+Close
+
+Ask Tai
+
+The power of transaction foundation models
+
+Building the unified intelligence layer for payments and banking
+
+Articles
+Back
+
+Close
+
+AI and ML
+
+Data strategy
+
+Article
+
+By
+
+Alla Gancz
+,
+
+Sid Sengupta
+,
+
+Artiom Troyanovsky
+
+and
+
+Nathan Hilt
+
+Published: June 02, 2026
+
+Payments are becoming faster, richer and more complex. Money now moves across cards, account-to-account rails, wallets, real-time payments, cross-border networks, embedded finance platforms and, increasingly, digital money infrastructure. At the same time, fraud is becoming more sophisticated, customer expectations are rising, regulatory scrutiny is intensifying and banks are under pressure to modernize legacy platforms without compromising resilience.
+
+For years, banks and payments organizations have responded by building more rules, more controls, more data pipelines and more task/domain-specific machine learning models: A fraud model here; a credit model there; a customer propensity model in another team; a reconciliation tool somewhere else. Each model solves a narrow problem, often using its own features, data definitions, governance processes and operating model.
+
+This approach has delivered value, but it is reaching its limits.
+
+The next leap in payments intelligence will come from transaction foundation models (TFMs): domain-specific AI models trained on large-scale transaction and event data to create a reusable intelligence layer across banking and payments. They can help institutions move from fragmented analytics to shared intelligence, from reactive decisioning to predictive insight, and from isolated AI use cases to scalable AI-powered operations.
+
+NVIDIA’s work on transaction foundation models provides a practical developer blueprint for building and creating intelligent embeddings by using transformer architecture on tabular data.
+
+For a broader industry view of how leading firms are already deploying this architecture, see NVIDIA's companion blog: Why Financial Institutions Are Converging on Transaction Foundation Models.
+
+Also recent industry work, including Revolut PRAGMA work, shows how a single pre-trained model backbone can support multiple downstream tasks such as fraud detection, credit scoring, customer engagement, recurrent transaction detection, product recommendation and lifetime value prediction.
+
+What are transaction foundation models?
+
+A transaction foundation model is an AI model trained on large volumes of financial transaction and event data so it can learn patterns in how money moves, how customers behave, how merchants operate and how risk emerges across the ecosystem.
+
+It isn’t simply a fraud model, a credit model or a marketing model. It’s a shared representation layer that can be reused across many use cases.
+
+In simple terms, a transaction foundation model learns the “language of money movement”.
+
+Just as a language model learns patterns in words, grammar, context and meaning, a transaction foundation model learns patterns in payment events, account behavior, merchant categories, transaction amounts, timing, channels, devices, balances, customer journeys and network relationships. These patterns are converted into embeddings — mathematical representations that capture useful signals from raw transaction histories.
+
+Those embeddings can then be used by downstream models and applications. A fraud team may use them to detect abnormal behavior:
+
+A credit team may use them to improve affordability and risk assessment.
+
+A payments operations team may use them to predict exceptions.
+
+A product team may use them to identify relevant customer needs.
+
+A merchant acquiring team may use them to optimize authorization rates or reduce false declines.
+
+The important shift is that each team no longer has to start from scratch. Instead of building dozens of isolated feature pipelines and models, the organization can build a common intelligence layer that learns from the full richness of transaction and event data, then adapts that intelligence to specific business outcomes.
+
+The evidence that this approach works is already substantial. Mastercard's Large Transaction Model (LTM), announced at GTC 2026 in partnership with NVIDIA and Databricks, was trained on billions of anonymized transactions and is framed by Mastercard as an insights engine spanning payments, cybersecurity, personalization and commerce- a marquee validation of the TFM category from one of the world's largest payment networks. Revolut's PRAGMA model- trained on 26 million user records, 24 billion events and 207 billion tokens across 111 countries-  delivered a 130.2% improvement in credit scoring, 64.7% improvement in external fraud recall and 40.5% improvement in product recommendation from a single pre-trained backbone. Stripe Radar, trained on more than $1.9 trillion of annual payment volume, reduces fraud by 32% on average. Adyen Uplift reported conversion uplift of up to 6%, cost reductions of up to 5% and an 86% reduction in manual risk rules across 60 enterprise pilots. Plaid's transaction representation model improved income classification by 48%, loan payment detection by 14% and bank-fee classification by 22% — with the same representation supporting classification, entity resolution and semantic retrieval. One reusable intelligence layer, multiple downstream gains.
+
+NVIDIA's blog goes deeper into the engineering partnerships behind several of these deployments — including Revolut, Mastercard, Adyen and Stripe — and is worth reading alongside these performance numbers: NVIDIA blog.
+
+Taken together, these examples show that transaction intelligence is already delivering measurable outcomes:
+
+Better fraud detection and lower fraud loss.
+
+Higher authorization and conversion rates.
+
+Lower false positives and fewer manual risk rules.
+
+Faster anomaly and incident detection.
+
+Better classification of income, fees, loan payments and financial behavior.
+
+Reusable embeddings that reduce the need to rebuild every model from scratch.
+
+This is the real strategic shift. Transaction foundation models are not simply another model type. They are a way to turn transaction data into reusable enterprise intelligence.
+
+The gap they fill
+
+Banks and payments companies already have huge volumes of transaction data. The problem isn’t a lack of data. The problem is that much of this data remains fragmented, underused or locked inside legacy systems, product silos and operational processes.
+
+Today, many institutions still operate with five major gaps.
+
+Data is fragmented across products and platforms. Card transactions, account-to-account payments, merchant acquiring data, customer servicing events, fraud case data, disputes, sanctions alerts, app behavior and open banking data often sit in different systems. Each system provides a partial view of the customer, the transaction or the risk.
+
+Models are often task-specific. A fraud model may be trained for one product or channel. A credit model may use a separate feature set. A churn model may be built in a different environment. This creates duplication, slows delivery and makes it harder to transfer learning from one use case to another.
+
+Feature engineering is expensive and slow. Many traditional machine learning approaches rely on hand-crafted features. Data scientists and engineers spend significant time defining ratios, aggregations, time windows and behavioral indicators. These features can be powerful, but they are labour-intensive and often difficult to reuse.
+
+Many models lack context. A single transaction may look normal in isolation but suspicious in sequence. A payment may be low risk for one customer but highly unusual for another. A merchant may appear healthy until network signals reveal a wider pattern of abuse. Context matters, and current systems often struggle to capture it consistently.
+
+AI doesn’t always scale beyond pilots. Many banks have promising proofs of concept but struggle to industrialize them. The barriers are not only technical. They include data readiness, model governance, explainability, integration into real-time decision flows, operational adoption and the ability to monitor performance over time.
+
+Current state vs future state: a maturity map
+
+Most institutions will not move to transaction foundation models in one step. The journey is a maturity progression.
+
+The future state isn’t about replacing every existing model. It’s about creating a reusable intelligence foundation that existing and new models can use. In many cases, the best architecture will be hybrid: foundation model embeddings, graph intelligence, rules, decision engines and human oversight working together.
+
+That hybrid approach is particularly important in regulated payments environments, where explainability, resilience, latency and control matter as much as predictive accuracy.
+
+Key use cases for banks and payments organizations
+
+Transaction foundation models can support a wide range of use cases. The highest-value opportunities often sit at the intersection of risk, revenue, resilience and customer experience.
+
+What are the benefits?
+
+The benefits of transaction foundation models can be grouped into five areas.
+
+Better performance. By learning from broader transaction and event histories, these models can identify signals that narrow models may miss. This can improve fraud detection, credit risk, engagement and operational prediction.
+
+Faster reuse. A shared model backbone reduces duplication. Teams can adapt existing embeddings rather than build every model and feature set from scratch.
+
+Improved data leverage. Institutions can extract more value from transaction data, event streams and behavioral signals that already exist but are not fully used.
+
+Stronger scalability. Instead of running disconnected AI pilots, banks can build a model platform that supports multiple use cases, governance patterns and delivery teams.
+
+Strategic differentiation. Over time, the model becomes a proprietary intelligence asset. It reflects the institution’s own transaction flows, customer relationships, operational patterns and risk experience.
+
+However, the benefits are not automatic. Transaction foundation models require strong data foundations, thoughtful architecture, rigorous governance, clear business ownership and disciplined delivery.
+
+They also need careful scope. Not every use case will benefit equally. In PRAGMA’s published evaluation, some tasks showed very strong improvements, while anti-money laundering performance was weaker against the baseline, underlining the importance of matching the model design to the use case and combining foundation models with other approaches where needed.
+
+How to get started
+
+Building a transaction foundation model requires more than applying a large model to payments data. It requires a carefully engineered data, model and deployment architecture that reflects the realities of regulated financial services: privacy, latency, explainability, resilience, auditability and production-grade integration.
+
+For many institutions, fraud is the right starting point. It is urgent, data-rich and measurable. Real-time payments, scams, account takeover, mule networks and false positives all require richer behavioral and contextual intelligence. A TFM can provide this sequence-based insight, while graph models can add network intelligence across accounts, devices, merchants and beneficiaries.
+
+This staged approach reduces risk. The first use case proves the model. The second and third prove reuse. Over time, the institution creates a proprietary transaction intelligence layer that continuously learns from money movement, operational outcomes and customer behavior.
+
+At a high level, the build process involves seven technical layers:
+
+Data inputs
+
+Data preparation and normalisation
+
+Transaction tokenisation
+
+Sequence modelling and model training
+
+Embeddings and representation learning
+
+Downstream use case adaptation
+
+Production deployment, monitoring and governance
+
+The first objective should be to prove that the model adds measurable lift over the current baseline. That might mean better fraud detection at the same false-positive rate, fewer manual exceptions, faster case triage, improved credit risk discrimination or better customer engagement.
+
+Once value is proven, the organization can scale the model across additional use cases, entities and channels.
+
+The long-term vision is a shared transaction intelligence platform: one that continuously learns from payments, operations and customer behavior, and makes those learnings available safely across the bank.
+
+Scaling transaction foundation models with NVIDIA and Thoughtworks
+
+Thoughtworks and NVIDIA help enterprises operationalize accelerated compute. NVIDIA brings the infrastructure that defines what's possible in AI — including NeMo AutoModel for training, NIM for inference, RAPIDS (cuDF, cuGraph) for data preparation and graph features, and NVIDIA AI Enterprise for production. Thoughtworks brings the industrial engineering that turns that capability into systems running in production. As an NVIDIA Advanced Technology Partner with a focus on Agentic AI specialization, Thoughtworks works with clients to close the lab-to-production gap with an integrated AI Factory operating model: standardized pipelines, automated governance, optimized inference economics and platforms that scale across teams. The result is faster production readiness, predictable unit economics and an AI program that keeps delivering long after the rack is in.
+
+We are going to explore the technical foundations in our next blog.
+
+Get started
+
+Explore the NVIDIA Transaction Foundation Model Blueprint for a hands-on developer starting point, and read NVIDIA's companion blog for a wider view of how the industry is putting these models into production: Why Financial Institutions Are Converging on Transaction Foundation Models.
+
+Related content
+
+Digital innovation
+
+Real-time payments: Are banks ready to capitalize on the revenue opportunities?
+
+Learn more
+
+AI and ML
+
+Unlocking the relational power of graph neural networks in fraud prevention
+
+Learn more
+
+Technology strategy
+
+Five key trends shaping the future of payments and global money movement
+
+Learn more
+
+View more
+
+View less
+
+Thinking about building a transaction intelligence layer?
+
+Let's talk
+
+Company
+
+About us
+
+What we do
+
+Partnerships
+
+Who we work with
+
+AI Labs
+
+News
+
+Diversity, Equity and Inclusion
+
+Careers
+
+Contact us
+
+Insights
+
+Preference center
+
+Articles
+
+Blogs
+
+Books
+
+Podcasts
+
+Site info
+
+Privacy policy and cookie settings
+
+Accessibility statement
+
+Modern slavery statement
+
+Corporate Social Responsibility Policy
+
+Policy of Equal Opportunity, Non-Discrimination and Anti-Harassment at the Workplace
+
+Code of conduct
+
+Integrity helpline
+
+Sustainable procurement policy
+
+Speak up policy
+
+Anti-bribery and anti-corruption policy
+
+Fraud advisory note
+
+Connect with us
+
+© 2026 Thoughtworks, Inc.
+
+×
+WeChat
