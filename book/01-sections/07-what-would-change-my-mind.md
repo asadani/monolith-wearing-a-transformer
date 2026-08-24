@@ -1,6 +1,6 @@
 # Section 7. What would change my mind
 
-A position that cannot be dislodged by evidence is not a position, it is a
+A position that cannot be dislodged by evidence is not a position but a
 preference. So this section names, in advance, what would move mine &mdash; written
 before anyone gets the chance to produce it, which is the only time such a list is
 worth anything.

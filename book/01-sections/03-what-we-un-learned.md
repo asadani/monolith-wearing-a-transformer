@@ -49,8 +49,8 @@ completes. When the routing optimizer starts returning nonsense, authorization s
 runs on a fallback path. When one model's feature pipeline goes stale, the other
 three do not.
 
-That is not a performance property. It is a **containment** property, and it is the
-one that determines what three in the morning looks like.
+Call that a **containment** property rather than a performance one. It is the
+property that decides what three in the morning looks like.
 
 A payment system is unusual in how sharply this matters. Most software fails softly:
 a page renders wrong, a report is late, a recommendation is poor. Payment
@@ -118,8 +118,8 @@ wrong with traffic," and it will take a while.
 Rollback is worse still. In the decomposed system you roll back one model and the
 other three keep their current versions. In the consolidated system, rolling back
 the backbone reverts every improvement every team shipped through it since the last
-known-good checkpoint. The unit of reversion is no longer a change. It is the whole
-brain.
+known-good checkpoint. The unit of reversion has stopped being a change and become the
+whole brain.
 
 ## The honest counter-case
 

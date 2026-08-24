@@ -48,7 +48,44 @@ matter:
     work_line: "A Monolith Wearing a Transformer &mdash; a verified inquiry into
       whether domain foundation models belong in the critical path of payment
       infrastructure."
-    ai_disclosure: verified
+    # The shared "verified" variant in book-forge calls the work a book. This is
+    # a 29-page paper, and the body says "paper" throughout; an inline override
+    # keeps the two halves of the document telling the reader the same thing.
+    ai_disclosure_html: |
+      <h3>A note on how this paper was written</h3>
+
+      <p>An AI system drafted this paper. Not "assisted with" &mdash; drafted it,
+        from the research through to the prose you are reading. I set the question
+        and its boundaries, made the judgment calls, argued with the drafts, and
+        put my name on the result. The errors are mine; the model does not get to
+        share the blame.</p>
+
+      <p>If that makes you wince, I understand the reflex. The internet is full of
+        confident, sourceless, frictionless text, and the reasonable response has
+        been to distrust anything that reads too smoothly. But the objection worth
+        taking seriously is not that a machine wrote it. It is that nobody checked
+        it.</p>
+
+      <p>That objection is the subject of this paper, which is the awkward part.
+        Section 1 is about a machine-generated document that specified a latency
+        figure with no source behind it. This one was built the other way round:
+        sources captured to disk and hashed before a word was drafted, every
+        factual sentence bound to an exact quotation inside one of those files,
+        and a verification gate that refused to let the text ship until each
+        binding checked out. Thirty-one claims went into the ledger; one failed
+        and is cited nowhere in these pages. Two more were withdrawn mid-draft
+        when I found the primary sources and discovered the secondhand versions
+        had improved on them. Section 6 names one of those out loud, because a
+        paper making this argument does not get to correct itself quietly.</p>
+
+      <p>The superscripts are not decoration &mdash; they are the audit trail, and
+        you can walk it yourself in an afternoon. That is the arrangement I would
+        like to see become normal: let the machine draft, and make the drafting
+        answer for itself. If you compose every sentence by hand, full respect
+        &mdash; the craft shows. And if you notice the em-dashes, they are mine. I
+        have always written this way. Make your peace with them.</p>
+
+      <p class="signoff">&mdash; A.S.</p>
     sources_html: |
       <p>The sources are a separate matter. This paper is published alongside a
         free companion archive &mdash; <span class="mono">tech.anujsadani.in/monolith-wearing-a-transformer</span>
@@ -69,6 +106,8 @@ matter:
     anchor_before: '<!-- BOOK-FORGE:BEFORE-END -->'
     qr_override:
       - index: 1
+        # author.yaml's shared card says "This book"; this is a paper.
+        label: "This paper, and the evidence"
         blurb: "Read this online, walk the claim ledger, open every source."
         code: "tech.anujsadani.in"
   colophon_html: |
