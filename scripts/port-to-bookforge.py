@@ -19,8 +19,8 @@ STYLE_BASE = "assets/_base-style.txt"
 OUT = "book.html.in"
 
 STANDFIRST = {
-    1: "A latency figure stated four times, in a comparison table, wearing a "
-       "citation marker. It does not exist.",
+    1: "An AI-generated analysis of a payments foundation model, and a "
+       "specification cited four times that no first-party material contains.",
     2: "What the company put on the record, what it left out, and the "
        "disclosure bar its own peers already clear.",
     3: "Service boundaries were not fashion. They were an answer to a question "
