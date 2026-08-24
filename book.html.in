@@ -547,6 +547,21 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
 .cover-dl:hover{ background:#7d2230 }
 
 /* The button is a screen affordance; in print the reader already has the PDF. */
+/* Entry links: screen-only, like the Ko-fi pill. A print reader is already
+   holding the long version, so an offer to read the short one is noise. */
+.entry-links{ margin:7mm 0 0 }
+.entry-summary{
+  font-family:var(--mono);
+  font-size:8.2pt;
+  letter-spacing:.02em;
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  padding-bottom:1px;
+}
+.entry-summary:hover{ border-bottom-color:var(--accent) }
+@media print{ .entry-links{ display:none } }
+
 @media print{ .cover-dl{ display:none } }
 
 /* ---------- screen presentation ---------- */
@@ -629,7 +644,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   .bar{ grid-template-columns:20mm 1fr 14mm }
   .cover-foot{ flex-direction:column;align-items:flex-start }
 }
-/* BOOK-FORGE:MATTER-CSS v1 sha=54d2d29db345 */
+/* BOOK-FORGE:MATTER-CSS v1 sha=787d0b04b390 */
 /* book-forge matter -- flow mode.
  *
  * Injected into essays that were never built as books. Each has its own
@@ -803,6 +818,36 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   color: var(--bf-faint);
 }
 .bf-matter .colophon b { color: var(--bf-soft); }
+
+/* --- screen reading order -------------------------------------------------
+ *
+ * On paper the order is right: cover, title page, copyright, the argument,
+ * about. On a screen it is a wall -- a reader meets a full-bleed cover, a
+ * title page, a copyright notice and an AI-disclosure note before one
+ * sentence of the argument, which on a 30-page essay is four screens of
+ * scrolling to find out whether it is worth reading.
+ *
+ * So screen only: drop the cover image, and send the copyright/disclosure
+ * block to the end where a reader who wants it can still find it. @media
+ * print is untouched, so the PDF keeps the print order exactly.
+ *
+ * body becomes a flex column because `order` needs a flex container. That
+ * stops margins collapsing BETWEEN top-level sections -- which is why the
+ * sections themselves are given a single margin direction below rather than
+ * relying on collapse.
+ */
+@media screen {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  body > section.cover,
+  body > section.sheet.cover { display: none; }
+
+  body > section { order: 0; }
+  body > .bf-front { order: 8; }
+  body > .bf-about { order: 9; }
+}
 /* /BOOK-FORGE:MATTER-CSS */
 
 </style>
@@ -832,6 +877,9 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
     failure is expensive.</p>
   <p class="byline">Anuj Sadani
     <small>Every claim bound to a captured source</small>
+  </p>
+  <p class="entry-links">
+    <a class="entry-summary" href="summary/">Short on time? Read the argument in brief &mdash; 5 min</a>
   </p>
   <a class="cover-dl" href="https://ko-fi.com/s/93e24c2638" target="_blank" rel="noopener"><span class="ar">&nearr;</span>&nbsp; Get the typeset PDF on Ko-fi</a>
 </section>

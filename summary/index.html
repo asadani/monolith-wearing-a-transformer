@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Monolith Wearing a Transformer — the argument in brief</title>
+<meta name="author" content="Anuj Sadani">
+<meta name="description" content="The condensed argument: a domain foundation model is a strong supporting system and a poor primary one. Five minutes; the full inquiry is 29 pages.">
+<link rel="canonical" href="https://tech.anujsadani.in/monolith-wearing-a-transformer/summary/">
+<meta property="og:title" content="A Monolith Wearing a Transformer — the argument in brief">
+<meta property="og:description" content="A shared backbone in the payment path is a single point of failure by construction. The condensed argument, in five minutes.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#FFFFFF; --wash:#F7F5F2; --ink:#161A21; --soft:#4E5665;
+  --faint:#7C8593; --rule:#E2E6EC; --accent:#9E2B3A; --accent-wash:#F6E9EB;
+  --serif:"Source Serif 4",Georgia,serif;
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#12151A; --wash:#171B21; --ink:#E7EBF0; --soft:#B4BCC7;
+    --faint:#828C9A; --rule:#2A313B; --accent:#E4737F; --accent-wash:#241419;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12151A; --wash:#171B21; --ink:#E7EBF0; --soft:#B4BCC7;
+  --faint:#828C9A; --rule:#2A313B; --accent:#E4737F; --accent-wash:#241419;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:0 1.3rem 5rem; background:var(--paper); color:var(--ink);
+  font-family:var(--serif); font-size:1.06rem; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:40rem;margin:0 auto}
+
+header{padding:3.4rem 0 0}
+.eyebrow{
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--faint); margin:0 0 1.3rem;
+  display:flex; gap:.6rem; align-items:center; flex-wrap:wrap;
+}
+.eyebrow .dot{color:var(--rule)}
+h1{
+  font-family:var(--sans); font-weight:700; font-size:clamp(1.9rem,5.4vw,2.7rem);
+  line-height:1.08; letter-spacing:-.02em; margin:0 0 .5rem; text-wrap:balance;
+}
+.sub{
+  font-family:var(--sans); font-weight:500; font-size:1.02rem; color:var(--soft);
+  margin:0 0 2rem;
+}
+.claim{
+  margin:0 0 2.6rem; padding:1.15rem 1.35rem;
+  background:var(--accent-wash); border-left:3px solid var(--accent);
+  font-size:1.16rem; line-height:1.5; color:var(--ink);
+}
+.claim b{font-weight:600}
+
+h2{
+  font-family:var(--sans); font-weight:600; font-size:1.02rem;
+  letter-spacing:.02em; margin:2.9rem 0 .1rem; color:var(--ink);
+}
+h2 .n{
+  font-family:var(--mono); font-size:.78rem; color:var(--accent);
+  margin-right:.55rem; font-weight:500;
+}
+h2+p{margin-top:.7rem}
+p{margin:0 0 1rem}
+strong{font-weight:600}
+em{font-style:italic}
+
+.pull{
+  font-family:var(--sans); font-weight:600; font-size:1.06rem; line-height:1.45;
+  color:var(--ink); margin:1.5rem 0; padding-left:1rem;
+  border-left:2px solid var(--accent);
+}
+
+ul{margin:0 0 1rem; padding-left:1.15rem}
+li{margin:0 0 .5rem}
+li::marker{color:var(--accent)}
+
+.crit{list-style:none; padding:0; margin:.9rem 0 1.2rem; counter-reset:c}
+.crit li{
+  counter-increment:c; position:relative; padding-left:2.1rem;
+  margin:0 0 .75rem; font-size:1rem;
+}
+.crit li::before{
+  content:counter(c); position:absolute; left:0; top:.12rem;
+  font-family:var(--mono); font-size:.75rem; color:var(--accent);
+  border:1px solid var(--rule); border-radius:50%;
+  width:1.45rem; height:1.45rem; display:grid; place-items:center;
+}
+.crit b{font-family:var(--sans); font-size:.97rem}
+
+.caveat{
+  margin:2.6rem 0 0; padding:1.1rem 1.3rem; background:var(--wash);
+  border:1px solid var(--rule); font-size:.97rem; color:var(--soft);
+}
+.caveat h3{
+  font-family:var(--sans); font-size:.8rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--faint); margin:0 0 .6rem; font-weight:600;
+}
+.caveat p:last-child{margin-bottom:0}
+
+.next{
+  margin-top:3.2rem; padding-top:1.8rem; border-top:2px solid var(--ink);
+}
+.next h3{
+  font-family:var(--sans); font-size:1.05rem; margin:0 0 .35rem; font-weight:600;
+}
+.next .why{color:var(--soft); font-size:.97rem; margin:0 0 1.3rem}
+.actions{display:flex; flex-wrap:wrap; gap:.7rem}
+.btn{
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-family:var(--mono); font-size:.82rem; font-weight:500;
+  text-decoration:none; padding:.72rem 1.15rem; border-radius:26px;
+  border:1px solid var(--rule); color:var(--ink); background:var(--paper);
+  transition:border-color .15s ease, background .15s ease;
+}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+.btn.primary:hover{background:#822430}
+.btn .ar{opacity:.8}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+footer{
+  margin-top:2.6rem; font-family:var(--mono); font-size:.74rem;
+  line-height:1.7; color:var(--faint);
+}
+footer a{color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">
+    <span>The argument in brief</span><span class="dot">&middot;</span>
+    <span>5 min</span><span class="dot">&middot;</span>
+    <span>full paper 29 pp</span>
+  </p>
+  <h1>A Monolith Wearing a Transformer</h1>
+  <p class="sub">What we un-learned about decoupling.</p>
+</header>
+
+<p class="claim">
+  <b>A domain foundation model is a strong supporting system and a poor primary
+  one.</b> Not because the model is bad. Because of what you can reason about at
+  three in the morning when it is quietly wrong across four decisions at once.
+</p>
+
+<h2><span class="n">01</span>What set this off</h2>
+<p>
+  A research document proposed that routing, fraud, risk and checkout all be
+  served from a single payments foundation model. It specified the model's
+  inference budget at <strong>29 milliseconds</strong>, four times over, each
+  instance carrying a citation marker.
+</p>
+<p>
+  The number appears in none of the vendor's own materials &mdash; not the
+  product page, the engineering blog, the launch release, or the CEO's newspaper
+  interview. Nobody lied. A model produced a document about a real system and a
+  plausible latency landed in a slot that wanted one.
+</p>
+<p class="pull">
+  The failure is not fabrication as an act. It is fabrication as a shape: a
+  document that looks cited, reads as technical, and carries one load-bearing
+  quantity that came from nowhere.
+</p>
+
+<h2><span class="n">02</span>What service boundaries were actually for</h2>
+<p>
+  Not development velocity &mdash; that was the conference pitch, and for many
+  teams it never arrived. The durable benefit was <strong>containment</strong>:
+  when the fraud scorer degrades, checkout still completes.
+</p>
+<p>
+  The pattern has a name. A bulkhead isolates parts of a system into
+  compartments "so that failure of one component will not cascade to other
+  components." It does not prevent failure. It bounds it.
+</p>
+<p>
+  A shared backbone serving all four decisions removes that compartment. Its
+  failure becomes a single point of failure <strong>by construction rather than
+  by misconfiguration</strong> &mdash; and that distinction is the whole
+  argument. A bug gets fixed and the architecture is unchanged. A design working
+  as intended has no configuration that restores the boundary.
+</p>
+<p>
+  Redundancy does not help, because the failure mode that matters is not the
+  model being <em>down</em>. It is the model being <em>wrong</em>. Five replicas
+  of a drifted model produce the same drifted answer five times, quickly.
+</p>
+
+<h2><span class="n">03</span>What the evidence actually shows</h2>
+<p>
+  <strong>Somebody tried it.</strong> Adyen reports attempting bigger deep
+  learning models combining multiple decisions, and finding they would
+  "compromise the engineering requirements (latency, uptime) of online
+  deployments in a critical flow." What failed was not accuracy. It was latency
+  and uptime, in the synchronous path.
+</p>
+<p>
+  <strong>And they intend to try again</strong> &mdash; the same source says they
+  expect to move the whole pipeline to deep learning "in the short future." Both
+  halves belong in any honest reading of it.
+</p>
+<p>
+  <strong>Nobody has benchmarked the actual question.</strong> No published
+  comparison of a consolidated backbone against task-specific models on
+  production payment traffic exists, on either side. The tabular literature
+  reached for instead scopes itself to ~10K samples; these systems train on four
+  billion payments. It neither supports nor refutes them.
+</p>
+<p>
+  What vendors do publish &mdash; Stripe's card-testing detection going from 59%
+  to 97%, Plaid's numbers at fixed operating points &mdash; are all
+  <strong>capability</strong> results. Not one is a <strong>containment</strong>
+  result. None reports what happened when the model was wrong, or how long
+  attribution took.
+</p>
+
+<h2><span class="n">04</span>What to do instead</h2>
+<p>
+  Put it beside the path, not in it. The highest-value position is a
+  representation layer: the model produces embeddings, and task-specific
+  classifiers consume them and decide. This is the shape Stripe describes. The
+  compartment survives, because the shared thing produces <em>inputs</em> rather
+  than <em>verdicts</em>.
+</p>
+<p>Five conditions before promoting anything into the critical path:</p>
+<ol class="crit">
+  <li><b>A fallback that is exercised, not documented.</b> Running on live traffic continuously &mdash; an untested fallback is a comment in a runbook.</li>
+  <li><b>Per-decision observability.</b> Aggregate model health hides one decision degrading while the average holds.</li>
+  <li><b>A measured mean time to attribution.</b> Induce a degradation, time how long the on-call takes to find it. Almost nobody has this number.</li>
+  <li><b>Independent rollback.</b> Revert one decision path without reverting the others &mdash; usually versioned embeddings with pinning.</li>
+  <li><b>Regional and segment validation before scale</b>, not after.</li>
+</ol>
+<p>
+  The burden of proof runs this way because the errors are not the same size. A
+  supporting system that turns out excellent costs a slower rollout. A primary
+  decision-maker that turns out subtly wrong costs money moving incorrectly, as
+  fast as traffic arrives, across four decision types at once.
+</p>
+
+<div class="caveat">
+  <h3>What this argument is not</h3>
+  <p>
+    The containment reasoning is <strong>deduction, not measurement</strong>, and
+    it is marked low confidence in the paper's ledger for exactly that reason.
+    The architectural evidence is largely vendor-published. If someone runs the
+    comparison and it goes the other way, this was a well-sourced argument for
+    the wrong conclusion.
+  </p>
+  <p>
+    The full paper names, in advance, the five findings that would change its
+    mind &mdash; and the one kind of result that would not.
+  </p>
+</div>
+
+<div class="next">
+  <h3>Read the full inquiry</h3>
+  <p class="why">
+    29 pages. 19 sources captured and hashed, 31 claims bound to exact
+    quotations, one of which failed verification and is cited nowhere. Every
+    source is archived alongside it, so you can check any claim yourself.
+  </p>
+  <div class="actions">
+    <a class="btn primary" href="../"><span class="ar">&rarr;</span> Read the full paper &middot; 29 pp</a>
+    <a class="btn" href="https://ko-fi.com/s/93e24c2638" target="_blank" rel="noopener"><span class="ar">&nearr;</span> Typeset PDF on Ko-fi</a>
+  </div>
+</div>
+
+<footer>
+  <b>A Monolith Wearing a Transformer</b> &mdash; a verified inquiry by Anuj Sadani, 2026.<br>
+  Full paper and source archive: <a href="../">tech.anujsadani.in/monolith-wearing-a-transformer</a>
+</footer>
+
+</div>
+</body>
+</html>

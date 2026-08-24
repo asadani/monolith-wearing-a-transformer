@@ -136,6 +136,9 @@ HEAD = """<meta charset="utf-8">
   <p class="byline">Anuj Sadani
     <small>Every claim bound to a captured source</small>
   </p>
+  <p class="entry-links">
+    <a class="entry-summary" href="summary/">Short on time? Read the argument in brief &mdash; 5 min</a>
+  </p>
   <a class="cover-dl" href="https://ko-fi.com/s/93e24c2638" target="_blank" rel="noopener"><span class="ar">&nearr;</span>&nbsp; Get the typeset PDF on Ko-fi</a>
 </section>
 

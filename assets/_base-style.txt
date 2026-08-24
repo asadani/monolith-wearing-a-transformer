@@ -541,6 +541,21 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
 .cover-dl:hover{ background:#7d2230 }
 
 /* The button is a screen affordance; in print the reader already has the PDF. */
+/* Entry links: screen-only, like the Ko-fi pill. A print reader is already
+   holding the long version, so an offer to read the short one is noise. */
+.entry-links{ margin:7mm 0 0 }
+.entry-summary{
+  font-family:var(--mono);
+  font-size:8.2pt;
+  letter-spacing:.02em;
+  color:var(--accent);
+  text-decoration:none;
+  border-bottom:1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  padding-bottom:1px;
+}
+.entry-summary:hover{ border-bottom-color:var(--accent) }
+@media print{ .entry-links{ display:none } }
+
 @media print{ .cover-dl{ display:none } }
 
 /* ---------- screen presentation ---------- */
