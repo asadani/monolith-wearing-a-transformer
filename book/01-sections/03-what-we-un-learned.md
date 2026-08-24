@@ -1,6 +1,6 @@
 # Section 3. What we un-learned about decoupling
 
-Fifteen years of payment engineering can be summarised as one long argument about
+Fifteen years of payment engineering can be summarized as one long argument about
 boundaries. Where to put them, what to pay for them, and what breaks when they are
 removed. The argument was not about elegance and it was not about fashion, though
 both were used as ammunition at various points. It was about a single question that
@@ -47,15 +47,15 @@ a great many companies discovered this the expensive way. The durable benefit wa
 narrower and less exciting: when the fraud scorer degrades, checkout still
 completes. When the routing optimizer starts returning nonsense, authorization still
 runs on a fallback path. When one model's feature pipeline goes stale, the other
-four do not.
+three do not.
 
 That is not a performance property. It is a **containment** property, and it is the
 one that determines what three in the morning looks like.
 
 A payment system is unusual in how sharply this matters. Most software fails softly:
 a page renders wrong, a report is late, a recommendation is poor. Payment
-infrastructure fails in money, in both directions, at the rate of arriving traffic,
-and it fails while the merchant is watching a real-time dashboard of transactions
+infrastructure fails in money, in both directions, as fast as traffic arrives, and
+it fails while the merchant is watching a real-time dashboard of transactions
 not completing. The cost of a failure is not the failure. It is the failure
 multiplied by the minutes it takes to work out which component is wrong.
 
@@ -142,10 +142,10 @@ an identity graph. The compartment walls are thinner than the architecture diagr
 suggests. Consolidating the models may remove less isolation than this section
 implies, because a good deal of it was already gone.
 
-I accept both points, and they narrow the claim rather than defeat it. The claim is
-not that decomposition is safe and consolidation is dangerous. It is that
-**consolidation moves a specific, well-understood, containable class of failure into
-a class that is none of those things**, and that this trade should be made
+I accept both points, and they narrow the claim rather than defeat it. Decomposition
+is not safe and consolidation is not dangerous; the narrower thing worth saying is
+that **consolidation moves a specific, well-understood, containable class of failure
+into a class that is none of those things**, and that this trade should be made
 deliberately, with the containment cost named, rather than as a side effect of
 adopting an architecture because it is the shape of the moment.
 

@@ -79,9 +79,9 @@ clear.**<sup class="cite">c-024</sup>
 
 ## Why launch coverage does not help
 
-Something worth noticing about the dozen trade articles that appeared alongside
-the announcement: they are one source. Each restates the same release. Counting
-them as corroboration is a category error, and NVIDIA and AWS &mdash; both named
+Something worth noticing about the trade articles that appeared alongside the
+announcement: they are one source. Each restates the same release. Counting them
+as corroboration is a category error, and NVIDIA and AWS &mdash; both named
 commercial partners in the launch &mdash; are participants rather than
 validators.
 

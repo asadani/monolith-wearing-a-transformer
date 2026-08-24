@@ -34,7 +34,7 @@ tabular deep learning literature, and this is where the argument quietly breaks.
 The benchmark most often cited for the opposing position &mdash; that gradient-boosted
 trees still beat neural networks on structured data &mdash; scopes its own finding
 explicitly. It reports that "tree-based models remain state-of-the-art on
-medium-sized data ($\sim$10K samples)."<sup class="cite">c-009</sup> Ten thousand
+medium-sized data (~10K samples)."<sup class="cite">c-009</sup> Ten thousand
 samples. The parenthesis is the authors' own, in their own abstract, and it is a
 scope condition rather than a hedge.
 
@@ -77,7 +77,7 @@ say clearly, **a different class of system in a different domain**, and I would 
 accept it as evidence if it pointed the other way.
 
 I raise it for one reason. The source documents that started this inquiry cited the
-monolithic-versus-modular question as settled in favour of consolidation, resting
+monolithic-versus-modular question as settled in favor of consolidation, resting
 that on an untraceable claim and on evidence drawn from a different class of system
 &mdash; while the one measured comparison actually present in the corpus found
 modular designs winning.<sup class="cite">c-018</sup> The evidence on this question
@@ -127,7 +127,7 @@ task-specific models with equivalent training data. Report:
 - rollback blast radius, measured in reverted changes rather than minutes;
 - correlated-error rate across the four decision types.
 
-Three of those five have never been published by anyone in this category. Until they
+The last three have never been published by anyone in this category. Until they
 are, the architectural argument is settled by whoever writes more confidently, which
 is how the document in Section 1 came to recommend re-coupling a payment system on
 the authority of a latency figure that did not exist.

@@ -10,9 +10,9 @@ more useful in a direction I did not expect.
 
 ## What Adyen reported
 
-Adyen &mdash; a payments platform operating at a scale comparable to the systems
-this paper is about &mdash; has written publicly about the machine learning behind
-its authorization-optimization work. Buried in that write-up is a sentence that
+Adyen &mdash; a payments platform serving card traffic in the same synchronous
+position this paper is about &mdash; has written publicly about the machine
+learning behind its authorization-optimization work. Buried in that write-up is a sentence that
 does more work than anything else in this corpus.
 
 The company reports having "tried with bigger artifacts and complex deep learning
@@ -34,7 +34,8 @@ Those are the two axes on which payment infrastructure is actually judged, and
 shared model is a bad idea for a nightly batch scoring job or an offline
 merchant-risk review. The claim under examination is specifically about the
 synchronous path, where the transaction is waiting and the timeout is real, and that
-is exactly the scope in which a company at this scale reports the approach failing.
+is exactly the scope in which a company operating in it reports the approach
+failing.
 
 This is the closest thing in the entire corpus to a measurement of the Section 3
 argument. It arrives from a first-party engineering write-up rather than a
@@ -58,7 +59,7 @@ a constraint to be engineered past, not a law.
 
 Quoting only the first sentence would have made this section much stronger and much
 less true. It would also have been the same move Section 1 spent two pages
-criticising: taking a real source and rendering it into the shape the argument
+criticizing: taking a real source and rendering it into the shape the argument
 wanted. The difference between a citation and an argument is that a citation still
 says what it says after you have finished needing it.
 

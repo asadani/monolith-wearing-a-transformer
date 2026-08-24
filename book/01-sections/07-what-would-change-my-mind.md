@@ -81,7 +81,7 @@ rate. Five times more disputes identified, on what merchant segment. Each of tho
 is one subordinate clause away from being a number a reader can use, and the company
 has the data, because you cannot claim the multiplier without it.
 
-And there is a recency defence that should be granted plainly: the model was
+And there is a recency defense that should be granted plainly: the model was
 announced days before this research began. Nothing has had time to be independently
 verified. That is an absence of scrutiny rather than evidence of failure, and if a
 named merchant publishes its own before-and-after next quarter, this paper's second
@@ -98,8 +98,8 @@ generated that is fluent, technical, cited in appearance, internally consistent,
 load-bearing on a quantity that came from nowhere &mdash; and the parts of it that
 are true make the invented part harder to see, not easier.
 
-The defence is not scepticism, which does not scale and which I did not have. I liked
-the figure. It was the most concrete thing in the document. The defence is
+The defense is not skepticism, which does not scale and which I did not have. I liked
+the figure. It was the most concrete thing in the document. The defense is
 mechanical: a rule that a claim without a locator in a captured source does not get
 made, applied by something that does not care how good the sentence sounds.
 

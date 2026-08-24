@@ -1028,9 +1028,9 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   disclosure sits below a bar its own peers already
   clear.</strong><sup class="cite">c-024</sup></p>
   <p class="beat">Why launch coverage does not help</p>
-  <p>Something worth noticing about the dozen trade articles that appeared alongside
-  the announcement: they are one source. Each restates the same release. Counting
-  them as corroboration is a category error, and NVIDIA and AWS — both named
+  <p>Something worth noticing about the trade articles that appeared alongside the
+  announcement: they are one source. Each restates the same release. Counting them
+  as corroboration is a category error, and NVIDIA and AWS — both named
   commercial partners in the launch — are participants rather than
   validators.</p>
   <p>There is also a recency problem that cuts in Razorpay’s favor, and it should be
@@ -1045,7 +1045,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   <p class="chapter-num">03</p>
     <h2>What we un-learned about decoupling</h2>
     <p class="standfirst">Service boundaries were not fashion. They were an answer to a question about what happens when one part of a system is wrong.</p>
-  <p class="dropcap">Fifteen years of payment engineering can be summarised as one long argument about
+  <p class="dropcap">Fifteen years of payment engineering can be summarized as one long argument about
   boundaries. Where to put them, what to pay for them, and what breaks when they are
   removed. The argument was not about elegance and it was not about fashion, though
   both were used as ammunition at various points. It was about a single question that
@@ -1083,13 +1083,13 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   narrower and less exciting: when the fraud scorer degrades, checkout still
   completes. When the routing optimizer starts returning nonsense, authorization still
   runs on a fallback path. When one model’s feature pipeline goes stale, the other
-  four do not.</p>
+  three do not.</p>
   <p>That is not a performance property. It is a <strong>containment</strong> property, and it is the
   one that determines what three in the morning looks like.</p>
   <p>A payment system is unusual in how sharply this matters. Most software fails softly:
   a page renders wrong, a report is late, a recommendation is poor. Payment
-  infrastructure fails in money, in both directions, at the rate of arriving traffic,
-  and it fails while the merchant is watching a real-time dashboard of transactions
+  infrastructure fails in money, in both directions, as fast as traffic arrives, and
+  it fails while the merchant is watching a real-time dashboard of transactions
   not completing. The cost of a failure is not the failure. It is the failure
   multiplied by the minutes it takes to work out which component is wrong.</p>
   <p>Boundaries are how you divide that multiplication down.</p>
@@ -1157,10 +1157,10 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   an identity graph. The compartment walls are thinner than the architecture diagram
   suggests. Consolidating the models may remove less isolation than this section
   implies, because a good deal of it was already gone.</p>
-  <p>I accept both points, and they narrow the claim rather than defeat it. The claim is
-  not that decomposition is safe and consolidation is dangerous. It is that
-  <strong>consolidation moves a specific, well-understood, containable class of failure into
-  a class that is none of those things</strong>, and that this trade should be made
+  <p>I accept both points, and they narrow the claim rather than defeat it. Decomposition
+  is not safe and consolidation is not dangerous; the narrower thing worth saying is
+  that <strong>consolidation moves a specific, well-understood, containable class of failure
+  into a class that is none of those things</strong>, and that this trade should be made
   deliberately, with the containment cost named, rather than as a side effect of
   adopting an architecture because it is the shape of the moment.</p>
   <p>Which raises the obvious question, and it is what Section 4 is about: has anyone
@@ -1179,9 +1179,9 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   <p>One did, and published it. The account is more useful than the argument, and it is
   more useful in a direction I did not expect.</p>
   <p class="beat">What Adyen reported</p>
-  <p>Adyen — a payments platform operating at a scale comparable to the systems
-  this paper is about — has written publicly about the machine learning behind
-  its authorization-optimization work. Buried in that write-up is a sentence that
+  <p>Adyen — a payments platform serving card traffic in the same synchronous
+  position this paper is about — has written publicly about the machine
+  learning behind its authorization-optimization work. Buried in that write-up is a sentence that
   does more work than anything else in this corpus.</p>
   <p>The company reports having “tried with bigger artifacts and complex deep learning
   models” that combine multiple decisions, and having found that these would often
@@ -1199,7 +1199,8 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   shared model is a bad idea for a nightly batch scoring job or an offline
   merchant-risk review. The claim under examination is specifically about the
   synchronous path, where the transaction is waiting and the timeout is real, and that
-  is exactly the scope in which a company at this scale reports the approach failing.</p>
+  is exactly the scope in which a company operating in it reports the approach
+  failing.</p>
   <p>This is the closest thing in the entire corpus to a measurement of the Section 3
   argument. It arrives from a first-party engineering write-up rather than a
   benchmark, which makes it a vendor source and imperfect evidence — but it is a
@@ -1217,7 +1218,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   a constraint to be engineered past, not a law.</p>
   <p>Quoting only the first sentence would have made this section much stronger and much
   less true. It would also have been the same move Section 1 spent two pages
-  criticising: taking a real source and rendering it into the shape the argument
+  criticizing: taking a real source and rendering it into the shape the argument
   wanted. The difference between a citation and an argument is that a citation still
   says what it says after you have finished needing it.</p>
   <p class="beat">What they run instead</p>
@@ -1309,7 +1310,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   <p>The benchmark most often cited for the opposing position — that gradient-boosted
   trees still beat neural networks on structured data — scopes its own finding
   explicitly. It reports that “tree-based models remain state-of-the-art on
-  medium-sized data ($$10K samples).”<sup class="cite">c-009</sup> Ten thousand
+  medium-sized data (~10K samples).”<sup class="cite">c-009</sup> Ten thousand
   samples. The parenthesis is the authors’ own, in their own abstract, and it is a
   scope condition rather than a hedge.</p>
   <p>The system under discussion in this paper is trained on four billion payments and
@@ -1344,7 +1345,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   say clearly, <strong>a different class of system in a different domain</strong>, and I would not
   accept it as evidence if it pointed the other way.</p>
   <p>I raise it for one reason. The source documents that started this inquiry cited the
-  monolithic-versus-modular question as settled in favour of consolidation, resting
+  monolithic-versus-modular question as settled in favor of consolidation, resting
   that on an untraceable claim and on evidence drawn from a different class of system
   — while the one measured comparison actually present in the corpus found
   modular designs winning.<sup class="cite">c-018</sup> The evidence on this question
@@ -1386,7 +1387,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   <li>rollback blast radius, measured in reverted changes rather than minutes;</li>
   <li>correlated-error rate across the four decision types.</li>
   </ul>
-  <p>Three of those five have never been published by anyone in this category. Until they
+  <p>The last three have never been published by anyone in this category. Until they
   are, the architectural argument is settled by whoever writes more confidently, which
   is how the document in Section 1 came to recommend re-coupling a payment system on
   the authority of a latency figure that did not exist.</p>
@@ -1402,8 +1403,9 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   right answer when a technology is this obviously useful.</p>
   <p>So here is the position stated constructively.</p>
   <p>A payments foundation model is a <strong>strong supporting system and a poor primary
-  one</strong>. The distinction is not about quality. It is about where in the path the
-  artifact sits, and what still works when it is wrong.</p>
+  one</strong> — the position Section 1 stated up front, now with the reasoning behind
+  it. What decides it is where in the path the artifact sits, and what still works
+  when it is wrong.</p>
   <p>That sentence needs unpacking into something a team can act on, because “supporting
   system” on its own is the kind of phrase everyone agrees with and nobody implements.</p>
   <p class="beat">Three places it belongs, and one it does not</p>
@@ -1435,7 +1437,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   to build, and it preserves the property that matters — separate artifacts,
   separate deployment, shared purpose.</p>
   <p><strong>Out of the synchronous path entirely.</strong> A large amount of what these models are
-  genuinely best at does not need to answer in single-digit milliseconds: post-hoc
+  genuinely best at does not need to answer while a transaction waits: post-hoc
   fraud review, chargeback prediction, merchant risk scoring, dispute triage,
   reconciliation anomaly detection, batch retry strategy. In asynchronous positions
   the latency and uptime constraints Adyen ran into<sup class="cite">c-025</sup> stop
@@ -1479,12 +1481,12 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   and taken literally it would have blocked most of the good infrastructure of the
   last decade.</p>
   <p>The response is about <strong>asymmetry of consequence</strong>, and it is the reason this paper
-  does not generalise beyond its domain.</p>
+  does not generalize beyond its domain.</p>
   <p>If a payments foundation model is deployed as a supporting system and turns out to
   be excellent, the cost is a slower rollout and some duplicated inference spend. The
   organization arrives at the same place, later, having spent more.</p>
   <p>If it is deployed as the primary decision-maker and turns out to be subtly wrong,
-  the cost is money moving incorrectly at the rate of arriving traffic, across four
+  the cost is money moving incorrectly, as fast as traffic arrives, across four
   decision types simultaneously, with attribution slowed by the very correlation that
   made the architecture attractive.</p>
   <p>Those two errors are not the same size, and where the errors are not the same size,
@@ -1567,7 +1569,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   rate. Five times more disputes identified, on what merchant segment. Each of those
   is one subordinate clause away from being a number a reader can use, and the company
   has the data, because you cannot claim the multiplier without it.</p>
-  <p>And there is a recency defence that should be granted plainly: the model was
+  <p>And there is a recency defense that should be granted plainly: the model was
   announced days before this research began. Nothing has had time to be independently
   verified. That is an absence of scrutiny rather than evidence of failure, and if a
   named merchant publishes its own before-and-after next quarter, this paper’s second
@@ -1580,8 +1582,8 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   generated that is fluent, technical, cited in appearance, internally consistent, and
   load-bearing on a quantity that came from nowhere — and the parts of it that
   are true make the invented part harder to see, not easier.</p>
-  <p>The defence is not scepticism, which does not scale and which I did not have. I liked
-  the figure. It was the most concrete thing in the document. The defence is
+  <p>The defense is not skepticism, which does not scale and which I did not have. I liked
+  the figure. It was the most concrete thing in the document. The defense is
   mechanical: a rule that a claim without a locator in a captured source does not get
   made, applied by something that does not care how good the sentence sounds.</p>
   <p>This paper was written under that rule. It has thirty-one claims in its ledger; one

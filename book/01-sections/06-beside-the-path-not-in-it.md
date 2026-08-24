@@ -7,8 +7,9 @@ right answer when a technology is this obviously useful.
 So here is the position stated constructively.
 
 A payments foundation model is a **strong supporting system and a poor primary
-one**. The distinction is not about quality. It is about where in the path the
-artifact sits, and what still works when it is wrong.
+one** &mdash; the position Section 1 stated up front, now with the reasoning behind
+it. What decides it is where in the path the artifact sits, and what still works
+when it is wrong.
 
 That sentence needs unpacking into something a team can act on, because "supporting
 system" on its own is the kind of phrase everyone agrees with and nobody implements.
@@ -48,7 +49,7 @@ to build, and it preserves the property that matters &mdash; separate artifacts,
 separate deployment, shared purpose.
 
 **Out of the synchronous path entirely.** A large amount of what these models are
-genuinely best at does not need to answer in single-digit milliseconds: post-hoc
+genuinely best at does not need to answer while a transaction waits: post-hoc
 fraud review, chargeback prediction, merchant risk scoring, dispute triage,
 reconciliation anomaly detection, batch retry strategy. In asynchronous positions
 the latency and uptime constraints Adyen ran into<sup class="cite">c-025</sup> stop
@@ -104,14 +105,14 @@ and taken literally it would have blocked most of the good infrastructure of the
 last decade.
 
 The response is about **asymmetry of consequence**, and it is the reason this paper
-does not generalise beyond its domain.
+does not generalize beyond its domain.
 
 If a payments foundation model is deployed as a supporting system and turns out to
 be excellent, the cost is a slower rollout and some duplicated inference spend. The
 organization arrives at the same place, later, having spent more.
 
 If it is deployed as the primary decision-maker and turns out to be subtly wrong,
-the cost is money moving incorrectly at the rate of arriving traffic, across four
+the cost is money moving incorrectly, as fast as traffic arrives, across four
 decision types simultaneously, with attribution slowed by the very correlation that
 made the architecture attractive.
 
