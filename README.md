@@ -9,7 +9,8 @@ exist.
 
 This paper takes the architecture seriously anyway.
 
-Read it online: **[tech.anujsadani.in/monolith-wearing-a-transformer](https://tech.anujsadani.in/monolith-wearing-a-transformer/)**
+Read it online: **[tech.anujsadani.in/monolith-wearing-a-transformer](https://tech.anujsadani.in/monolith-wearing-a-transformer/)**  
+Typeset PDF: **[ko-fi.com/s/93e24c2638](https://ko-fi.com/s/93e24c2638)**
 
 ---
 
@@ -31,7 +32,7 @@ Three steps, in order of how well the evidence supports them.
 2. **The one company that published an attempt reports it failing on latency and
    uptime, in a critical flow — not on accuracy.** It also says it intends to try
    again. Both halves are in the paper, because quoting the first alone would be
-   the same selective reading the paper opens by criticising.
+   the same selective reading the paper opens by criticizing.
 
 3. **Nobody has benchmarked the thing being argued about.** No published
    comparison of a consolidated backbone against task-specific models on
@@ -57,7 +58,9 @@ conclusion — and the one kind of result that would not.
 | `assets/` | Cover art and the base stylesheet |
 | `index.html` | The built edition |
 
-The typeset PDF is not in this repository. It is distributed from Ko-fi.
+The typeset PDF is not in this repository. It is distributed from
+[Ko-fi](https://ko-fi.com/s/93e24c2638). The reading edition above is free and
+complete; the PDF is the designed 29-page edition.
 
 ---
 
