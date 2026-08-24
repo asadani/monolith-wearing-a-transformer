@@ -61,6 +61,13 @@ body{
 section.sheet{ page-break-after:always; break-after:page; }
 section.sheet:last-of-type{ page-break-after:auto; break-after:auto; }
 
+/* Every numbered section opens a page of its own. break-after on the preceding
+   sheet is not enough on its own: the injected front matter is a .bf-flow block
+   that breaks BEFORE itself and not after, so section 01 was landing on the same
+   page as the tail of the copyright note. Asserting the break here makes a
+   section's own start independent of whatever precedes it. */
+section.sheet.chapter{ page-break-before:always; break-before:page; }
+
 /* ---------- cover: full-bleed artwork, page 1 ---------- */
 
 section.cover{
