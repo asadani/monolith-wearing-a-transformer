@@ -1663,7 +1663,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   <p>But it will have been checkable, and the thing it argued against was not.</p>
 </section>
 
-<!-- BOOK-FORGE:ABOUT v1 sha=2b464443ec08 -->
+<!-- BOOK-FORGE:ABOUT v1 sha=b00513812303 -->
 <section class="bf-matter bf-about bf-flow">
   <h2>About the author</h2>
 
@@ -1703,9 +1703,9 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   </div>
 
   <div class="colophon">
-    Set in Source Serif 4, Archivo and IBM Plex Mono.<br>
-      Nineteen sources captured and hashed, thirty-one claims bound to quotation,
-      one of them failed. First edition, 2026.
+    Nineteen sources captured and hashed. Thirty-one claims bound to exact
+      quotation; one failed verification and is cited nowhere in these pages.<br>
+      First edition, 2026.
   </div>
 
 </section>

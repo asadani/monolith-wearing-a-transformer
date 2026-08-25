@@ -111,11 +111,13 @@ matter:
         blurb: "Read this online, walk the claim ledger, open every source."
         code: "tech.anujsadani.in"
   # A colophon says how the thing was made. Restating the title and the URL here
-  # only repeated the work line on page 3 and the QR card directly above it.
+  # only repeated the work line on page 3 and the QR card directly above it. The
+  # typefaces went too: a print convention that says nothing to a screen reader,
+  # where the ledger line is the one fact worth leaving them with.
   colophon_html: |
-    Set in Source Serif 4, Archivo and IBM Plex Mono.<br>
-      Nineteen sources captured and hashed, thirty-one claims bound to quotation,
-      one of them failed. First edition, 2026.
+    Nineteen sources captured and hashed. Thirty-one claims bound to exact
+      quotation; one failed verification and is cited nowhere in these pages.<br>
+      First edition, 2026.
 
 license:
   id: all-rights-reserved
