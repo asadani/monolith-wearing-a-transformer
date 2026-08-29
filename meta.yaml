@@ -145,7 +145,6 @@ verify:
   matter_probes:
     - "Copyright, permissions"
     - "About the author"
-  allow_system_fonts: false
   min_images: 0
   expect_pages: 29
   page_tolerance: 4

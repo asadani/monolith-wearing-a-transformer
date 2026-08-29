@@ -651,7 +651,7 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   .bar{ grid-template-columns:20mm 1fr 14mm }
   .cover-foot{ flex-direction:column;align-items:flex-start }
 }
-/* BOOK-FORGE:MATTER-CSS v1 sha=787d0b04b390 */
+/* BOOK-FORGE:MATTER-CSS v1 sha=c9624f4344d7 */
 /* book-forge matter -- flow mode.
  *
  * Injected into essays that were never built as books. Each has its own
@@ -810,6 +810,11 @@ table.refs a{ color:var(--ink);text-decoration:none;border-bottom:.5px solid var
   color: var(--bf-soft);
 }
 .bf-matter .qrcard .what code {
+  /* Without this, <code> falls to the browser's default mono -- Consolas on
+     Windows, DejaVu on Linux -- so the same book rendered a different face
+     depending on the machine that built it. Books that happen to define their
+     own .qrcard code rule were fine; the ones that did not, were not. */
+  font-family: var(--mono, var(--bf-mono, ui-monospace, monospace));
   font-size: 0.78rem;
   color: var(--bf-accent);
   background: none;
