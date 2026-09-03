@@ -1,0 +1,30 @@
+{
+ "00-the-number-that-does-not-exist": {
+  "k": "9649880fcd9a3239",
+  "d": 277.0
+ },
+ "01-what-was-actually-announced": {
+  "k": "871f275750c743f9",
+  "d": 310.5
+ },
+ "02-what-we-un-learned-about-decoupling": {
+  "k": "a24b74ffe376915d",
+  "d": 561.1
+ },
+ "03-somebody-already-tried-this": {
+  "k": "42c91f99b0c95557",
+  "d": 462.4
+ },
+ "04-nobody-benchmarked-this": {
+  "k": "d8cc68ace5b0c380",
+  "d": 496.8
+ },
+ "05-beside-the-path-not-in-it": {
+  "k": "96cafe744bdbe526",
+  "d": 455.0
+ },
+ "06-what-would-change-my-mind": {
+  "k": "a0a256f981bd1990",
+  "d": 442.9
+ }
+}

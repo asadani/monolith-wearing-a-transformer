@@ -1,0 +1,67 @@
+Somebody already tried this.
+
+A payments platform at comparable scale attempted the consolidation, published what broke, and intends to try again.
+
+The argument in Section 3 is deduction. It reasons from what a boundary is to what removing one costs, and deduction is the weakest kind of evidence this paper deals in. So the honest next move is to go looking for somebody who actually attempted the consolidation in production and said what happened.
+
+One did, and published it. The account is more useful than the argument, and it is more useful in a direction I did not expect.
+
+Adyen, a payments platform serving card traffic in the same synchronous position this paper is about, has written publicly about the machine learning behind its authorization-optimization work. Buried in that write-up is a sentence that does more work than anything else in this corpus.
+
+The company reports having "tried with bigger artifacts and complex deep learning models" that combine multiple decisions, and having found that these would often "compromise the engineering requirements (latency, uptime) of online deployments in a critical flow."
+
+Read that slowly, because the specific words matter and I got them wrong the first time. I originally reached this through a practitioner's summary, which rendered it as tried it, failed, kept trying. That rendering was directionally right and lost the part that decides the question.
+
+What failed was not accuracy. Adyen does not report that the consolidated model predicted worse. It reports that the consolidated model compromised latency and uptime, and that this happened in a critical flow.
+
+Those are the two axes on which payment infrastructure is actually judged, and "critical flow" is the precise scope condition. Nobody is arguing that a large shared model is a bad idea for a nightly batch scoring job or an offline merchant-risk review. The claim under examination is specifically about the synchronous path, where the transaction is waiting and the timeout is real, and that is exactly the scope in which a company operating in it reports the approach failing.
+
+This is the closest thing in the entire corpus to a measurement of the Section 3 argument. It arrives from a first-party engineering write-up rather than a benchmark, which makes it a vendor source and imperfect evidence, but it is a vendor reporting a failure of its own preferred direction, which is the kind of vendor claim worth the most.
+
+The half a selective reader would drop
+
+Immediately alongside it, Adyen says something that cuts the other way, and this paper would forfeit its standing if it printed the first quote without the second.
+
+The company states that it keeps investigating that line of thinking and is "expecting to move the whole pipeline to deep learning architectures in the short future."
+
+So Adyen is not a witness against consolidation. Adyen is a witness that consolidation is operationally hard in a critical flow today, while intending to get there. The engineering constraint is real and current; the company treats it as a constraint to be engineered past, not a law.
+
+Quoting only the first sentence would have made this section much stronger and much less true. It would also have been the same move Section 1 spent two pages criticizing: taking a real source and rendering it into the shape the argument wanted. The difference between a citation and an argument is that a citation still says what it says after you have finished needing it.
+
+What they run instead
+
+The third thing Adyen discloses is the one most useful to a team making this decision on Monday, and it is not a negative result at all. It is an architecture.
+
+The system, as described, "consists of a collection of machine learning models of various natures that share awareness and knowledge," optimized globally toward a shared objective rather than merged into a single model.
+
+That sentence is worth more than the two before it. It describes a third option which the monolith-versus-microservices framing tends to hide, because that framing presents the choice as binary: one model that knows everything, or several models that know nothing about each other.
+
+The middle position is shared objective, separate artifacts. The models are coordinated, they see each other's signal, they optimize toward a common outcome rather than four locally optimal ones, they are trained with awareness of the whole, and they remain independently deployable, independently rollbackable, independently ownable, independently degradable. You get most of the joint-learning benefit that motivates a shared backbone. You keep the compartment.
+
+It is a harder system to build than either extreme. It requires deciding what "awareness" means between models, keeping shared representations from silently drifting apart, and holding a global objective that four teams can each move toward without one team's improvement showing up as another's regression. Nobody should pretend this is the easy path. It is, however, the path the company that tried both ends of the spectrum currently operates.
+
+Single point of failure, single point of intelligence
+
+Put Sections 3 and 4 together and the shape of the objection sharpens.
+
+The problem with a shared backbone in the payment path is not that transformers are unsuited to transaction data. The evidence on that question is genuinely thin in both directions, which Section 5 is about. The problem is a governance one wearing an architecture costume.
+
+When one model serves routing, fraud, risk and checkout, four decisions with four different owners, four different regulatory exposures, four different tolerances for error and four different definitions of "wrong" all become one deployment.
+
+Ask the ordinary operational questions of that arrangement and they stop having ordinary answers:
+
+Who approves a release? The fraud team's acceptable regression is the routing team's outage.
+
+What does a canary measure? A canary needs a metric. This artifact has four, and they do not move together.
+
+Who is paged when it degrades? The alert fires on whichever downstream metric crosses first, which is not the same as whichever decision broke.
+
+What is the rollback unit? Everything, since the last checkpoint, for everyone.
+
+What do you tell a regulator asking why a specific transaction was declined? The answer now involves a model that was also, in the same forward pass, optimizing conversion.
+
+That last one is not rhetorical. A model jointly trained on fraud and conversion has a shared representation in which those objectives are entangled by design, and "entangled by design" is a difficult phrase to use in a compliance conversation.
+
+None of these are model-quality problems. A better transformer does not fix any of them, because none of them are about the transformer being wrong. They are about what happens to accountability when four decisions stop being four things.
+
+That is the case against putting it in the critical path. Section 5 asks the fairer question: what does the published evidence actually settle about whether it belongs there at all?
